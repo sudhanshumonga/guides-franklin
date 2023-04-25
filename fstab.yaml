@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: https://publish-p34572-e147957.adobeaemcloud.com/content/output/sites/userguide_master_all_files-ditamap/personal-spaceship-operations-manual.html
+    url: https://dita-franklin-worker.sudhanshu1996monga9741.workers.dev/
     type: markup
 

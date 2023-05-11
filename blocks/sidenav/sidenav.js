@@ -24,9 +24,9 @@ function createTree(parent, data) {
     li.classList.add("sidenav-list-item");
     if (item.children) {
         li.appendChild(span);
+        li.appendChild(anchor);
         createTree(li, item.children);
     } else {
-        li.appendChild(anchor);
         li.classList.add("closed");
     }
   });

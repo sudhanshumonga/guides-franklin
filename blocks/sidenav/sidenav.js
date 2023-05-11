@@ -1,4 +1,4 @@
-import treeData from './sidenav_data'
+import treeData from './sidenav_data.js'
 
 function createTree(parent, data) {
     const ul = document.createElement("ul");

@@ -12,9 +12,10 @@ function createTree(parent, data) {
       span.style.width = '10px'
       span.style.height = '10px'
       span.style.minWidth = '10px'
+      span.style.display = 'flex'
       span.style.backgroundColor = 'black'
       anchor.textContent = item.displayName;
-      anchor.setAttribute('href', item.url)
+      anchor.setAttribute('href', `https://main--guides_franklin--sudhanshumonga.hlx.page/${item.url}`)
       li.classList.add('sidenav-list-item')
       li.appendChild(span);
       li.appendChild(anchor);

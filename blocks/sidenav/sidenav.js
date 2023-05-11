@@ -27,6 +27,7 @@ function createTree(parent, data) {
         li.appendChild(anchor);
         createTree(li, item.children);
     } else {
+        li.appendChild(anchor);
         li.classList.add("closed");
     }
   });

@@ -19,6 +19,7 @@ function createTree(parent, data) {
       );
     }
     li.classList.add("sidenav-list-item");
+    li.classList.add("closed");
     if (item.children) {
         const wrapperSpan = document.createElement("span");
         wrapperSpan.classList.add("chevron-text-wrapper");
@@ -28,7 +29,6 @@ function createTree(parent, data) {
         createTree(li, item.children);
     } else {
         li.appendChild(anchor);
-        li.classList.add("closed");
     }
   });
 }

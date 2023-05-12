@@ -12,3 +12,12 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+
+footer .container {
+  display: block;
+  
+}
+
+footer .container > div {
+  display: flex;
+}

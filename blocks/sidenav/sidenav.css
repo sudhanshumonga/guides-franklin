@@ -32,7 +32,6 @@
 }
 
 .sidenav ul.tree li.closed .chevron-icon-span {
-    margin-right: 0.5rem;
     transform: rotate(0deg);
 }
 
@@ -45,6 +44,7 @@
     text-align: center;
     line-height: 10px;
     color: #000;
+    margin-right: 0.5rem;
     font-weight: 800;
     transform: rotate(90deg);
 }

@@ -47,4 +47,7 @@
     margin-right: 0.5rem;
     font-weight: 800;
     transform: rotate(90deg);
+    transform-origin: center;
+    margin-top: -0.125rem;
+    cursor: pointer;
 }

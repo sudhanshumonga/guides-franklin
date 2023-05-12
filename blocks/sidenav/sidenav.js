@@ -9,11 +9,8 @@ function createTree(parent, data) {
     ul.appendChild(li);
     const anchor = document.createElement("a");
     const span = document.createElement("span");
-    span.style.width = "10px";
-    span.style.height = "10px";
-    span.style.minWidth = "10px";
-    span.style.display = "flex";
-    span.style.backgroundColor = "black";
+    span.classList.add('chevron-icon-span')
+    span.textContent = '>'
     anchor.textContent = item.displayName;
     if (item.url) {
       anchor.setAttribute(

@@ -25,3 +25,31 @@
 .sidenav ul.tree li>a:hover {
     text-decoration: underline;
 }
+
+.sidenav .chevron-text-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.sidenav ul.tree li.closed .chevron-icon-span {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    display: flex;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 10px;
+    color: #fff;
+}
+
+.sidenav ul.tree .chevron-icon-span {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    display: flex;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 10px;
+    color: #fff;
+    transform: rotate(90deg);
+}

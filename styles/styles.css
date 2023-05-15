@@ -232,12 +232,14 @@ main img {
 }
 
 main .section {
-  padding: 64px 16px;
+  overflow: auto;
+  padding: 1rem;
 }
 
 @media (min-width: 600px) {
   main .section {
-    padding: 64px 32px;
+    overflow: auto;
+    padding: 1rem;
   }
 }
 

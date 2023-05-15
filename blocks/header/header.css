@@ -1,12 +1,15 @@
 /* header and nav layout */
 
+header.header-wrapper {
+  min-height: var(--nav-height);
+}
+
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
   z-index: 2;
   height: var(--nav-height);
   position: fixed;
-  margin: 0.5rem 0;
 }
 
 header nav {

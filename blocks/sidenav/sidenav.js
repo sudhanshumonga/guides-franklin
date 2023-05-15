@@ -25,14 +25,15 @@ function createTree(parent, data) {
   parent.appendChild(ul);
   data.forEach((item) => {
     const li = document.createElement("li");
-    li.setAttribute("id", `sidenav-li-${id++}`)
+    const _id = id++
+    li.setAttribute("id", `sidenav-li-${_id}`)
     ul.appendChild(li);
     const anchor = document.createElement("a");
     const span = document.createElement("span");
     span.classList.add('chevron-icon-span')
     span.textContent = '>'
     anchor.textContent = item.displayName;
-    anchor.setAttribute('data-li-id', id)
+    anchor.setAttribute('data-li-id', _id)
     const siteURL = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
     if (item.url) {
       let navURL = `${siteURL}/${item.url}`

@@ -1,6 +1,11 @@
 .sidenav-container {
     background: aliceblue;
 }
+
+.sidenav .sidenav-list-item.selected {
+    background: #caecfc;
+}
+
 .sidenav ul.tree {
     list-style: none;
     margin: 0;

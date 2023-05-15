@@ -1,4 +1,5 @@
 import treeData from "./sidenav_data.js";
+let id = 0
 
 function expandHeirarchy(element, root) {
     if(element === root) return
@@ -18,7 +19,7 @@ function expandSelection(parent) {
     element.scrollIntoView();
 }
 
-function createTree(parent, data, id) {
+function createTree(parent, data) {
   const ul = document.createElement("ul");
   ul.classList.add("tree");
   parent.appendChild(ul);
@@ -31,6 +32,7 @@ function createTree(parent, data, id) {
     span.classList.add('chevron-icon-span')
     span.textContent = '>'
     anchor.textContent = item.displayName;
+    anchor.setAttribute('data-li-id', id)
     const siteURL = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
     if (item.url) {
       let navURL = `${siteURL}/${item.url}`
@@ -40,7 +42,7 @@ function createTree(parent, data, id) {
       );
       anchor.addEventListener('click', (event) => {
         event.preventDefault()
-        onClick(id - 1, navURL)
+        onClick(anchor.getAttribute('data-li-id'), navURL)
       })
     }
     li.classList.add("sidenav-list-item");
@@ -51,7 +53,7 @@ function createTree(parent, data, id) {
         wrapperSpan.appendChild(span);
         wrapperSpan.appendChild(anchor);
         li.appendChild(wrapperSpan);
-        createTree(li, item.children, id);
+        createTree(li, item.children);
     } else {
         li.appendChild(anchor);
     }
@@ -66,7 +68,7 @@ function onClick(id, navURL) {
 
 // Get the treeview element and create the tree
 const treeview = document.getElementsByClassName("sidenav")[0];
-createTree(treeview, treeData, 0);
+createTree(treeview, treeData);
 expandSelection(treeview)
 
 // Add click event listener to each span element

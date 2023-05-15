@@ -12,7 +12,8 @@ function expandSelection(parent) {
     let queryString = window.location.search;
     let params = new URLSearchParams(queryString);
     let id = params.get('expand')
-    let element = parent.getElementById(id)
+    let element = document.getElementById(`sidenav-li-${id}`)
+    if(!element) return
     element.classList.add('selected')
     expandHeirarchy(element, parent)
     element.scrollIntoView();
@@ -24,7 +25,7 @@ function createTree(parent, data) {
   parent.appendChild(ul);
   data.forEach((item) => {
     const li = document.createElement("li");
-    li.setAttribute("id", id++)
+    li.setAttribute("id", `sidenav-li-${id++}`)
     ul.appendChild(li);
     const anchor = document.createElement("a");
     const span = document.createElement("span");
@@ -33,12 +34,14 @@ function createTree(parent, data) {
     anchor.textContent = item.displayName;
     const siteURL = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
     if (item.url) {
+      let navURL = `${siteURL}/${item.url}`
       anchor.setAttribute(
         "href",
-        `${siteURL}/${item.url}`
+        navURL
       );
-      anchor.addEventListener('click', () => {
-        onClick(id - 1)
+      anchor.addEventListener('click', (event) => {
+        event.preventDefault()
+        onClick(id - 1, navURL)
       })
     }
     li.classList.add("sidenav-list-item");
@@ -56,11 +59,10 @@ function createTree(parent, data) {
   });
 }
 
-function onClick(id) {
-    let queryString = window.location.search;
-    let params = new URLSearchParams(queryString);
-    params.set('expand', id);
-    window.location.search = params.toString();
+function onClick(id, navURL) {
+    const url = new URL(navURL);
+    url.searchParams.set("expand", id); // set the query parameter
+    window.location.href = url.toString(); // navigate
 }
 
 // Get the treeview element and create the tree

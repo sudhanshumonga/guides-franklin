@@ -5,7 +5,7 @@ const isDesktop = window.matchMedia('(min-width: 900px)');
 
 function migrateTree() {
     const treeUl = document.getElementsByClassName("tree")[0];
-    document.removeChild(treeUl)
+    treeUl.remove()
     if(!isDesktop.matches) { //move the tree to header nav-sections
         const headerNav = document.getElementsByClassName("nav-sections")[0];
         headerNav.appendChild(treeUl)

@@ -155,14 +155,14 @@ export default async function decorate(block) {
     nav.setAttribute('aria-expanded', 'false');
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, isDesktop.matches);
-    migrateTree()
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
-    isDesktop.addEventListener('change', () => migrateTree());
 
     decorateIcons(nav);
     const navWrapper = document.createElement('div');
     navWrapper.className = 'nav-wrapper';
     navWrapper.append(nav);
     block.append(navWrapper);
+    migrateTree()
+    isDesktop.addEventListener('change', () => migrateTree());
   }
 }

@@ -142,7 +142,7 @@ export default async function decorate(block) {
     navWrapper.className = 'nav-wrapper';
     navWrapper.append(nav);
     block.append(navWrapper);
-    migrateTree()
-    isDesktop.addEventListener('change', () => migrateTree());
+    migrateTree(isDesktop)
+    isDesktop.addEventListener('change', () => migrateTree(isDesktop));
   }
 }

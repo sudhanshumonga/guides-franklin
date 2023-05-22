@@ -73,8 +73,8 @@ function onClick(id, navURL) {
 // Get the treeview element and create the tree
 const treeview = document.getElementsByClassName("sidenav")[0];
 createTree(treeview, treeData);
-migrateTree()
-isDesktop.addEventListener('change', () => migrateTree())
+migrateTree(isDesktop)
+isDesktop.addEventListener('change', () => migrateTree(isDesktop))
 expandSelection(treeview)
 
 // Add click event listener to each span element

@@ -1,8 +1,8 @@
 /**
  * Migrates the tree view of TOC from left panel to hamburger menu, or vice versa based on the media (desktop/mobile)
- * @param {Element} block The footer block element
+ * @param {MediaQueryList} isDesktop the window.matchMedia object
  */
-export function migrateTree() {
+export function migrateTree(isDesktop) {
     if(!isDesktop.matches) { //move the tree to header nav-sections: mobile view
         const treeUlParent = document.querySelector(".sidenav.block");
         if(treeUlParent) {

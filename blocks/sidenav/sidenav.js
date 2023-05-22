@@ -1,6 +1,20 @@
 import treeData from "./sidenav_data.js";
 let id = 0
 
+const isDesktop = window.matchMedia('(min-width: 900px)');
+
+function migrateTree() {
+    const treeUl = document.getElementsByClassName("tree")[0];
+    document.removeChild(treeUl)
+    if(!isDesktop.matches) { //move the tree to header nav-sections
+        const headerNav = document.getElementsByClassName("nav-sections")[0];
+        headerNav.appendChild(treeUl)
+    } else {
+        const sidenavBlock = document.querySelector(".sidenav.block")[0];
+        sidenavBlock.appendChild(treeUl)
+    }
+}
+
 function expandHeirarchy(element, root) {
     if(element === root) return
     let parent = element.parentElement
@@ -70,6 +84,8 @@ function onClick(id, navURL) {
 // Get the treeview element and create the tree
 const treeview = document.getElementsByClassName("sidenav")[0];
 createTree(treeview, treeData);
+migrateTree()
+isDesktop.addEventListener('change', () => migrateTree())
 expandSelection(treeview)
 
 // Add click event listener to each span element

@@ -169,7 +169,6 @@ header nav .nav-sections {
 
 nav .nav-sections h3 {
   margin: 0;
-  height: 100%;
   line-height: var(--nav-height);
 }
 

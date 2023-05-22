@@ -1,5 +1,12 @@
 .sidenav-container {
+    display: none;
     background: aliceblue;
+}
+
+@media (min-width: 900px) {
+    .sidenav-container {
+      display: block;
+    }
 }
 
 .sidenav .sidenav-list-item.selected {

@@ -1,5 +1,7 @@
 .minitoc-list {
     list-style: none;
+    font-size: 10pt;
+    padding: 0;
 }
 
 .minitoc-level-1 {

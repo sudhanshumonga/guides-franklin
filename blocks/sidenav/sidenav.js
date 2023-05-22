@@ -6,25 +6,28 @@ const isDesktop = window.matchMedia('(min-width: 900px)');
 function migrateTree() {
     if(!isDesktop.matches) { //move the tree to header nav-sections: mobile view
         const treeUlParent = document.querySelector(".sidenav.block");
-        const treeUl = treeUlParent.querySelector('.tree')
-        if(treeUl) {
-            const headerNav = document.getElementsByClassName("nav-sections")[0];
-            if(headerNav) {
-                treeUl.remove()
-                headerNav.appendChild(treeUl)
+        if(treeUlParent) {
+            const treeUl = treeUlParent.querySelector('.tree')
+            if(treeUl) {
+                const headerNav = document.getElementsByClassName("nav-sections")[0];
+                if(headerNav) {
+                    treeUl.remove()
+                    headerNav.appendChild(treeUl)
+                }
             }
         }
     } else { // desktop view
         const treeUlParent = document.querySelector(".nav-sections");
-        const treeUl = treeUlParent.querySelector('.tree')
-        if(treeUl) {
-            const headerNav = document.querySelector(".sidenav.block");
-            if(headerNav) {
-                treeUl.remove()
-                headerNav.appendChild(treeUl)
+        if(treeUlParent) {
+            const treeUl = treeUlParent.querySelector('.tree')
+            if(treeUl) {
+                const headerNav = document.querySelector(".sidenav.block");
+                if(headerNav) {
+                    treeUl.remove()
+                    headerNav.appendChild(treeUl)
+                }
             }
         }
-
     }
 }
 

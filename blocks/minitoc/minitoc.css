@@ -2,23 +2,30 @@
     list-style: none;
     font-size: 10pt;
     padding: 0;
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .minitoc-list {
+      display: block;
+    }
 }
 
 .minitoc-level-1 {
     margin-left: 0;
 }
 .minitoc-level-2 {
-    margin-left: 0.5rem;
+    margin-left: 0.75rem;
 }
 .minitoc-level-3 {
-    margin-left: 1rem;
+    margin-left: 2.25rem;
 }
 .minitoc-level-4 {
-    margin-left: 1.5rem;
+    margin-left: 3rem;
 }
 .minitoc-level-5 {
-    margin-left: 2rem ;
+    margin-left: 3.75rem ;
 }
 .minitoc-level-6 {
-    margin-left: 2.5rem;
+    margin-left: 4.5rem;
 }

@@ -10,7 +10,7 @@ function migrateTree() {
         const headerNav = document.getElementsByClassName("nav-sections")[0];
         headerNav.appendChild(treeUl)
     } else {
-        const sidenavBlock = document.querySelector(".sidenav.block")[0];
+        const sidenavBlock = document.querySelector(".sidenav.block");
         sidenavBlock.appendChild(treeUl)
     }
 }

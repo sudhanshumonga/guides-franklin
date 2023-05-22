@@ -4,14 +4,23 @@ let id = 0
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
 function migrateTree() {
-    const treeUl = document.getElementsByClassName("tree")[0];
-    treeUl.remove()
-    if(!isDesktop.matches) { //move the tree to header nav-sections
-        const headerNav = document.getElementsByClassName("nav-sections")[0];
-        headerNav.appendChild(treeUl)
-    } else {
-        const sidenavBlock = document.querySelector(".sidenav.block");
-        sidenavBlock.appendChild(treeUl)
+    if(!isDesktop.matches) { //move the tree to header nav-sections: mobile view
+        const treeUlParent = document.querySelector(".sidenav.block");
+        const treeUl = treeUlParent.querySelector('.tree')
+        if(treeUl) {
+            treeUl.remove()
+            const headerNav = document.getElementsByClassName("nav-sections")[0];
+            headerNav.appendChild(treeUl)
+        }
+    } else { // desktop view
+        const treeUlParent = document.querySelector(".nav-sections");
+        const treeUl = treeUlParent.querySelector('.tree')
+        if(treeUl) {
+            treeUl.remove()
+            const headerNav = document.querySelector(".sidenav.block");
+            headerNav.appendChild(treeUl)
+        }
+
     }
 }
 

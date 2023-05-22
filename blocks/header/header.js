@@ -3,6 +3,27 @@ import { getMetadata, decorateIcons } from '../../scripts/lib-franklin.js';
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
+function migrateTree() {
+  if(!isDesktop.matches) { //move the tree to header nav-sections: mobile view
+      const treeUlParent = document.querySelector(".sidenav.block");
+      const treeUl = treeUlParent.querySelector('.tree')
+      if(treeUl) {
+          treeUl.remove()
+          const headerNav = document.getElementsByClassName("nav-sections")[0];
+          headerNav.appendChild(treeUl)
+      }
+  } else { // desktop view
+      const treeUlParent = document.querySelector(".nav-sections");
+      const treeUl = treeUlParent.querySelector('.tree')
+      if(treeUl) {
+          treeUl.remove()
+          const headerNav = document.querySelector(".sidenav.block");
+          headerNav.appendChild(treeUl)
+      }
+
+  }
+}
+
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
@@ -134,7 +155,9 @@ export default async function decorate(block) {
     nav.setAttribute('aria-expanded', 'false');
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, isDesktop.matches);
+    migrateTree()
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+    isDesktop.addEventListener('change', () => migrateTree());
 
     decorateIcons(nav);
     const navWrapper = document.createElement('div');

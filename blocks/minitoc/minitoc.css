@@ -1,12 +1,15 @@
+.minitoc {
+    display: none;
+}
+
 .minitoc-list {
     list-style: none;
     font-size: 10pt;
     padding: 0;
-    display: none;
 }
 
 @media (min-width: 900px) {
-    .minitoc-list {
+    .minitoc {
       display: block;
     }
 }

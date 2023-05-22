@@ -140,6 +140,8 @@ a:hover {
 main {
   height: calc(100% - 5rem);
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   flex-direction: row;
 }
 
@@ -235,6 +237,10 @@ main img {
 main .section {
   overflow: auto;
   padding: 1rem;
+}
+
+main .section:empty {
+  display: none;
 }
 
 @media (min-width: 600px) {

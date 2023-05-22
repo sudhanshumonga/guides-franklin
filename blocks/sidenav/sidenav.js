@@ -8,9 +8,9 @@ function migrateTree() {
         const treeUlParent = document.querySelector(".sidenav.block");
         const treeUl = treeUlParent.querySelector('.tree')
         if(treeUl) {
-            treeUl.remove()
             const headerNav = document.getElementsByClassName("nav-sections")[0];
             if(headerNav) {
+                treeUl.remove()
                 headerNav.appendChild(treeUl)
             }
         }
@@ -18,9 +18,9 @@ function migrateTree() {
         const treeUlParent = document.querySelector(".nav-sections");
         const treeUl = treeUlParent.querySelector('.tree')
         if(treeUl) {
-            treeUl.remove()
             const headerNav = document.querySelector(".sidenav.block");
             if(headerNav) {
+                treeUl.remove()
                 headerNav.appendChild(treeUl)
             }
         }

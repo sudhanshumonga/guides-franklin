@@ -10,7 +10,9 @@ function migrateTree() {
         if(treeUl) {
             treeUl.remove()
             const headerNav = document.getElementsByClassName("nav-sections")[0];
-            headerNav.appendChild(treeUl)
+            if(headerNav) {
+                headerNav.appendChild(treeUl)
+            }
         }
     } else { // desktop view
         const treeUlParent = document.querySelector(".nav-sections");
@@ -18,7 +20,9 @@ function migrateTree() {
         if(treeUl) {
             treeUl.remove()
             const headerNav = document.querySelector(".sidenav.block");
-            headerNav.appendChild(treeUl)
+            if(headerNav) {
+                headerNav.appendChild(treeUl)
+            }
         }
 
     }

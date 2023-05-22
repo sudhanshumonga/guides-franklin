@@ -1,6 +1,6 @@
 .sidenav-container {
     display: none;
-    background: aliceblue;
+    background: var(--sidenav-bg-color);
 }
 
 @media (min-width: 900px) {

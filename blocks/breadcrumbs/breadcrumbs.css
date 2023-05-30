@@ -1,8 +1,19 @@
+.breadcrumbs {
+    font-size: 0.85rem;
+}
 .breadcrumbs > div {
     display: flex;
-  }
+}
 
 .breadcrumbs > div > div:not(:last-child)::after {
     content: "/";
     margin: 0 5px;
+}
+
+.breadcrumbs > div > div:not(:last-child) {
+    color: var(--brdcrmb-secondary-color);
+}
+
+.breadcrumbs > div > div:last-child {
+    color: var(--brdcrmb-primary-color);
 }

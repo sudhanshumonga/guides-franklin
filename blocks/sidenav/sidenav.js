@@ -39,7 +39,7 @@ function createTree(parent, data) {
     anchor.setAttribute('data-li-id', _id)
     const siteURL = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
     if (item.url) {
-      let navURL = `${siteURL}/${item.url}`
+      let navURL = new URL(item.url, siteURL).href
       anchor.setAttribute(
         "href",
         navURL

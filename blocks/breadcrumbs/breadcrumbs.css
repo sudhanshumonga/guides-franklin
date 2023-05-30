@@ -1,0 +1,8 @@
+.breadcrumbs > div {
+    display: flex;
+  }
+
+.breadcrumbs > div > div:not(:last-child)::after {
+    content: "/";
+    margin: 0 5px;
+}

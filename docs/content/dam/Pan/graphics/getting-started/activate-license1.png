@@ -10,93 +10,93 @@
       0 TIMER_START{Request Processing}
       4 COMMENT timer_end format is {&lt;elapsed microseconds&gt;,&lt;timer name&gt;} &lt;optional message&gt;
      11 LOG Method=GET, PathInfo=null
-     15 TIMER_START{handleSecurity}
-   2567 TIMER_END{2550,handleSecurity} authenticator org.apache.sling.auth.core.impl.SlingAuthenticator@70625383 returns true
-   3162 TIMER_START{ResourceResolution}
-   3584 TIMER_END{418,ResourceResolution} URI=/content/dam/Pan/graphics/getting-started/activate_license1.png resolves to Resource=NonExistingResource, path=/content/dam/Pan/graphics/getting-started/activate_license1.png
-   3593 LOG Resource Path Info: SlingRequestPathInfo: path=&apos;/content/dam/Pan/graphics/getting-started/activate_license1.png&apos;, selectorString=&apos;null&apos;, extension=&apos;png&apos;, suffix=&apos;null&apos;
-   3595 TIMER_START{ServletResolution}
-   3602 TIMER_START{resolveServlet(/content/dam/Pan/graphics/getting-started/activate_license1.png)}
-   4943 LOG {0}: no servlet found
-   4956 TIMER_END{1351,resolveServlet(/content/dam/Pan/graphics/getting-started/activate_license1.png)} Using servlet org.apache.sling.servlets.get.DefaultGetServlet
-   4963 TIMER_END{1365,ServletResolution} URI=/content/dam/Pan/graphics/getting-started/activate_license1.png handled by Servlet=org.apache.sling.servlets.get.DefaultGetServlet
-   4969 LOG Applying Requestfilters
-   4979 LOG Calling filter: com.adobe.granite.resourceresolverhelper.impl.ResourceResolverHelperImpl
-   4993 LOG Calling filter: org.apache.sling.security.impl.ContentDispositionFilter
-   5001 LOG Calling filter: com.adobe.granite.csrf.impl.CSRFFilter
-   5013 LOG Calling filter: org.apache.sling.i18n.impl.I18NFilter
-   5023 LOG Calling filter: com.adobe.granite.httpcache.impl.InnerCacheFilter
-   5035 LOG Calling filter: org.apache.sling.rewriter.impl.RewriterFilter
-   5042 LOG Calling filter: com.adobe.cq.history.impl.HistoryRequestFilter
-   5240 LOG Calling filter: com.day.cq.wcm.core.impl.WCMRequestFilter
-   5257 LOG Calling filter: com.adobe.cq.wcm.core.components.internal.servlets.CoreFormHandlingServlet
-   5265 LOG Calling filter: com.adobe.granite.optout.impl.OptOutFilter
-   5272 LOG Calling filter: com.day.cq.wcm.foundation.forms.impl.FormsHandlingServlet
-   5281 LOG Calling filter: com.adobe.cq.social.commons.cors.CORSAuthenticationFilter
-   5287 LOG Calling filter: org.apache.sling.engine.impl.debug.RequestProgressTrackerLogFilter
-   5295 LOG Calling filter: com.adobe.fmdita.sling.filters.UUIDConverterFilter
-   5303 LOG Calling filter: com.adobe.fmdita.loggers.CorrelationIdInjector
-   5323 LOG Calling filter: com.adobe.aem.dxml.tragopan.core.filters.LoggingFilter
-   5331 LOG Calling filter: com.adobe.dxml.aem.components.core.filters.LoggingFilter
-   5338 LOG Calling filter: com.day.cq.wcm.mobile.core.impl.redirect.RedirectFilter
-   5344 LOG Calling filter: com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl
-   5438 LOG Calling filter: com.adobe.granite.rest.assets.impl.AssetContentDispositionFilter
-   5445 LOG Calling filter: com.adobe.granite.requests.logging.impl.RequestLoggerImpl
-   5462 LOG Calling filter: com.adobe.granite.rest.impl.servlet.ApiResourceFilter
-   5474 LOG Calling filter: com.adobe.cq.social.ugcbase.security.impl.SaferSlingPostServlet
-   5481 LOG Calling filter: com.day.cq.wcm.core.impl.warp.TimeWarpFilter
-   5490 LOG Calling filter: com.adobe.cq.dam.webdav.impl.io.DamWebdavRequestFilter
-   5502 LOG Calling filter: com.day.cq.dam.core.impl.servlet.ActivityRecordHandler
-   5512 LOG Calling filter: com.day.cq.dam.core.impl.servlet.DamContentDispositionFilter
-   5528 LOG Calling filter: com.day.cq.dam.core.impl.assetlinkshare.AdhocAssetShareAuthHandler
-   5538 LOG Applying Componentfilters
-   5545 LOG Calling filter: com.day.cq.personalization.impl.TargetComponentFilter
-   5551 LOG Calling filter: com.day.cq.wcm.core.impl.page.PageLockFilter
-   5559 LOG Calling filter: com.day.cq.wcm.core.impl.WCMComponentFilter
-   5598 LOG Calling filter: com.day.cq.wcm.core.impl.WCMDebugFilter
-   5616 TIMER_START{org.apache.sling.servlets.get.DefaultGetServlet#0}
-   5978 TIMER_END{359,org.apache.sling.servlets.get.DefaultGetServlet#0}
-   6293 LOG Filter timing: filter=com.day.cq.wcm.core.impl.WCMDebugFilter, inner=407, total=477, outer=70
-   6303 LOG Filter timing: filter=com.adobe.dxml.flattening.filter.FlatteningFilter, inner=477, total=484, outer=7
-   6313 LOG Filter timing: filter=com.day.cq.wcm.core.impl.WCMComponentFilter, inner=484, total=608, outer=124
-   6321 LOG Filter timing: filter=com.day.cq.wcm.core.impl.page.PageLockFilter, inner=608, total=659, outer=51
-   7981 LOG Filter timing: filter=com.day.cq.dam.core.impl.assetlinkshare.AdhocAssetShareAuthHandler, inner=869, total=927, outer=58
-   7990 LOG Filter timing: filter=com.day.cq.dam.core.impl.servlet.DamContentDispositionFilter, inner=927, total=987, outer=60
-   7998 LOG Filter timing: filter=com.day.cq.dam.core.impl.servlet.ActivityRecordHandler, inner=987, total=1055, outer=68
-   8007 LOG Filter timing: filter=com.adobe.cq.dtm.reactor.impl.servlets.ClientLibraryFilter, inner=1055, total=1061, outer=6
-   8015 LOG Filter timing: filter=com.adobe.cq.dam.webdav.impl.io.DamWebdavRequestFilter, inner=1061, total=1115, outer=54
-   8023 LOG Filter timing: filter=com.day.cq.wcm.core.impl.warp.TimeWarpFilter, inner=1115, total=1172, outer=57
-   8032 LOG Filter timing: filter=com.adobe.cq.social.ugcbase.security.impl.SaferSlingPostServlet, inner=1172, total=1226, outer=54
-   8041 LOG Filter timing: filter=com.adobe.cq.dtm.impl.servlets.DTMLibraryCompatibilityFilter, inner=1226, total=1232, outer=6
-   8049 LOG Filter timing: filter=com.adobe.granite.rest.impl.servlet.ApiResourceFilter, inner=1232, total=1293, outer=61
-   8058 LOG Filter timing: filter=com.adobe.granite.requests.logging.impl.RequestLoggerImpl, inner=1293, total=1454, outer=161
-   8066 LOG Filter timing: filter=com.adobe.granite.rest.assets.impl.AssetContentDispositionFilter, inner=1454, total=1523, outer=69
-   8074 LOG Filter timing: filter=com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl, inner=1523, total=1663, outer=140
-   8082 LOG Filter timing: filter=com.day.cq.wcm.mobile.core.impl.redirect.RedirectFilter, inner=1663, total=1735, outer=72
-   8090 LOG Filter timing: filter=com.adobe.dxml.aem.components.core.filters.LoggingFilter, inner=1735, total=1793, outer=58
-   8098 LOG Filter timing: filter=com.adobe.aem.dxml.tragopan.core.filters.LoggingFilter, inner=1793, total=1847, outer=54
-   8113 LOG Filter timing: filter=com.adobe.fmdita.loggers.CorrelationIdInjector, inner=1847, total=1928, outer=81
-   8122 LOG Filter timing: filter=com.adobe.fmdita.sling.filters.UUIDConverterFilter, inner=1928, total=1991, outer=63
-   8130 LOG Filter timing: filter=org.apache.sling.engine.impl.debug.RequestProgressTrackerLogFilter, inner=1991, total=2040, outer=49
-   8138 LOG Filter timing: filter=com.adobe.cq.social.commons.cors.CORSAuthenticationFilter, inner=2040, total=2092, outer=52
-   8146 LOG Filter timing: filter=com.day.cq.wcm.foundation.forms.impl.FormsHandlingServlet, inner=2092, total=2153, outer=61
-   8153 LOG Filter timing: filter=com.adobe.granite.optout.impl.OptOutFilter, inner=2153, total=2204, outer=51
-   8162 LOG Filter timing: filter=com.adobe.cq.wcm.core.components.internal.servlets.CoreFormHandlingServlet, inner=2204, total=2271, outer=67
-   8169 LOG Filter timing: filter=com.day.cq.wcm.core.impl.WCMRequestFilter, inner=2271, total=2337, outer=66
-   8178 LOG Filter timing: filter=com.adobe.cq.history.impl.HistoryRequestFilter, inner=2337, total=2578, outer=241
-   8187 LOG Filter timing: filter=org.apache.sling.rewriter.impl.RewriterFilter, inner=2578, total=2634, outer=56
-   8195 LOG Filter timing: filter=com.adobe.granite.httpcache.impl.InnerCacheFilter, inner=2634, total=2702, outer=68
-   8203 LOG Filter timing: filter=org.apache.sling.i18n.impl.I18NFilter, inner=2702, total=2772, outer=70
-   8211 LOG Filter timing: filter=com.adobe.granite.csrf.impl.CSRFFilter, inner=2772, total=2850, outer=78
-   8218 LOG Filter timing: filter=org.apache.sling.security.impl.ContentDispositionFilter, inner=2850, total=2911, outer=61
-   8227 LOG Filter timing: filter=org.apache.sling.distribution.servlet.DistributionAgentCreationFilter, inner=2911, total=2918, outer=7
-   8402 LOG Applying Error filters
-   8410 LOG Calling filter: org.apache.sling.i18n.impl.I18NFilter
-   8416 LOG Calling filter: org.apache.sling.rewriter.impl.RewriterFilter
-   8448 TIMER_START{handleError:status=404}
-   8502 TIMER_END{51,handleError:status=404} Using handler /libs/sling/servlet/errorhandler/404.jsp
-  10356 LOG Found processor for post processing ProcessorConfiguration: {contentTypes=[text/html], paths=[/content], order=1000, active=true, valid=true, processErrorResponse=true, pipeline=(generator=Config(type=htmlparser, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/generator-htmlparser: { jcr:primaryType = nt:unstructured, includeTags = [A]}}], values={jcr:primaryType=nt:unstructured, includeTags=[Ljava.lang.String;@7de45ea4}]), transformers=(Config(type=fmdita-crossmap-link-writer, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/transformer-fmdita-crossmap-link-writer: { jcr:primaryType = nt:unstructured}}], values={jcr:primaryType=nt:unstructured}]), Config(type=linkchecker, config={}), Config(type=mobile, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/transformer-mobile: { jcr:primaryType = nt:unstructured, component-optional = true}}], values={jcr:primaryType=nt:unstructured, component-optional=true}]), Config(type=mobiledebug, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/transformer-mobiledebug: { jcr:primaryType = nt:unstructured, component-optional = true}}], values={jcr:primaryType=nt:unstructured, component-optional=true}]), Config(type=contentsync, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/transformer-contentsync: { jcr:primaryType = nt:unstructured, component-optional = true}}], values={jcr:primaryType=nt:unstructured, component-optional=true}]), serializer=Config(type=htmlwriter, config={}))}
-  10539 TIMER_END{10535,Request Processing} Dumping SlingRequestProgressTracker Entries
+     13 TIMER_START{handleSecurity}
+   2822 TIMER_END{2805,handleSecurity} authenticator org.apache.sling.auth.core.impl.SlingAuthenticator@70625383 returns true
+   3245 TIMER_START{ResourceResolution}
+   3614 TIMER_END{365,ResourceResolution} URI=/content/dam/Pan/graphics/getting-started/activate_license1.png resolves to Resource=NonExistingResource, path=/content/dam/Pan/graphics/getting-started/activate_license1.png
+   3619 LOG Resource Path Info: SlingRequestPathInfo: path=&apos;/content/dam/Pan/graphics/getting-started/activate_license1.png&apos;, selectorString=&apos;null&apos;, extension=&apos;png&apos;, suffix=&apos;null&apos;
+   3621 TIMER_START{ServletResolution}
+   3624 TIMER_START{resolveServlet(/content/dam/Pan/graphics/getting-started/activate_license1.png)}
+   4956 LOG {0}: no servlet found
+   4967 TIMER_END{1340,resolveServlet(/content/dam/Pan/graphics/getting-started/activate_license1.png)} Using servlet org.apache.sling.servlets.get.DefaultGetServlet
+   4974 TIMER_END{1351,ServletResolution} URI=/content/dam/Pan/graphics/getting-started/activate_license1.png handled by Servlet=org.apache.sling.servlets.get.DefaultGetServlet
+   4977 LOG Applying Requestfilters
+   4984 LOG Calling filter: com.adobe.granite.resourceresolverhelper.impl.ResourceResolverHelperImpl
+   4994 LOG Calling filter: org.apache.sling.security.impl.ContentDispositionFilter
+   4999 LOG Calling filter: com.adobe.granite.csrf.impl.CSRFFilter
+   5007 LOG Calling filter: org.apache.sling.i18n.impl.I18NFilter
+   5013 LOG Calling filter: com.adobe.granite.httpcache.impl.InnerCacheFilter
+   5020 LOG Calling filter: org.apache.sling.rewriter.impl.RewriterFilter
+   5026 LOG Calling filter: com.adobe.cq.history.impl.HistoryRequestFilter
+   5197 LOG Calling filter: com.day.cq.wcm.core.impl.WCMRequestFilter
+   5209 LOG Calling filter: com.adobe.cq.wcm.core.components.internal.servlets.CoreFormHandlingServlet
+   5215 LOG Calling filter: com.adobe.granite.optout.impl.OptOutFilter
+   5221 LOG Calling filter: com.day.cq.wcm.foundation.forms.impl.FormsHandlingServlet
+   5226 LOG Calling filter: com.adobe.cq.social.commons.cors.CORSAuthenticationFilter
+   5231 LOG Calling filter: org.apache.sling.engine.impl.debug.RequestProgressTrackerLogFilter
+   5236 LOG Calling filter: com.adobe.fmdita.sling.filters.UUIDConverterFilter
+   5241 LOG Calling filter: com.adobe.fmdita.loggers.CorrelationIdInjector
+   5252 LOG Calling filter: com.adobe.aem.dxml.tragopan.core.filters.LoggingFilter
+   5258 LOG Calling filter: com.adobe.dxml.aem.components.core.filters.LoggingFilter
+   5263 LOG Calling filter: com.day.cq.wcm.mobile.core.impl.redirect.RedirectFilter
+   5268 LOG Calling filter: com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl
+   5334 LOG Calling filter: com.adobe.granite.rest.assets.impl.AssetContentDispositionFilter
+   5340 LOG Calling filter: com.adobe.granite.requests.logging.impl.RequestLoggerImpl
+   5361 LOG Calling filter: com.adobe.granite.rest.impl.servlet.ApiResourceFilter
+   5370 LOG Calling filter: com.adobe.cq.social.ugcbase.security.impl.SaferSlingPostServlet
+   5380 LOG Calling filter: com.day.cq.wcm.core.impl.warp.TimeWarpFilter
+   5388 LOG Calling filter: com.adobe.cq.dam.webdav.impl.io.DamWebdavRequestFilter
+   5401 LOG Calling filter: com.day.cq.dam.core.impl.servlet.ActivityRecordHandler
+   5411 LOG Calling filter: com.day.cq.dam.core.impl.servlet.DamContentDispositionFilter
+   5432 LOG Calling filter: com.day.cq.dam.core.impl.assetlinkshare.AdhocAssetShareAuthHandler
+   5438 LOG Applying Componentfilters
+   5443 LOG Calling filter: com.day.cq.personalization.impl.TargetComponentFilter
+   5449 LOG Calling filter: com.day.cq.wcm.core.impl.page.PageLockFilter
+   5455 LOG Calling filter: com.day.cq.wcm.core.impl.WCMComponentFilter
+   5476 LOG Calling filter: com.day.cq.wcm.core.impl.WCMDebugFilter
+   5489 TIMER_START{org.apache.sling.servlets.get.DefaultGetServlet#0}
+   5771 TIMER_END{278,org.apache.sling.servlets.get.DefaultGetServlet#0}
+   6250 LOG Filter timing: filter=com.day.cq.wcm.core.impl.WCMDebugFilter, inner=434, total=514, outer=80
+   6260 LOG Filter timing: filter=com.adobe.dxml.flattening.filter.FlatteningFilter, inner=514, total=520, outer=6
+   6270 LOG Filter timing: filter=com.day.cq.wcm.core.impl.WCMComponentFilter, inner=520, total=644, outer=124
+   6278 LOG Filter timing: filter=com.day.cq.wcm.core.impl.page.PageLockFilter, inner=644, total=721, outer=77
+   8038 LOG Filter timing: filter=com.day.cq.dam.core.impl.assetlinkshare.AdhocAssetShareAuthHandler, inner=960, total=1031, outer=71
+   8048 LOG Filter timing: filter=com.day.cq.dam.core.impl.servlet.DamContentDispositionFilter, inner=1031, total=1106, outer=75
+   8060 LOG Filter timing: filter=com.day.cq.dam.core.impl.servlet.ActivityRecordHandler, inner=1106, total=1165, outer=59
+   8073 LOG Filter timing: filter=com.adobe.cq.dtm.reactor.impl.servlets.ClientLibraryFilter, inner=1165, total=1170, outer=5
+   8082 LOG Filter timing: filter=com.adobe.cq.dam.webdav.impl.io.DamWebdavRequestFilter, inner=1170, total=1238, outer=68
+   8090 LOG Filter timing: filter=com.day.cq.wcm.core.impl.warp.TimeWarpFilter, inner=1238, total=1317, outer=79
+   8098 LOG Filter timing: filter=com.adobe.cq.social.ugcbase.security.impl.SaferSlingPostServlet, inner=1317, total=1373, outer=56
+   8106 LOG Filter timing: filter=com.adobe.cq.dtm.impl.servlets.DTMLibraryCompatibilityFilter, inner=1373, total=1378, outer=5
+   8114 LOG Filter timing: filter=com.adobe.granite.rest.impl.servlet.ApiResourceFilter, inner=1378, total=1430, outer=52
+   8122 LOG Filter timing: filter=com.adobe.granite.requests.logging.impl.RequestLoggerImpl, inner=1430, total=1591, outer=161
+   8131 LOG Filter timing: filter=com.adobe.granite.rest.assets.impl.AssetContentDispositionFilter, inner=1591, total=1676, outer=85
+   8139 LOG Filter timing: filter=com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl, inner=1676, total=1791, outer=115
+   8147 LOG Filter timing: filter=com.day.cq.wcm.mobile.core.impl.redirect.RedirectFilter, inner=1791, total=1851, outer=60
+   8155 LOG Filter timing: filter=com.adobe.dxml.aem.components.core.filters.LoggingFilter, inner=1851, total=1903, outer=52
+   8163 LOG Filter timing: filter=com.adobe.aem.dxml.tragopan.core.filters.LoggingFilter, inner=1903, total=1974, outer=71
+   8171 LOG Filter timing: filter=com.adobe.fmdita.loggers.CorrelationIdInjector, inner=1974, total=2041, outer=67
+   8179 LOG Filter timing: filter=com.adobe.fmdita.sling.filters.UUIDConverterFilter, inner=2041, total=2101, outer=60
+   8193 LOG Filter timing: filter=org.apache.sling.engine.impl.debug.RequestProgressTrackerLogFilter, inner=2101, total=2152, outer=51
+   8202 LOG Filter timing: filter=com.adobe.cq.social.commons.cors.CORSAuthenticationFilter, inner=2152, total=2207, outer=55
+   8210 LOG Filter timing: filter=com.day.cq.wcm.foundation.forms.impl.FormsHandlingServlet, inner=2207, total=2268, outer=61
+   8218 LOG Filter timing: filter=com.adobe.granite.optout.impl.OptOutFilter, inner=2268, total=2318, outer=50
+   8227 LOG Filter timing: filter=com.adobe.cq.wcm.core.components.internal.servlets.CoreFormHandlingServlet, inner=2318, total=2386, outer=68
+   8234 LOG Filter timing: filter=com.day.cq.wcm.core.impl.WCMRequestFilter, inner=2386, total=2443, outer=57
+   8242 LOG Filter timing: filter=com.adobe.cq.history.impl.HistoryRequestFilter, inner=2443, total=2657, outer=214
+   8250 LOG Filter timing: filter=org.apache.sling.rewriter.impl.RewriterFilter, inner=2657, total=2715, outer=58
+   8258 LOG Filter timing: filter=com.adobe.granite.httpcache.impl.InnerCacheFilter, inner=2715, total=2779, outer=64
+   8267 LOG Filter timing: filter=org.apache.sling.i18n.impl.I18NFilter, inner=2779, total=2830, outer=51
+   8274 LOG Filter timing: filter=com.adobe.granite.csrf.impl.CSRFFilter, inner=2830, total=2895, outer=65
+   8282 LOG Filter timing: filter=org.apache.sling.security.impl.ContentDispositionFilter, inner=2895, total=2952, outer=57
+   8290 LOG Filter timing: filter=org.apache.sling.distribution.servlet.DistributionAgentCreationFilter, inner=2952, total=2958, outer=6
+   8438 LOG Applying Error filters
+   8446 LOG Calling filter: org.apache.sling.i18n.impl.I18NFilter
+   8453 LOG Calling filter: org.apache.sling.rewriter.impl.RewriterFilter
+   8495 TIMER_START{handleError:status=404}
+   8545 TIMER_END{47,handleError:status=404} Using handler /libs/sling/servlet/errorhandler/404.jsp
+  10064 LOG Found processor for post processing ProcessorConfiguration: {contentTypes=[text/html], paths=[/content], order=1000, active=true, valid=true, processErrorResponse=true, pipeline=(generator=Config(type=htmlparser, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/generator-htmlparser: { jcr:primaryType = nt:unstructured, includeTags = [A]}}], values={jcr:primaryType=nt:unstructured, includeTags=[Ljava.lang.String;@7de45ea4}]), transformers=(Config(type=fmdita-crossmap-link-writer, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/transformer-fmdita-crossmap-link-writer: { jcr:primaryType = nt:unstructured}}], values={jcr:primaryType=nt:unstructured}]), Config(type=linkchecker, config={}), Config(type=mobile, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/transformer-mobile: { jcr:primaryType = nt:unstructured, component-optional = true}}], values={jcr:primaryType=nt:unstructured, component-optional=true}]), Config(type=mobiledebug, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/transformer-mobiledebug: { jcr:primaryType = nt:unstructured, component-optional = true}}], values={jcr:primaryType=nt:unstructured, component-optional=true}]), Config(type=contentsync, config=JcrPropertyMap [node=Node[NodeDelegate{tree=/apps/fmdita/config/rewriter/fmdita-crossmap-link-patcher/transformer-contentsync: { jcr:primaryType = nt:unstructured, component-optional = true}}], values={jcr:primaryType=nt:unstructured, component-optional=true}]), serializer=Config(type=htmlwriter, config={}))}
+  10198 TIMER_END{10194,Request Processing} Dumping SlingRequestProgressTracker Entries
 </pre>
 
         

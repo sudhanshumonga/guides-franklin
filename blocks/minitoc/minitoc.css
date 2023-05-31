@@ -8,12 +8,18 @@
     padding: 0;
 }
 
+.minitoc-container {
+    padding: 0rem;
+}
+
+
 @media (min-width: 900px) {
     .minitoc {
       display: block;
     }
     .minitoc-container {
         width: 15rem;
+        padding: 1rem;
     }
     
 }

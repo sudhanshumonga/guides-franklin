@@ -136,6 +136,11 @@ a:any-link {
   text-decoration: none;
 }
 
+main > div:nth-child(2) {
+  width: calc(100% - 35rem);
+}
+
+
 a:hover {
   text-decoration: underline;
   color: var(--link-hover-color);

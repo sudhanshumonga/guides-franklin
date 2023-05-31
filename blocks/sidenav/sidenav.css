@@ -1,5 +1,6 @@
 .sidenav-container {
     display: none;
+    width: 20rem;
     background: var(--sidenav-bg-color);
 }
 

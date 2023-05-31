@@ -2,6 +2,10 @@
     display: none;
 }
 
+.minitoc-container {
+    width: 15rem;
+}
+
 .minitoc-list {
     list-style: none;
     font-size: 10pt;

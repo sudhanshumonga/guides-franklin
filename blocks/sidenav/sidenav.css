@@ -51,6 +51,7 @@ ul.tree li.closed .chevron-icon-span {
 }
 
 ul.tree .chevron-icon-span {
+    background-image: url(./ch-right.svg);
     width: 10px;
     height: 10px;
     min-width: 10px;

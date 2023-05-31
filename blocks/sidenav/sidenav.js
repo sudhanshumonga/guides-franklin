@@ -34,7 +34,6 @@ function createTree(parent, data) {
     const anchor = document.createElement("a");
     const span = document.createElement("span");
     span.classList.add('chevron-icon-span')
-    span.textContent = '>'
     anchor.textContent = item.displayName;
     anchor.setAttribute('data-li-id', _id)
     const siteURL = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');

@@ -40,10 +40,10 @@ ul.tree li a {
     font-size: 1.125rem;
 }
 
-ul.tree li>a:hover {
+/* ul.tree li>a:hover {
     font-weight: 500;
     text-decoration: underline;
-}
+} */
 
 .chevron-text-wrapper {
     display: flex;

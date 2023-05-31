@@ -36,9 +36,12 @@ ul.tree li.closed>ul {
 
 ul.tree li>a {
     cursor: pointer;
+    color: #505050;
+    font-size: 1.125rem;
 }
 
 ul.tree li>a:hover {
+    font-weight: 500;
     text-decoration: underline;
 }
 

@@ -34,7 +34,7 @@ ul.tree li.closed>ul {
     display: none;
 }
 
-ul.tree li>a {
+ul.tree li a {
     cursor: pointer;
     color: #505050;
     font-size: 1.125rem;

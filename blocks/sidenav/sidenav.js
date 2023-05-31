@@ -36,6 +36,8 @@ function createTree(parent, data) {
     span.classList.add('chevron-icon-span')
     anchor.textContent = item.displayName;
     anchor.setAttribute('data-li-id', _id)
+    anchor.setAttribute('title', item.displayName)
+    anchor.setAttribute('aria-title', item.displayName)
     const siteURL = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
     if (item.url) {
       let navURL = new URL(item.url, siteURL).href

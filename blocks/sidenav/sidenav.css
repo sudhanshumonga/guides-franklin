@@ -51,14 +51,15 @@ ul.tree li.closed .chevron-icon-span {
 }
 
 ul.tree .chevron-icon-span {
+    height: 20px;
+    background-repeat: no-repeat;
     background-image: url(./ch-right.svg);
     width: 10px;
-    height: 10px;
     min-width: 10px;
     display: flex;
     border-radius: 50%;
     text-align: center;
-    line-height: 10px;
+    line-height: 20px;
     color: #000;
     margin-right: 0.5rem;
     font-weight: 800;

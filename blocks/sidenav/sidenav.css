@@ -39,6 +39,10 @@ ul.tree li a {
     color: #505050;
     font-size: 1.125rem;
     text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
 }
 
 ul.tree li a:hover {

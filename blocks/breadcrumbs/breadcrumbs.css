@@ -10,10 +10,10 @@
     margin: 0 5px;
 }
 
-.breadcrumbs > div > div:not(:last-child) {
+.breadcrumbs > div > div:not(:last-child) a {
     color: var(--brdcrmb-secondary-color);
 }
 
-.breadcrumbs > div > div:last-child {
+.breadcrumbs > div > div:last-child a {
     color: var(--brdcrmb-primary-color);
 }

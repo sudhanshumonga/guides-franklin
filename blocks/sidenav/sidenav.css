@@ -11,7 +11,7 @@
 }
 
 .sidenav-list-item.selected {
-    background: #caecfc;
+    background: var(--hover-bg-color);
 }
 
 ul.tree {

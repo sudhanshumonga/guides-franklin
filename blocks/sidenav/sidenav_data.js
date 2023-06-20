@@ -1,1 +1,1 @@
-export default [{"displayName":"Contacts","url":"/content/dam/guides-regression/TravelDITA/Contacts/contacts"}]
+export default [{"displayName":"contacts.xml","url":"/content/dam/guides-regression/TravelDITA/Contacts/contacts"}]

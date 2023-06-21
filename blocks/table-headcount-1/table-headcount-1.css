@@ -1,19 +1,19 @@
-.table-headcount-2 {
+.table-headcount-1 {
   display: table;
   width: 100%;
   border-collapse: collapse;
 }
 
-.table-headcount-2 > div {
+.table-headcount-1 > div {
   display: table-row;
 }
 
-.table-headcount-2 > div > div {
+.table-headcount-1 > div > div {
   display: table-cell;
   padding: 8px;
   border: 1px solid black;
 }
 
-.table-headcount-2 > div:first-child > div {
+.table-headcount-1 > div:first-child > div {
   font-weight: bold;
 }

@@ -17,5 +17,12 @@ footer .container {
 }
 
 footer .container > div {
-  display: flex;
+  display: block;
+}
+
+@media(min-width: 900px) {
+  footer .container > div {
+    display: flex;
+    justify-content: space-between;
+  }
 }

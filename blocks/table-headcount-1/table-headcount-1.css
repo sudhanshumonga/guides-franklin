@@ -16,4 +16,5 @@
 
 .table-headcount-1 > div:first-child > div {
   font-weight: bold;
+  background: var(--table-header-bg-color);
 }

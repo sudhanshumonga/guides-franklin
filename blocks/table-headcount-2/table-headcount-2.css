@@ -16,8 +16,10 @@
 
 .table-headcount-2 > div:nth-child(1) > div {
   font-weight: bold;
+  background: var(--table-header-bg-color);
 }
 
 .table-headcount-2 > div:nth-child(2) > div {
   font-weight: bold;
+  background: var(--table-header-bg-color);
 }

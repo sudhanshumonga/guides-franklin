@@ -37,7 +37,7 @@ function createTree(parent, data) {
     anchor.textContent = item.displayName;
     anchor.setAttribute('data-li-id', _id)
     anchor.setAttribute('title', item.displayName)
-    anchor.setAttribute('aria-title', item.displayName)
+    anchor.setAttribute('aria-label', item.displayName)
     const siteURL = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
     if (item.url) {
       let navURL = new URL(item.url, siteURL).href

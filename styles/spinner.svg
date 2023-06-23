@@ -22,17 +22,18 @@
     @keyframes dash {
       0% {
         stroke-dashoffset: 60;
+        transform: rotate(0deg);
       }
       50% {
         stroke-dashoffset: 0;
-        transform: rotate(135deg);
+        transform: rotate(180deg);
       }
       100% {
         stroke-dashoffset: -60;
-        transform: rotate(450deg);
+        transform: rotate(360deg);
       }
     }
   </style>
   
-  <circle class="loader-circle" cx="50%" cy="50%" r="40%" />
+  <circle class="loader-circle" cx="25" cy="25" r="20" />
 </svg>

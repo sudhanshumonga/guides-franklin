@@ -262,6 +262,7 @@ main .section:empty {
 
 header .spinner-wheel-suspense {
   background-image: url('./spinner.svg');
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 900px) {

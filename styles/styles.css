@@ -260,6 +260,10 @@ main .section:empty {
   }
 }
 
+header .spinner-wheel-suspense {
+  background-image: url('./spinner.svg');
+}
+
 @media (min-width: 900px) {
   .section > div {
     max-width: 1200px;

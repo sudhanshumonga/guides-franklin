@@ -577,10 +577,21 @@ export async function waitForLCP(lcpBlocks) {
  * @returns {Promise}
  */
 export function loadHeader(header) {
+  const spinner = document.createElement('span')
+  const text = document.createTextNode('Loading...')
+  spinner.appendChild(text)
+  spinner.classList.add('spinner-wheel-suspense')
+  spinner.style.width = '100%'
+  spinner.style.height = '100%'
+  spinner.style.position = 'absolute'
+  spinner.style.backgroundColor = 'red'
+  header.appendChild(spinner)
   const headerBlock = buildBlock('header', '');
   header.append(headerBlock);
   decorateBlock(headerBlock);
-  return loadBlock(headerBlock);
+  return loadBlock(headerBlock).then(() => {
+    spinner.remove()
+  });
 }
 
 /**

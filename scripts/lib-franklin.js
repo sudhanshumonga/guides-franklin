@@ -393,6 +393,8 @@ export async function loadBlock(block) {
   const status = block.dataset.blockStatus;
   if (status !== 'loading' && status !== 'loaded') {
     const spinner = document.createElement('span')
+    const text = document.createTextNode('Loading...')
+    spinner.appendChild(text)
     spinner.classList.add('spinner-wheel-suspense')
     spinner.style.width = '100%'
     spinner.style.height = '100%'

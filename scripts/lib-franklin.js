@@ -303,7 +303,7 @@ export function decorateSections(main) {
     wrappers.forEach((wrapper) => section.append(wrapper));
     section.classList.add('section');
     section.dataset.sectionStatus = 'initialized';
-    section.style.display = 'none';
+    // section.style.display = 'none';
 
     /* process section metadata */
     const sectionMeta = section.querySelector('div.section-metadata');
@@ -392,6 +392,13 @@ export function buildBlock(blockName, content) {
 export async function loadBlock(block) {
   const status = block.dataset.blockStatus;
   if (status !== 'loading' && status !== 'loaded') {
+    const spinner = document.createElement('span')
+    spinner.classList('spinner-wheel-suspense')
+    spinner.style.width = '100%'
+    spinner.style.height = '100%'
+    spinner.style.position = 'absolute'
+    spinner.style.backgroundColor = 'red'
+    block.appendChild(spinner)
     block.dataset.blockStatus = 'loading';
     const { blockName } = block.dataset;
     try {
@@ -412,7 +419,9 @@ export async function loadBlock(block) {
           resolve();
         })();
       });
-      await Promise.all([cssLoaded, decorationComplete]);
+      await Promise.all([cssLoaded, decorationComplete]).then(() => {
+        spinner.remove()
+      })
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(`failed to load block ${blockName}`, error);
@@ -619,7 +628,7 @@ export function setup() {
  * Auto initializiation.
  */
 function init() {
-  document.body.style.display = 'none';
+  // document.body.style.display = 'none';
   setup();
   sampleRUM('top');
 

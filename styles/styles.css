@@ -263,6 +263,7 @@ main .section:empty {
 header .spinner-wheel-suspense {
   background-image: url('./loader.gif');
   background-repeat: no-repeat;
+  background-size: 2rem 2rem;
 }
 
 @media (min-width: 900px) {

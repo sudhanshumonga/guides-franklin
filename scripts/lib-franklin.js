@@ -577,9 +577,9 @@ export function addLoadingToHeader(header) {
   spinner.appendChild(text)
   spinner.classList.add('spinner-wheel-suspense')
   spinner.style.width = '100%'
-  spinner.style.height = '100%'
+  spinner.style.height = '3rem'
   spinner.style.position = 'absolute'
-  spinner.style.backgroundColor = 'red'
+  spinner.style.backgroundColor = 'white'
   header.appendChild(spinner)
   return spinner
 } 

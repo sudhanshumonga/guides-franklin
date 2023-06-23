@@ -571,12 +571,7 @@ export async function waitForLCP(lcpBlocks) {
   });
 }
 
-/**
- * Loads a block named 'header' into header
- * @param {Element} header header element
- * @returns {Promise}
- */
-export function loadHeader(header) {
+export function addLoadingToHeader(header) {
   const spinner = document.createElement('span')
   const text = document.createTextNode('Loading...')
   spinner.appendChild(text)
@@ -586,12 +581,19 @@ export function loadHeader(header) {
   spinner.style.position = 'absolute'
   spinner.style.backgroundColor = 'red'
   header.appendChild(spinner)
+  return spinner
+} 
+
+/**
+ * Loads a block named 'header' into header
+ * @param {Element} header header element
+ * @returns {Promise}
+ */
+export function loadHeader(header) {
   const headerBlock = buildBlock('header', '');
   header.append(headerBlock);
   decorateBlock(headerBlock);
-  return loadBlock(headerBlock).then(() => {
-    spinner.remove()
-  });
+  return loadBlock(headerBlock)
 }
 
 /**

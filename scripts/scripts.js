@@ -3,7 +3,7 @@ import {
   buildBlock,
   loadHeader,
   loadFooter,
-  decorateButtons,
+  addLoadingToHeader,
   decorateIcons,
   decorateSections,
   decorateBlocks,
@@ -94,6 +94,7 @@ export function addFavIcon(href) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  const spinner = addLoadingToHeader(doc.querySelector('header'))
   const main = doc.querySelector('main');
   await loadBlocks(main);
 
@@ -101,7 +102,9 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
+  loadHeader(doc.querySelector('header')).then(() => {
+    spinner.remove()
+  });
   loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);

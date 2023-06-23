@@ -392,15 +392,6 @@ export function buildBlock(blockName, content) {
 export async function loadBlock(block) {
   const status = block.dataset.blockStatus;
   if (status !== 'loading' && status !== 'loaded') {
-    // const spinner = document.createElement('span')
-    // const text = document.createTextNode('Loading...')
-    // spinner.appendChild(text)
-    // spinner.classList.add('spinner-wheel-suspense')
-    // spinner.style.width = '100%'
-    // spinner.style.height = '100%'
-    // spinner.style.position = 'absolute'
-    // spinner.style.backgroundColor = 'red'
-    // block.appendChild(spinner)
     block.dataset.blockStatus = 'loading';
     const { blockName } = block.dataset;
     try {
@@ -421,9 +412,7 @@ export async function loadBlock(block) {
           resolve();
         })();
       });
-      await Promise.all([cssLoaded, decorationComplete]).then(() => {
-        spinner.remove()
-      })
+      await Promise.all([cssLoaded, decorationComplete])
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(`failed to load block ${blockName}`, error);

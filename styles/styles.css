@@ -265,6 +265,17 @@ main .section:empty {
     max-width: 1200px;
     margin: auto;
   }
+
+   /*different blocks css for very first load of style.css*/
+  .sidenav-container {
+    width: 20rem;
+  }
+  .minitoc-container {
+    width: 15rem;
+  } 
+  .section:nth-child(2) {
+    width: calc(100% - 35rem);
+  }
 }
 
 /* section metadata */

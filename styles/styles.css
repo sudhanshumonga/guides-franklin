@@ -274,7 +274,7 @@ main .section:empty {
     width: 15rem;
   } 
   .section:nth-child(2) {
-    width: calc(100% - 35rem);
+    width: calc(100% - 41rem);
   }
 }
 

@@ -261,7 +261,7 @@ main .section:empty {
 }
 
 header .spinner-wheel-suspense {
-  background-image: url('./spinner.svg');
+  background-image: url('./loader.gif');
   background-repeat: no-repeat;
 }
 

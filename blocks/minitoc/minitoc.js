@@ -14,8 +14,11 @@ for (var i = 0; i < headings.length; i++) {
   miniTOCList.appendChild(listItem);
 }
 if(headings.length !== 0) {
+    var h2minitocText = document.createElement('h2')
+    h2minitocText.classList.add('minitoc-title')
     var textNode = document.createTextNode("On this page")
     miniTOCList.classList.add('minitoc-list')
-    minitocContainer.appendChild(textNode)
+    h2minitocText.appendChild(textNode)
+    minitocContainer.appendChild(h2minitocText)
     minitocContainer.appendChild(miniTOCList)
 }

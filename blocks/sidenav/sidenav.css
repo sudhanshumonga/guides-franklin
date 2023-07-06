@@ -35,6 +35,7 @@ ul.tree li.closed>ul {
 }
 
 ul.tree li a {
+    font-weight: 700;
     cursor: pointer;
     color: #505050;
     font-size: 1.125rem;

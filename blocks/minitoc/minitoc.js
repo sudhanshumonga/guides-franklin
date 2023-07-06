@@ -14,7 +14,7 @@ for (var i = 0; i < headings.length; i++) {
   miniTOCList.appendChild(listItem);
 }
 if(headings.length !== 0) {
-    var textNode = document.createTextNode("In this topic")
+    var textNode = document.createTextNode("On this page")
     miniTOCList.classList.add('minitoc-list')
     minitocContainer.appendChild(textNode)
     minitocContainer.appendChild(miniTOCList)

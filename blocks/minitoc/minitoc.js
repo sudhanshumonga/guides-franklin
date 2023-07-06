@@ -25,7 +25,7 @@ if(headings.length !== 0) {
     minitocContainer.appendChild(miniTOCList)
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('franklin-website-ready', () => {
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (

@@ -121,6 +121,8 @@ async function loadLazy(doc) {
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
+  const customEvent = new Event('franklin-website-ready');
+  window.dispatchEvent(customEvent)
   // load anything that can be postponed to the latest here
 }
 

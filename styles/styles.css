@@ -79,6 +79,7 @@ body {
 
 body.appear {
   display: flex;
+  height: fit-content;
 }
 
 header {

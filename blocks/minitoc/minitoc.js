@@ -48,6 +48,14 @@ window.addEventListener('franklin-website-ready', () => {
       }
     }
   }
+  tagList.forEach(tag => {
+    tag.addEventListener('click', () => {
+      for (let j = 0; j < tagList.length; j++) {
+        tagList[j].classList.remove('selected');
+      }
+      tag.classList.add('selected');
+    })
+  })
   const contentArea = content.querySelector('main > div:nth-child(2)')
   contentArea.addEventListener('scroll', updateSelectedTag);
   contentArea.addEventListener('resize', updateSelectedTag);

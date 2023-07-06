@@ -12,7 +12,7 @@
 .minitoc-title {
     font-weight: 600;
     line-height: 1.125;
-    color: #717171;
+    color: var(--minitoc-title-color);
     font-size: 1rem;
 }
 

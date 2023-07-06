@@ -43,6 +43,7 @@ function updateSelectedTag() {
       }
       
       tagList[i].classList.add('selected');
+      break;
     }
   }
 }

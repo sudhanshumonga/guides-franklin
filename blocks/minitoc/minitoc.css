@@ -3,6 +3,7 @@
 }
 
 .minitoc-list {
+    text-transform: none;
     list-style: none;
     font-size: 10pt;
     padding: 0;
@@ -16,6 +17,7 @@ main .section .minitoc-container {
 @media (min-width: 900px) {
     .minitoc {
       display: block;
+      text-transform: uppercase;
     }
     .minitoc-container {
         width: 15rem;

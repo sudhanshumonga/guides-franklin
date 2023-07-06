@@ -22,3 +22,27 @@ if(headings.length !== 0) {
     minitocContainer.appendChild(h2minitocText)
     minitocContainer.appendChild(miniTOCList)
 }
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function updateSelectedTag() {
+  for (let i = 0; i < headings.length; i++) {
+    if (isInViewport(headings[i])) {
+      for (let j = 0; j < tagList.length; j++) {
+        tagList[j].classList.remove('selected');
+      }
+      
+      tagList[i].classList.add('selected');
+    }
+  }
+}
+window.addEventListener('scroll', updateSelectedTag);
+window.addEventListener('resize', updateSelectedTag);

@@ -9,6 +9,13 @@
     padding: 0;
 }
 
+.minitoc-title {
+    font-weight: 600;
+    line-height: 1.125;
+    color: #717171;
+    font-size: 1rem;
+}
+
 main .section .minitoc-container {
     padding: 0rem;
 }

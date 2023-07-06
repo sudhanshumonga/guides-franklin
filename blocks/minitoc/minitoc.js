@@ -58,8 +58,7 @@ window.addEventListener('franklin-website-ready', () => {
       }, 0)
     })
   })
-  const contentArea = content.querySelector('main > div:nth-child(2)')
-  contentArea.addEventListener('scroll', updateSelectedTag);
+  window.addEventListener('scroll', updateSelectedTag);
   window.addEventListener('resize', updateSelectedTag);
   updateSelectedTag()
 });

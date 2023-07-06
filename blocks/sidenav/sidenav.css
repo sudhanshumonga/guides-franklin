@@ -26,7 +26,7 @@ li.sidenav-list-item > ul.tree li {
 }
 
 li.sidenav-list-item > ul.tree > li.has-children {
-    margin-left: 20px;
+    margin-left: 0.75rem;
 }
 
 

@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"Personal Spaceship Operations Manual","url":"/content/dam/guides-regression/TravelDITA/Cover/personal-spaceship-operations-manual"},{"displayName":"Legal","url":"/content/dam/guides-regression/TravelDITA/Legal/legal"},{"displayName":"contacts.xml","url":"/content/dam/guides-regression/TravelDITA/Contacts/contacts"}]
+const treeData = [{"displayName":"General description","url":"/content/dam/guides-regression/TravelDITA/GeneralDescription/general-description","children":[{"displayName":"History of flight","url":"/content/dam/guides-regression/TravelDITA/GeneralDescription/c-history-of-flight"}]}]
 
 let id = 0;
 

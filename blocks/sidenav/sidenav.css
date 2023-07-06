@@ -20,8 +20,8 @@ ul.tree {
     padding: 0;
 }
 
-ul.tree > ul.tree li {
-    padding-left: 20px;
+li.sidenav-list-item > ul.tree li {
+    padding-left: 40px;
     position: relative;
 }
 

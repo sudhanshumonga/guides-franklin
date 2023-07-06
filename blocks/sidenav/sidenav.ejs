@@ -55,6 +55,7 @@ function createTree(parent, data) {
     li.classList.add("sidenav-list-item");
     li.classList.add("closed");
     if (item.children) {
+      li.classList.add("has-children");
       const wrapperSpan = document.createElement("span");
       wrapperSpan.classList.add("chevron-text-wrapper");
       wrapperSpan.appendChild(span);

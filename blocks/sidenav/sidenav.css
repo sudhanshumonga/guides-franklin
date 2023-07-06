@@ -20,7 +20,7 @@ ul.tree {
     padding: 0;
 }
 
-ul.tree li {
+ul.tree > ul.tree li {
     padding-left: 20px;
     position: relative;
 }

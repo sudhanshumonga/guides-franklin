@@ -21,8 +21,12 @@ ul.tree {
 }
 
 li.sidenav-list-item > ul.tree li {
-    padding-left: 40px;
+    margin-left: 40px;
     position: relative;
+}
+
+li.sidenav-list-item > ul.tree li.sidenav-list-item > .chevron-text-wrapper {
+    margin-left: -20px;
 }
 
 

@@ -13,7 +13,7 @@
     color: #323232;
 }
 
-.minitoc-list li.selected {
+.minitoc-list li.selected a{
     font-weight: bold;
     color: var(--minitoc-selected-color);
 }

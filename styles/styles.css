@@ -284,6 +284,7 @@ header .spinner-wheel-suspense {
   } 
   .section:nth-child(2) {
     width: calc(100% - 41rem);
+    flex-grow: 1;
   }
 }
 

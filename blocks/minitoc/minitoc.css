@@ -34,8 +34,10 @@ main .section .minitoc-container {
     .minitoc-container {
         width: 15rem;
         padding: 1rem;
-        position: fixed;
         right: 0;
+    }
+    .minitoc-wrapper {
+        position: fixed;
     }
     
 }

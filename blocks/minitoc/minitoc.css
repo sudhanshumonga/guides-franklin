@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+.minitoc-title li a {
+    color: #323232;
+}
+
 .minitoc-list .selected {
     font-weight: bold;
     color: var(--minitoc-selected-color);

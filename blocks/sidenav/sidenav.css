@@ -8,6 +8,13 @@
     .sidenav-container {
       display: block;
     }
+    .sidenav-expand-collapse {
+        width: 1rem;
+        height: 1rem;
+        background: red;
+        position: fixed;
+        left: 21rem;
+    }
 }
 
 .sidenav-list-item.selected > a{

@@ -10,6 +10,9 @@ for (var i = 0; i < headings.length; i++) {
   listItem.classList.add(`minitoc-level-${headingLevel}`)
   var link = document.createElement("a");
   link.textContent = heading.textContent;
+  if(!heading.textContent) {
+    continue
+  }
   link.href = "#" + heading.id;
   listItem.appendChild(link);
   miniTOCList.appendChild(listItem);

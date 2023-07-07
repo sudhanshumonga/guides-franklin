@@ -26,12 +26,7 @@
         left: 0;
     }
     .sidenav-expand-collapse.open {
-        width: 1rem;
         transform: unset;
-        height: 1rem;
-        background: url('./side-rail-open.svg');
-        position: fixed;
-        left: 21rem;
     }
 }
 

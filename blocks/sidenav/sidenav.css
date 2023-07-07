@@ -20,14 +20,16 @@
     .sidenav-expand-collapse {
         width: 1rem;
         height: 1rem;
-        background: red;
+        background: url('./side-rail-open.svg');
         position: fixed;
-        left: 21rem;
+        transform: rotate(180deg);
+        left: 0;
     }
     .sidenav-expand-collapse.open {
         width: 1rem;
+        transform: unset;
         height: 1rem;
-        background: green;
+        background: url('./side-rail-open.svg');
         position: fixed;
         left: 21rem;
     }

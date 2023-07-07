@@ -18,7 +18,7 @@ for (var i = 0; i < headings.length; i++) {
   miniTOCList.appendChild(listItem);
   tagList.push(listItem)
 }
-if(headings.length !== 0) {
+if(tagList.length !== 0) {
     var h2minitocText = document.createElement('h2')
     h2minitocText.classList.add('minitoc-title')
     var textNode = document.createTextNode("On this page")

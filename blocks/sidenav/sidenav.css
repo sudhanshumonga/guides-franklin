@@ -3,8 +3,17 @@
     width: 20rem;
     background: var(--sidenav-bg-color);
 }
+.sidenav-expand-collapse {
+    display: none;
+}
 
 @media (min-width: 900px) {
+    .sidenav-expand-collapse {
+        display: block;
+    }
+    .sidenav-container.hidden {
+        display: none;
+    }
     .sidenav-container {
       display: block;
     }
@@ -12,6 +21,13 @@
         width: 1rem;
         height: 1rem;
         background: red;
+        position: fixed;
+        left: 21rem;
+    }
+    .sidenav-expand-collapse.open {
+        width: 1rem;
+        height: 1rem;
+        background: green;
         position: fixed;
         left: 21rem;
     }

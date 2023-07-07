@@ -26,6 +26,7 @@ function expandSelection(parent) {
 function addExpandCollapseButton() {
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
+  span.classList.add('open')
   span.addEventListener('click', () => {
     const isOpen = span.classList.contains('open')
     const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];

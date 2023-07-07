@@ -7,5 +7,10 @@
 }
 
 .note::before {
-    content: "Note:"
+    content: "Note:";
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--note-block-header-color);
 }

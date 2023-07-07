@@ -10,7 +10,7 @@
     }
 }
 
-.sidenav-list-item.selected {
+.sidenav-list-item.selected a{
     background: var(--hover-bg-color);
 }
 

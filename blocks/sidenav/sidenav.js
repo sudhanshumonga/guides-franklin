@@ -26,7 +26,7 @@ function expandSelection(parent) {
 function addExpandCollapseButton(container) {
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
-  document.insertBefore(container, span)
+  document.insertBefore(span, container)
 }
 
 function createTree(parent, data) {

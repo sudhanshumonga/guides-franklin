@@ -16,7 +16,7 @@
     }
     .sidenav-container {
       display: block;
-      padding-top: 2rem;
+      padding-top: 2rem !important;
     }
     .sidenav-expand-collapse {
         width: 1rem;

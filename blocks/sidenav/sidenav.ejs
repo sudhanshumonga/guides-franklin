@@ -30,7 +30,7 @@ function addExpandCollapseButton() {
   span.addEventListener('click', () => {
     const isOpen = span.classList.contains('open')
     const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
-    (!isOpen) ? sidenavContainer.classList.remove('hidden') : sidenavContainer.classList.add('hidden')
+    (!isOpen) ? sidenavContainer.classList.remove('force-hide') : sidenavContainer.classList.add('force-hide')
     span.classList.toggle("open");
   })
   const main = document.getElementsByTagName('main')[0]

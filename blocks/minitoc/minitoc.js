@@ -26,6 +26,9 @@ if(tagList.length !== 0) {
     h2minitocText.appendChild(textNode)
     minitocContainer.appendChild(h2minitocText)
     minitocContainer.appendChild(miniTOCList)
+} else {
+  const minitocContainerSection = document.getElementsByClassName('minitoc-container')[0]
+  minitocContainerSection.classList.add('force-hide')
 }
 
 window.addEventListener('franklin-website-ready', () => {

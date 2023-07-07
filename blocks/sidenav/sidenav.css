@@ -11,9 +11,6 @@
     .sidenav-expand-collapse {
         display: block;
     }
-    .sidenav-container.hidden {
-        display: none;
-    }
     .sidenav-container {
       display: block;
     }

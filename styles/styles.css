@@ -269,6 +269,10 @@ header .spinner-wheel-suspense {
   background-size: 2rem 2rem;
 }
 
+.force-hide {
+  display: none !important;
+}
+
 @media (min-width: 900px) {
   .section > div {
     max-width: 1200px;

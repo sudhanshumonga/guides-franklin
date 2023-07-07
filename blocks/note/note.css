@@ -1,0 +1,7 @@
+.note {
+    background: var(--note-block-bg-color);
+    padding: 18px 24px;
+    border-left: 4px solid var(--note-block-border-color);
+    margin-bottom: 1em;
+    font-size: 14px;
+}

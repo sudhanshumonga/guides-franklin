@@ -22,6 +22,9 @@
   --bg-color : #ffffff;
   --minitoc-title-color: rgb(74, 74, 74);
   --minitoc-selected-color: #378ef0;
+  --note-block-bg-color: #eee;
+  --note-block-border-color: #ddd;
+  
   /* fonts */
   --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
   --heading-font-family: var(--body-font-family);

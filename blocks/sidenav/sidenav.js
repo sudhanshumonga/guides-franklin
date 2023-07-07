@@ -23,10 +23,11 @@ function expandSelection(parent) {
   element.scrollIntoView();
 }
 
-function addExpandCollapseButton(container) {
+function addExpandCollapseButton() {
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
-  document.insertBefore(span, container)
+  const main = document.getElementsByName('main')[0]
+  main.prepend(span)
 }
 
 function createTree(parent, data) {
@@ -82,8 +83,7 @@ function onClick(id, navURL) {
 
 // Get the treeview element and create the tree
 const treeview = document.getElementsByClassName("sidenav")[0];
-const treeviewContainer = document.getElementsByClassName("sidenav-container")[0];
-addExpandCollapseButton(treeviewContainer);
+addExpandCollapseButton();
 createTree(treeview, treeData);
 migrateTree(isDesktop);
 isDesktop.addEventListener("change", () => migrateTree(isDesktop));

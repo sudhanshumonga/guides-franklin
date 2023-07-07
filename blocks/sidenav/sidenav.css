@@ -16,15 +16,14 @@
     }
     .sidenav-container {
       display: block;
-      padding-top: 2rem !important;
     }
     .sidenav-expand-collapse {
         width: 1rem;
         height: 1rem;
         background: url('./side-rail-open.svg');
-        position: fixed;
         transform: rotate(180deg);
         left: 0;
+        cursor: pointer;
     }
     .sidenav-expand-collapse.open {
         transform: unset;

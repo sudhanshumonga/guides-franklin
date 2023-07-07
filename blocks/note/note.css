@@ -5,3 +5,7 @@
     margin-bottom: 1em;
     font-size: 14px;
 }
+
+.note::before {
+    content: "Note:"
+}

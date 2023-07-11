@@ -6,7 +6,7 @@ function fireAppReadyEvent() {
 }
 
 function addReadyClass() {
-    const body = document.getElementsByName('body')[0]
+    const body = document.getElementsByTagName('body')[0]
     body.classList.add('franklin-app-rendered')
 }
 

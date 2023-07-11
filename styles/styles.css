@@ -296,6 +296,10 @@ header .spinner-wheel-suspense {
   }
 }
 
+.franklin-app-rendered .section:nth-child(3) {
+  flex-grow: 1;
+}
+
 /* section metadata */
 main .section.highlight {
   background-color: var(--highlight-background-color);

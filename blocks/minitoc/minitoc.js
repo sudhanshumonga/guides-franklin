@@ -31,7 +31,7 @@ if(tagList.length !== 0) {
   minitocContainerSection.classList.add('force-hide')
 }
 
-window.addEventListener('franklin-website-ready', () => {
+window.addEventListener('franklin-app-ready', () => {
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (

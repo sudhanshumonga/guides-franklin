@@ -21,6 +21,12 @@ footer .container > div {
   display: block;
 }
 
+footer {
+  font-size: .9375rem !important;
+  font-weight: 600 !important;
+  color: #4b4b4b !important;
+}
+
 @media(min-width: 900px) {
   footer .container > div {
     display: flex;

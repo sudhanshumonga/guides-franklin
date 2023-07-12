@@ -54,12 +54,13 @@
   --table-header-bg-color: aliceblue;
 
 
-  /*Main content vars*/
+  /* Main content vars */
   --alias-heading-text-line-height: 1.3;
   --heading-xl-text-size: 36px;
   --alias-heading-xl-text-size: 36px;
   --alias-heading-s-margin-top: 16px;
   --global-dimension-size-115: 9px;
+  --alias-heading-text-font-weight-regular: 700;
 }
 
 @media (min-width: 900px) {
@@ -104,14 +105,8 @@ h4, h5, h6 {
   font-size: var(--heading-xl-text-size, var(--alias-heading-xl-text-size));
   margin-top: var(--alias-heading-s-margin-top);
   margin-bottom: var(--global-dimension-size-115);
-
-  
+  font-weight: var(--alias-heading-text-font-weight-regular);
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
 }
 
 h1 { font-size: var(--heading-font-size-xxl) }

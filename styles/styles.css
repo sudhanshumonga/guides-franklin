@@ -117,6 +117,7 @@ h5 { font-size: var(--heading-font-size-s) }
 h6 { font-size: var(--heading-font-size-xs) }
 
 p, dl, ol, ul, pre, blockquote {
+  margin-top: unset;
   margin-bottom: 1em;
 }
 

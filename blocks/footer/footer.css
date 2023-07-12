@@ -27,6 +27,17 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
   color: #4b4b4b !important;
 }
 
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+  font-size: .9375rem !important;
+  font-weight: 600 !important;
+  color: #4b4b4b !important;
+}
+
+footer p, footer a {
+  font-size: .9375rem !important;
+  color: #4b4b4b !important;
+}
+
 @media(min-width: 900px) {
   footer .container > div {
     display: flex;

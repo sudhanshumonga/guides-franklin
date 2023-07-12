@@ -101,7 +101,7 @@ header {
 
 h1, h2, h3,
 h4, h5, h6 {
-  line-height: var(--alias-heading-text-line-height);
+  line-height: var(--alias-heading-text-line-height);
   font-size: var(--heading-xl-text-size, var(--alias-heading-xl-text-size));
   margin-top: var(--alias-heading-s-margin-top);
   margin-bottom: var(--global-dimension-size-115);

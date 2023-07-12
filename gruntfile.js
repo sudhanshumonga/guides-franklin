@@ -8,7 +8,7 @@ module.exports = function(grunt) {
          target: {
            files: [{
              expand: true,
-             src: ['src/js/**/*.js'],
+             src: ['**/*.js'],
              dest: 'dist/js',
              ext: '.min.js',
              extDot: 'last'
@@ -25,11 +25,29 @@ module.exports = function(grunt) {
            extDot: 'last'
          }]
        }
-     }
+     },
+     'string-replace': {
+      updateImports: {
+        files: [{
+          expand: true,
+          src: ['**/*.min.js', '**/*.min.css']
+        }],
+        options: {
+          replacements: [{
+            pattern: /(require\(["'])(.+?)(["']\))/g,
+            replacement: '$1$2.min$3'
+          }, {
+            pattern: /(from\s+["'])(.+?)(["'])/g,
+            replacement: '$1$2.min$3'
+          }]
+        }
+      }
+    }
    });
  
    grunt.loadNpmTasks('grunt-terser');
    grunt.loadNpmTasks('grunt-contrib-cssmin');
- 
+   grunt.loadNpmTasks('grunt-string-replace');
+
    grunt.registerTask('minify', ['terser', 'cssmin']);
  };

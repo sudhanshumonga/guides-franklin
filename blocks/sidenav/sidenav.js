@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"General description","url":"/content/dam/guides-regression/TravelDITA/GeneralDescription/general-description","children":[{"displayName":"c_history_of_flight.xml","url":"/content/dam/guides-regression/TravelDITA/GeneralDescription/c-history-of-flight"}]}]
+const treeData = [{"displayName":"Personal Spaceship Operations Manual","url":"/content/dam/guides-regression/TravelDITA/Cover/personal-spaceship-operations-manual"},{"displayName":"Legal","url":"/content/dam/guides-regression/TravelDITA/Legal/legal"},{"displayName":"Contacts","url":"/content/dam/guides-regression/TravelDITA/Contacts/contacts"},{"url":"/content/dam/guides-regression/TravelDITA/GeneralDescription/general-description","children":[{"url":"GUID-7a16a6d2-4e3c-46dc-9467-1a2fbd137fec"},{"url":"GUID-320b2337-32ff-45ef-ad71-569277023a86"},{"url":"GUID-ae53120e-fd31-451c-93c5-c7033dae0f26"}]},{"url":"/content/dam/guides-regression/TravelDITA/Systems/systems"},{"url":"/content/dam/guides-regression/TravelDITA/OperatingLimitations/operating-limitations"}]
 
 let id = 0;
 

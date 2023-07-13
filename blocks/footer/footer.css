@@ -34,8 +34,10 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
 }
 
 footer p, footer a {
-  font-size: .9375rem !important;
-  color: #4b4b4b !important;
+  font-size: var(--footer-font-size) !important;
+  color: var(--footer-content-color) !important;
+  font-family: var(--footer-font-family) !important;
+  font-weight: var(--footer-font-weight) !important;
 }
 
 @media(min-width: 900px) {

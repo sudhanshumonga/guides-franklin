@@ -53,6 +53,12 @@
   --alias-heading-s-margin-top: 16px;
   --global-dimension-size-115: 9px;
   --alias-heading-text-font-weight-regular: 700;
+
+  /* Footer vars*/
+  --footer-content-color: rgb(75, 75, 75);
+  --footer-font-family: adobe-clean, sans-serif;
+  --footer-font-size: 12px;
+  --footer-font-weight: 400;
 }
 
 html {

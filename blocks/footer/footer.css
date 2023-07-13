@@ -1,8 +1,12 @@
 footer {
   padding: 2rem;
   flex-grow: 1;
-  background-color: var(--overlay-background-color);
+  background-color: var(--footer-background-color);
+  background-color: var(--footer-background-color);
   font-size: var(--body-font-size-s);
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: var(--footer-border-color)
 }
 
 footer .footer {

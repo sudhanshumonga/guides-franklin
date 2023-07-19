@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"GUID-a7cd8341-d925-4278-9469-cc9316195493.ditamap","url":"/content/dam/pdf/ditamap-1-flattened/guid-a7cd8341-d925-4278-9469-cc9316195493","children":[{"displayName":"Map: Reuse content (4 topicrefs)","url":"/content/dam/pdf/ditamap-1-flattened/guid-79c72469-2107-42df-82c4-6a16b2eec5ab","children":[{"url":"guid-fc6486c7-564c-40e8-91fe-bbbb58c41fe1"}]}]}]
+const treeData = [{"displayName":"GUID-a7cd8341-d925-4278-9469-cc9316195493.ditamap","url":"/content/dam/pdf/ditamap-1-flattened/guid-a7cd8341-d925-4278-9469-cc9316195493","children":[{"displayName":"Map: Reuse content (4 topicrefs)","url":"/content/dam/pdf/ditamap-1-flattened/guid-79c72469-2107-42df-82c4-6a16b2eec5ab","children":[{"displayName":"GUID-bae84d22-242e-4c45-bbd1-6b3a7c16df79.dita","url":"/content/dam/pdf/ditamap-1-flattened/guid-bae84d22-242e-4c45-bbd1-6b3a7c16df79"}]}]}]
 
 let id = 0;
 

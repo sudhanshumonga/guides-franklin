@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = []
+const treeData = [{"displayName":"Topic is sample","url":"/content/dam/dita-templates/maps/topic"}]
 
 let id = 0;
 

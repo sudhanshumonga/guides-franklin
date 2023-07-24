@@ -1,1 +1,1 @@
-export default [{"displayName":"Topic is sample","url":"/content/dam/dita-templates/maps/topic"}]
+export default []

@@ -282,13 +282,13 @@ header .spinner-wheel-suspense {
   .minitoc-container {
     width: 15rem;
   } 
-  .section:nth-child(3) {
+  .section.breadcrumbs-container {
     width: calc(100% - 42rem);
     /* flex-grow: 1; */
   }
 }
 
-.franklin-app-rendered .section:nth-child(3) {
+.franklin-app-rendered .section.breadcrumbs-container {
   flex-grow: 1;
 }
 

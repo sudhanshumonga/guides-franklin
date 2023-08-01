@@ -23,9 +23,13 @@ function getTileForData(displayName, url, index) {
         event.stopPropagation()
     })
     tileWrapperDiv.addEventListener('click', (event) => {
+        let navURL = new URL(url, siteURL).href;
         event.preventDefault()
         event.stopPropagation()
         currTiles = currTiles[index]
+        if(!currTiles.children) {
+            window.location.href = navURL
+        }
         construct()
     })
     const text = document.createTextNode(displayName)

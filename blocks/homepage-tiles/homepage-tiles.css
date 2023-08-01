@@ -3,3 +3,23 @@
 .homepage-tiles-container {
   width: 100%;
 }
+.homepage-tiles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile-wrapper {
+  display: flex;
+  width: 15rem;
+  height: 15rem;
+}
+
+.span-class {
+  width: 100%;
+  height: 2rem;
+}
+
+.image-div-class {
+  width: 15rem;
+  height: 13rem;
+}

@@ -8,6 +8,9 @@ function getTileForData(displayName, url, index) {
     const tileWrapperDiv = document.createElement("div");
     tileWrapperDiv.classList.add("tile-wrapper");
     const tileTitleHeading = document.createElement("span");
+    tileTitleHeading.classList.add('span-class')
+    const imageDiv = document.createElement("div");
+    imageDiv.classList.add('image-div-class')
     const siteURL =
       window.location.protocol +
       "//" +
@@ -27,6 +30,7 @@ function getTileForData(displayName, url, index) {
     })
     const text = document.createTextNode(displayName)
     tileTitleHeading.appendChild(text)
+    tileWrapperDiv.appendChild(imageDiv)
     tileWrapperDiv.appendChild(tileTitleHeading)
     return tileWrapperDiv
 }

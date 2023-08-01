@@ -10,11 +10,18 @@
 }
 
 .tile-wrapper {
-  flex-direction: column;
-  display: flex;
-  width: 15rem;
-  padding: 1rem;
-  height: 15rem;
+  width: 18rem;
+  text-align: center;
+  line-height: 4.5rem;
+  border-radius: 0.25rem;
+  display: block;
+  padding-bottom: 0rem;
+  cursor: pointer;
+  box-shadow: 0px 1px 5px 3px #eaeaea;
+  margin: 2rem;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .span-class {
@@ -24,6 +31,14 @@
 
 .image-div-class {
   background-color: red;
-  width: 15rem;
-  height: 13rem;
+    height: 12rem;
+    width: 100%;
+    /* background: transparent; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-image: url(./toc_default_tile.svg); */
+    box-sizing: border-box;
 }

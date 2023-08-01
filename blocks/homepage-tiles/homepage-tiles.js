@@ -34,8 +34,9 @@ function getTileForData(displayName, url, index) {
         currTiles = currTiles[index].children
         if(!currTiles) {
             window.location.href = navURL
+        } else {
+            construct()
         }
-        construct()
     })
     const text = document.createTextNode(displayName)
     tileTitleHeading.appendChild(text)

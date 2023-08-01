@@ -30,15 +30,13 @@
 }
 
 .image-div-class {
-  background-color: red;
-    height: 12rem;
-    width: 100%;
-    /* background: transparent; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* background-image: url(./toc_default_tile.svg); */
-    box-sizing: border-box;
+  height: 12rem;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
 }

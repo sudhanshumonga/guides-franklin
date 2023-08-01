@@ -3,7 +3,7 @@ import sidenavTreeData from '../sidenav/sidenav_data.js'
 const tilesView = document.getElementsByClassName("homepage-tiles")[0];
 
 let currTiles = sidenavTreeData
-
+const number_of_toc_images = 8
 function getTileForData(displayName, url, index) {
     const tileWrapperDiv = document.createElement("div");
     tileWrapperDiv.classList.add("tile-wrapper");
@@ -11,6 +11,7 @@ function getTileForData(displayName, url, index) {
     tileTitleHeading.classList.add('span-class')
     const imageDiv = document.createElement("div");
     imageDiv.classList.add('image-div-class')
+    imageDiv.style.backgroundImage = `url(./assets/images/tocimg${index%number_of_toc_images + 1})`
     const siteURL =
       window.location.protocol +
       "//" +

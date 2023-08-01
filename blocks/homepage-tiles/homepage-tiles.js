@@ -26,8 +26,8 @@ function getTileForData(displayName, url, index) {
         let navURL = new URL(url, siteURL).href;
         event.preventDefault()
         event.stopPropagation()
-        currTiles = currTiles[index]
-        if(!currTiles.children) {
+        currTiles = currTiles[index].children
+        if(!currTiles) {
             window.location.href = navURL
         }
         construct()

@@ -9,6 +9,10 @@ function getTileForData(displayName, url, index) {
     tileWrapperDiv.classList.add("tile-wrapper");
     const tileTitleHeading = document.createElement("span");
     tileTitleHeading.classList.add('span-class')
+
+    const titleSpanDiv = document.createElement("div");
+    titleSpanDiv.classList.add('title-span-div-class')
+
     const imageDiv = document.createElement("div");
     imageDiv.classList.add('image-div-class')
     imageDiv.classList.add(`tile_${index%number_of_toc_images + 1}`)
@@ -35,8 +39,9 @@ function getTileForData(displayName, url, index) {
     })
     const text = document.createTextNode(displayName)
     tileTitleHeading.appendChild(text)
+    titleSpanDiv.appendChild(tileTitleHeading)
     tileWrapperDiv.appendChild(imageDiv)
-    tileWrapperDiv.appendChild(tileTitleHeading)
+    tileWrapperDiv.appendChild(titleSpanDiv)
     return tileWrapperDiv
 }
 

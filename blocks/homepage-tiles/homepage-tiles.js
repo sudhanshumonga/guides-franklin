@@ -6,7 +6,7 @@ let currTiles = sidenavTreeData
 
 function getTileForData(displayName, url, index) {
     const tileWrapperDiv = document.createElement("div");
-    tileDiv.classList.add("tile-wrapper");
+    tileWrapperDiv.classList.add("tile-wrapper");
     const tileTitleHeading = document.createElement("h3");
     const siteURL =
       window.location.protocol +

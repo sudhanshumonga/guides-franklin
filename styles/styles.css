@@ -64,6 +64,9 @@
 
   /* Shortdesc vars*/
   --shortdesc-color: #666;
+
+  /* Hero vars*/
+  --hero-heading-text-color: rgb(74, 74, 74);
 }
 
 html {

@@ -6,9 +6,12 @@
 .homepage-tiles {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .tile-wrapper {
+  flex-direction: column;
   display: flex;
   width: 15rem;
   height: 15rem;
@@ -20,6 +23,7 @@
 }
 
 .image-div-class {
+  background-color: red;
   width: 15rem;
   height: 13rem;
 }

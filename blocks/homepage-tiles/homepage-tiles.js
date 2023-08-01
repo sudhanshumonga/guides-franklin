@@ -1,4 +1,4 @@
-import sidenavTreeData from '../sidenav/sidenav_data'
+import sidenavTreeData from '../sidenav/sidenav_data.js'
 
 const tilesView = document.getElementsByClassName("homepage-tiles")[0];
 

@@ -11,7 +11,7 @@ function getTileForData(displayName, url, index) {
     tileTitleHeading.classList.add('span-class')
     const imageDiv = document.createElement("div");
     imageDiv.classList.add('image-div-class')
-    imageDiv.style.backgroundImage = `url(./assets/images/tocimg${index%number_of_toc_images + 1})`
+    imageDiv.classList.add(`tile_${index%number_of_toc_images + 1}`)
     const siteURL =
       window.location.protocol +
       "//" +

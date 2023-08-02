@@ -1,8 +1,6 @@
 import { migrateTree } from "../utils.js";
 const treeData = $TOC_SIDENAV_DATA$
 
-let id = 0;
-
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
@@ -10,6 +8,16 @@ function expandHeirarchy(element, root) {
   let parent = element.parentElement;
   parent.classList.remove("closed");
   expandHeirarchy(parent, root);
+}
+
+function setExpandedFromLevel() {
+  const queryString = window.location.search;
+  const params = new URLSearchParams(queryString);
+  const id = params.get("level");
+  if(id) {
+    params.delete('level')
+    params.set('expanded', id)
+  }
 }
 
 function expandSelection(parent) {
@@ -37,13 +45,21 @@ function addExpandCollapseButton() {
   main.prepend(span)
 }
 
-function createTree(parent, data) {
+function generateId(prefix, suffix) {
+  if(prefix) {
+      return `${prefix}-${suffix}`
+  }
+  return `${suffix}`
+}
+
+function createTree(parent, data, prefix, level) {
   const ul = document.createElement("ul");
   ul.classList.add("tree");
   parent.appendChild(ul);
-  data.forEach((item) => {
+  data.forEach((item, idx) => {
     const li = document.createElement("li");
-    const _id = id++;
+    const newPrefix = generateId(prefix, level)
+    const _id = generateId(newPrefix, idx);
     li.setAttribute("id", `sidenav-li-${_id}`);
     ul.appendChild(li);
     const anchor = document.createElement("a");
@@ -75,7 +91,7 @@ function createTree(parent, data) {
       wrapperSpan.appendChild(span);
       wrapperSpan.appendChild(anchor);
       li.appendChild(wrapperSpan);
-      createTree(li, item.children);
+      createTree(li, item.children, newPrefix, level+1);
     } else {
       li.appendChild(anchor);
     }
@@ -91,9 +107,10 @@ function onClick(id, navURL) {
 // Get the treeview element and create the tree
 const treeview = document.getElementsByClassName("sidenav")[0];
 addExpandCollapseButton();
-createTree(treeview, treeData);
+createTree(treeview, treeData, '', '0');
 migrateTree(isDesktop);
 isDesktop.addEventListener("change", () => migrateTree(isDesktop));
+setExpandedFromLevel()
 expandSelection(treeview);
 
 // Add click event listener to each span element

@@ -12,6 +12,13 @@ function getLevelFromURL() {
     return id
 }
 
+function generateId(prefix, suffix) {
+    if(prefix) {
+        return prefix + '-' + suffix
+    }
+    return suffix
+}
+
 function getTileForData(displayName, url, index) {
     const tileWrapperDiv = document.createElement("div");
     tileWrapperDiv.classList.add("tile-wrapper");
@@ -41,7 +48,7 @@ function getTileForData(displayName, url, index) {
         event.stopPropagation()
         currTiles = currTiles[index].children
         const id = getLevelFromURL()
-        const newId = id + '-' + index
+        const newId = generateId(id, index)
         url.searchParams.set("level", newId)
         if(!currTiles) {
             window.location.href = navURL

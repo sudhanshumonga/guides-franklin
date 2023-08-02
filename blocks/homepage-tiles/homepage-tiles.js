@@ -58,13 +58,13 @@ function getTileForData(displayName, url, index) {
 }
 
 function getNodesForLevel(urlId) {
-    let currTiles = sidenavTreeData
-    if(urlId === "") return currTiles
+    let treeData = sidenavTreeData
+    if(urlId === "") return treeData
     const ids = urlId.split('-')
     ids.forEach(id => {
-        currTiles = currTiles[id]
+        treeData = treeData[id]
     })
-    return currTiles
+    return treeData
 }
 
 function construct() {

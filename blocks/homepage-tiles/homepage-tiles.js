@@ -58,8 +58,9 @@ function getTileForData(displayName, url, index) {
 }
 
 function getNodesForLevel(urlId) {
-    const ids = urlId.split('-')
     let currTiles = sidenavTreeData
+    if(urlId === "") return currTiles
+    const ids = urlId.split('-')
     ids.forEach(id => {
         currTiles = currTiles[id]
     })

@@ -10,16 +10,6 @@ function expandHeirarchy(element, root) {
   expandHeirarchy(parent, root);
 }
 
-function setExpandedFromLevel() {
-  const url = new URL(window.location.href);
-  const id = url.searchParams.get("level");
-  if(id) {
-    url.searchParams.delete('level')
-    url.searchParams.set('expanded', id)
-    window.location.href = url.toString()
-  }
-}
-
 function expandSelection(parent) {
   let queryString = window.location.search;
   let params = new URLSearchParams(queryString);
@@ -110,7 +100,6 @@ addExpandCollapseButton();
 createTree(treeview, treeData, '', '');
 migrateTree(isDesktop);
 isDesktop.addEventListener("change", () => migrateTree(isDesktop));
-setExpandedFromLevel()
 expandSelection(treeview);
 
 // Add click event listener to each span element

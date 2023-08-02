@@ -57,8 +57,8 @@ function getTileForData(displayName, url, index) {
     return tileWrapperDiv
 }
 
-function getNodesForLevel(id) {
-    const ids = id.split('-')
+function getNodesForLevel(urlId) {
+    const ids = urlId.split('-')
     let currTiles = sidenavTreeData
     ids.forEach(id => {
         currTiles = currTiles[id]

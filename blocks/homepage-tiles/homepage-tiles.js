@@ -9,7 +9,7 @@ function getLevelFromURL() {
     let queryString = window.location.search;
     let params = new URLSearchParams(queryString);
     let id = params.get("level") || '';
-    return id
+    return `${id}`
 }
 
 function generateId(prefix, suffix) {

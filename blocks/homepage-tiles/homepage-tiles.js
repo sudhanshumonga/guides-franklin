@@ -54,6 +54,7 @@ function getTileForData(displayName, url, index) {
         } else {
             let currUrl = new URL('', siteURL)
             currUrl.searchParams.set("level", newId)
+            window.location.href = currUrl.toString()
             construct()
         }
     })

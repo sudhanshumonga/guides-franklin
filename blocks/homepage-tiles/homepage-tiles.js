@@ -73,7 +73,7 @@ function getNodesForLevel(urlId) {
     ids.forEach(id => {
         treeData = treeData[id]
     })
-    return treeData
+    return treeData.children || []
 }
 
 function construct() {

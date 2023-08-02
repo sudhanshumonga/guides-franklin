@@ -1,8 +1,6 @@
 import { migrateTree } from "../utils.js";
 const treeData = [{"displayName":"A note to beta participants","url":"/content/dam/bb/content/en/ns-test-move-fix-2/cid1528813394359"},{"displayName":"What is ?","url":"/content/dam/bb/content/en/ns-test-move-fix-2/krr1520536780494","children":[{"displayName":"gbx1524148734140.xml","url":"/content/dam/bb/content/en/ns-test-move-fix/gbx1524148734140"},{"displayName":"Getting started with ","url":"/content/dam/bb/content/en/ns-test-move-fix-2/oxm1520536825687"},{"displayName":"Requirements","url":"/content/dam/bb/content/en/ns-test-move-fix-2/caz1528464187364"},{"displayName":"Register your organization in the  management\n        console","url":"/content/dam/bb/content/en/ns-test-move-fix-2/fdz1520536941696"},{"displayName":"Submit your \n        registration ","url":"/content/dam/bb/content/en/ns-test-move-fix-2/obf1520537039233"}]},{"displayName":"Using ","url":"/content/dam/bb/content/en/ns-test-move-fix-2/lvb1520537067654","children":[{"displayName":"wmo1520537233229.xml","url":"/content/dam/bb/content/en/ns-test-move-fix-2/wmo1520537233229"}]},{"displayName":"Managing connections","url":"/content/dam/bb/content/en/ns-test-move-fix-2/cbt1520537269124","children":[{"displayName":"Search for an organization","url":"/content/dam/bb/content/en/ns-test-move-fix-2/uxi1520537320615"},{"displayName":"View organization details","url":"/content/dam/bb/content/en/ns-test-move-fix-2/yan1520537359445"},{"displayName":"Request a connection","url":"/content/dam/bb/content/en/ns-test-move-fix-2/uja1520537389221","children":[{"displayName":"Cancel a pending connection request","url":"/content/dam/bb/content/en/ns-test-move-fix-2/qbq1528210323512"}]},{"displayName":"Invite an unlisted organization","url":"/content/dam/bb/content/en/ns-test-move-fix-2/gct1524768608636"},{"displayName":"Accept a connection request","url":"/content/dam/bb/content/en/ns-test-move-fix-2/yho1527188730449"},{"displayName":"Decline a connection request","url":"/content/dam/bb/content/en/ns-test-move-fix-2/goh1520537445641","children":[{"displayName":"Remove the connection for an app","url":"/content/dam/bb/content/en/ns-test-move-fix-2/cpq1527532409606"}]}]},{"displayName":"Managing Org Connect","url":"/content/dam/bb/content/en/ns-test-move-fix-2/pat1520537481977","children":[{"displayName":"Edit your organization's profile","url":"/content/dam/bb/content/en/ns-test-move-fix-2/hjl1520537563057"},{"displayName":"Edit visibility for your organization","url":"/content/dam/bb/content/en/ns-test-move-fix-2/yhn1521139372597"},{"displayName":"Add \n        administrators","url":"/content/dam/bb/content/en/ns-test-move-fix-2/hvg1520537638360"}]},{"displayName":"Audit and logging","url":"/content/dam/bb/content/en/ns-test-move-fix-2/jhs1520537722180","children":[{"displayName":"Export audit events to a .csv file","url":"/content/dam/bb/content/en/ns-test-move-fix-2/jbv1534519371005"}]},{"displayName":"Submit feedback","url":"/content/dam/bb/content/en/ns-test-move-fix-2/maw1520537876208"},{"displayName":"Legal notice","url":"/content/dam/bb/content/en/ns-test-move-fix-2/oqo1534519198974"}]
 
-let id = 0;
-
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {
@@ -10,6 +8,16 @@ function expandHeirarchy(element, root) {
   let parent = element.parentElement;
   parent.classList.remove("closed");
   expandHeirarchy(parent, root);
+}
+
+function setExpandedFromLevel() {
+  const queryString = window.location.search;
+  const params = new URLSearchParams(queryString);
+  const id = params.get("level");
+  if(id) {
+    params.delete('level')
+    params.set('expanded', id)
+  }
 }
 
 function expandSelection(parent) {
@@ -37,13 +45,21 @@ function addExpandCollapseButton() {
   main.prepend(span)
 }
 
-function createTree(parent, data) {
+function generateId(prefix, suffix) {
+  if(prefix) {
+      return `${prefix}-${suffix}`
+  }
+  return `${suffix}`
+}
+
+function createTree(parent, data, prefix, level) {
   const ul = document.createElement("ul");
   ul.classList.add("tree");
   parent.appendChild(ul);
-  data.forEach((item) => {
+  data.forEach((item, idx) => {
     const li = document.createElement("li");
-    const _id = id++;
+    const newPrefix = generateId(prefix, level)
+    const _id = generateId(newPrefix, idx);
     li.setAttribute("id", `sidenav-li-${_id}`);
     ul.appendChild(li);
     const anchor = document.createElement("a");
@@ -75,7 +91,7 @@ function createTree(parent, data) {
       wrapperSpan.appendChild(span);
       wrapperSpan.appendChild(anchor);
       li.appendChild(wrapperSpan);
-      createTree(li, item.children);
+      createTree(li, item.children, newPrefix, level+1);
     } else {
       li.appendChild(anchor);
     }
@@ -91,9 +107,10 @@ function onClick(id, navURL) {
 // Get the treeview element and create the tree
 const treeview = document.getElementsByClassName("sidenav")[0];
 addExpandCollapseButton();
-createTree(treeview, treeData);
+createTree(treeview, treeData, '', '0');
 migrateTree(isDesktop);
 isDesktop.addEventListener("change", () => migrateTree(isDesktop));
+setExpandedFromLevel()
 expandSelection(treeview);
 
 // Add click event listener to each span element

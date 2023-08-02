@@ -36,9 +36,14 @@ function getTileForData(displayName, url, index) {
       "//" +
       window.location.hostname +
       (window.location.port ? ":" + window.location.port : "");
+    
+    const id = getLevelFromURL()
+    const newId = generateId(id, index)
+
     tileTitleHeading.addEventListener('click', (event) => {
         let navURL = new URL(url, siteURL).href;
-        window.location.href = navURL
+        navURL.searchParams.set("expand", newId)
+        window.location.href = navURL.toString()
         event.preventDefault()
         event.stopPropagation()
     })
@@ -46,11 +51,9 @@ function getTileForData(displayName, url, index) {
         let navURL = new URL(url, siteURL);
         event.preventDefault()
         event.stopPropagation()
-        const id = getLevelFromURL()
-        const newId = generateId(id, index)
         currTiles = getNodesForLevel(newId)
         if(!currTiles) {
-            navURL.searchParams.set("level", newId)
+            navURL.searchParams.set("expand", newId)
             window.location.href = navURL.toString()
         } else {
             let currUrl = new URL('', siteURL)

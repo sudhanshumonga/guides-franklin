@@ -43,15 +43,15 @@ function getTileForData(displayName, url, index) {
         event.stopPropagation()
     })
     tileWrapperDiv.addEventListener('click', (event) => {
-        let navURL = new URL(url, siteURL).href;
+        let UrlObj = new URL(url, siteURL);
         event.preventDefault()
         event.stopPropagation()
         currTiles = currTiles[index].children
         const id = getLevelFromURL()
         const newId = generateId(id, index)
-        url.searchParams.set("level", newId)
+        UrlObj.searchParams.set("level", newId)
         if(!currTiles) {
-            window.location.href = navURL
+            window.location.href = UrlObj.toString()
         } else {
             construct()
         }

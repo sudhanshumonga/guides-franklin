@@ -91,7 +91,7 @@ function createTree(parent, data, prefix, level) {
       wrapperSpan.appendChild(span);
       wrapperSpan.appendChild(anchor);
       li.appendChild(wrapperSpan);
-      createTree(li, item.children, newPrefix, (+level)+1);
+      createTree(li, item.children, newPrefix, idx);
     } else {
       li.appendChild(anchor);
     }

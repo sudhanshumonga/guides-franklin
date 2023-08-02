@@ -11,12 +11,12 @@ function expandHeirarchy(element, root) {
 }
 
 function setExpandedFromLevel() {
-  const queryString = window.location.search;
-  const params = new URLSearchParams(queryString);
-  const id = params.get("level");
+  const url = new URL(navURL);
+  const id = url.searchParams.get("level");
   if(id) {
-    params.delete('level')
-    params.set('expanded', id)
+    url.searchParams.delete('level')
+    url.searchParams.set('expanded', id)
+    window.location.href = url.toString()
   }
 }
 

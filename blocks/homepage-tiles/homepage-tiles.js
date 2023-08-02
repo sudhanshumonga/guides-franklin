@@ -71,9 +71,9 @@ function getNodesForLevel(urlId) {
     if(urlId === "") return treeData
     const ids = urlId.split('-')
     ids.forEach(id => {
-        treeData = treeData[id]
+        treeData = treeData[id].children
     })
-    return treeData.children || []
+    return treeData || []
 }
 
 function construct() {

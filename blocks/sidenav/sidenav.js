@@ -11,7 +11,7 @@ function expandHeirarchy(element, root) {
 }
 
 function setExpandedFromLevel() {
-  const url = new URL(navURL);
+  const url = new URL(window.location.href);
   const id = url.searchParams.get("level");
   if(id) {
     url.searchParams.delete('level')

@@ -46,9 +46,9 @@ function getTileForData(displayName, url, index) {
         let navURL = new URL(url, siteURL).href;
         event.preventDefault()
         event.stopPropagation()
-        currTiles = currTiles[index].children
         const id = getLevelFromURL()
         const newId = generateId(id, index)
+        currTiles = getNodesForLevel(newId)
         if(!currTiles) {
             window.location.href = navURL
         } else {
@@ -66,21 +66,20 @@ function getTileForData(displayName, url, index) {
     return tileWrapperDiv
 }
 
-function getNodesForLevel(urlId) {
+function getNodesForLevel(urlId = getLevelFromURL()) {
     let treeData = sidenavTreeData
     if(urlId === "") return treeData
     const ids = urlId.split('-')
     ids.forEach(id => {
         treeData = treeData[id].children
     })
-    return treeData || []
+    return treeData
 }
 
 function construct() {
     tilesView.replaceChildren([]) //clear the wrapper
     const fragment = document.createDocumentFragment()
-    const id = getLevelFromURL()
-    const nodes = getNodesForLevel(id) || []
+    const nodes = getNodesForLevel() || []
     nodes.map((node, idx) => {
         return getTileForData(node.displayName, node.url, idx)
     }).forEach(node => {

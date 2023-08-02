@@ -14,9 +14,9 @@ function getLevelFromURL() {
 
 function generateId(prefix, suffix) {
     if(prefix) {
-        return prefix + '-' + suffix
+        return `${prefix}-${suffix}`
     }
-    return suffix
+    return `${suffix}`
 }
 
 function getTileForData(displayName, url, index) {

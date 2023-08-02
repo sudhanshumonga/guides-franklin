@@ -4,6 +4,14 @@ const tilesView = document.getElementsByClassName("homepage-tiles")[0];
 
 let currTiles = sidenavTreeData
 const number_of_toc_images = 8
+
+function getLevelFromURL() {
+    let queryString = window.location.search;
+    let params = new URLSearchParams(queryString);
+    let id = params.get("level") || '';
+    return id
+}
+
 function getTileForData(displayName, url, index) {
     const tileWrapperDiv = document.createElement("div");
     tileWrapperDiv.classList.add("tile-wrapper");
@@ -33,6 +41,9 @@ function getTileForData(displayName, url, index) {
         event.stopPropagation()
         currTiles = currTiles[index].children
         if(!currTiles) {
+            const id = getLevelFromURL()
+            const newId = id + '-' + index
+            url.searchParams.set("level", newId)
             window.location.href = navURL
         } else {
             construct()
@@ -46,10 +57,20 @@ function getTileForData(displayName, url, index) {
     return tileWrapperDiv
 }
 
+function getNodesForLevel(id) {
+    const ids = id.split('-')
+    let currTiles = sidenavTreeData
+    ids.forEach(id => {
+        currTiles = currTiles[id]
+    })
+    return currTiles
+}
+
 function construct() {
     tilesView.replaceChildren([]) //clear the wrapper
     const fragment = document.createDocumentFragment()
-    const nodes = currTiles || []
+    const id = getLevelFromURL()
+    const nodes = getNodesForLevel(id) || []
     nodes.map((node, idx) => {
         return getTileForData(node.displayName, node.url, idx)
     }).forEach(node => {

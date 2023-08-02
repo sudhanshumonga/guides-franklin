@@ -40,10 +40,10 @@ function getTileForData(displayName, url, index) {
         event.preventDefault()
         event.stopPropagation()
         currTiles = currTiles[index].children
+        const id = getLevelFromURL()
+        const newId = id + '-' + index
+        url.searchParams.set("level", newId)
         if(!currTiles) {
-            const id = getLevelFromURL()
-            const newId = id + '-' + index
-            url.searchParams.set("level", newId)
             window.location.href = navURL
         } else {
             construct()

@@ -1,1 +1,1 @@
-export default [{"displayName":"topic1","url":"/content/dam/dita-templates/topics/smonga/topic1"}]
+export default [{"displayName":"topic1","url":"/content/dam/dita-templates/topics/smonga/topic1"},{"displayName":"topic1","url":"/content/dam/dita-templates/topics/smonga/topic1"}]

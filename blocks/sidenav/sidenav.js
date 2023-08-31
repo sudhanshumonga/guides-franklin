@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"topic1","url":"/content/dam/dita-templates/topics/smonga/topic1"},{"displayName":"topic1","url":"/content/dam/dita-templates/topics/smonga/topic1"}]
+const treeData = [{"displayName":"topic1","url":"/content/dam/dita-templates/topics/smonga/topic1"}]
 
 const isDesktop = window.matchMedia("(min-width: 900px)");
 

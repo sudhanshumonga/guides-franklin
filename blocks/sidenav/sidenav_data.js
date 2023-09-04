@@ -1,1 +1,1 @@
-export default [{"displayName":"GUID-6c85a4c3-91a6-453b-90f6-1397d091c6dd.dita","url":"guid-6c85a4c3-91a6-453b-90f6-1397d091c6dd"},{"displayName":"topic1.dita","url":"/content/dam/dita-templates/topics/smonga/topic1"}]
+export default [{"displayName":"Recline the seats","url":"/content/dam/dita-templates/topics/smonga/tasktopic"}]

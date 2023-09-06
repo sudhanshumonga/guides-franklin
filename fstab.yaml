@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: http://10.40.43.197:8787/
+    url: https://dita-franklin-worker.sudhanshu1996monga9741.workers.dev/
     type: markup
 

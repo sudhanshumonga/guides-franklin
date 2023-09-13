@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: https://dita-franklin-worker.sudhanshu1996monga9741.workers.dev/
+    url: https://dita-franklin-worker.adobeaem.workers.dev/
     type: markup
 

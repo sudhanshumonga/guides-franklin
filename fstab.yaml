@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: https://dita-franklin-worker.adobeaem.workers.dev/
+    url: https://dita-franklin-worker.adobeaem.workers.dev/sudhanshumonga/guides-franklin/main/docs
     type: markup
 

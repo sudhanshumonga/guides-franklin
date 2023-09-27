@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"","url":"contents/tasks/changingtheoil"},{"displayName":"","url":"contents/tasks/organizing"},{"displayName":"","url":"contents/tasks/spraypainting"},{"displayName":"","url":"contents/tasks/takinggarbage"},{"displayName":"","url":"contents/tasks/washingthecar"},{"displayName":"","url":"contents/concepts/lawnmower"},{"displayName":"","url":"contents/concepts/oil"},{"displayName":"","url":"contents/concepts/paint"},{"displayName":"","url":"contents/concepts/shelving"},{"displayName":"","url":"contents/concepts/snowshovel"},{"displayName":"","url":"contents/concepts/toolbox"},{"displayName":"","url":"contents/concepts/waterhose"},{"displayName":"","url":"contents/concepts/wheelbarrow"},{"displayName":"","url":"contents/concepts/workbench"},{"displayName":"","url":"contents/concepts/wwfluid"}]
+const treeData = [{"url":"contents/topic"}]
 
 const isDesktop = window.matchMedia("(min-width: 900px)");
 

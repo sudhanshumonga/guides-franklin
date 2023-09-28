@@ -1,1 +1,1 @@
-export default [{"url":"contents/topic"}]
+export default [{"displayName":"topic","url":"contents/topic"}]

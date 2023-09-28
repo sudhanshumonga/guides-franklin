@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"url":"contents/topic"}]
+const treeData = [{"displayName":"topic","url":"contents/topic"}]
 
 const isDesktop = window.matchMedia("(min-width: 900px)");
 

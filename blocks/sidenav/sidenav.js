@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"Title has been mapped","url":"contents/tasks/changingtheoil"},{"displayName":"Organizing the workbench and tools","url":"contents/tasks/organizing"},{"displayName":"Spray painting","url":"contents/tasks/spraypainting"},{"displayName":"Taking out the garbage","url":"contents/tasks/takinggarbage"},{"displayName":"Washing the car v1.1","url":"contents/tasks/washingthecar"},{"displayName":"Lawnmower","url":"contents/concepts/lawnmower"},{"displayName":"Oil","url":"contents/concepts/oil"},{"displayName":"Paint","url":"contents/concepts/paint"},{"displayName":"Shelving","url":"contents/concepts/shelving"},{"displayName":"Snow shovel","url":"contents/concepts/snowshovel"},{"displayName":"Tool box","url":"contents/concepts/toolbox"},{"displayName":"Water hose","url":"contents/concepts/waterhose"},{"displayName":"Wheel barrow","url":"contents/concepts/wheelbarrow"},{"displayName":"Workbench","url":"contents/concepts/workbench"},{"displayName":"Windshield washer fluid v1.1","url":"contents/concepts/wwfluid"}]
+const treeData = [{"displayName":"topic","url":"contents/topic"}]
 
 const isDesktop = window.matchMedia("(min-width: 900px)");
 

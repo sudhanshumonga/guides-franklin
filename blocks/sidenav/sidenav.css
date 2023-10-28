@@ -49,6 +49,7 @@
 }
 
 .sidenav-list-item.selected > a{
+    font-weight: 500;
     color: var(--sidenav-selection-color);
 }
 

@@ -63,6 +63,10 @@ ul.tree {
     padding: 0;
 }
 
+.has-children li.sidenav-list-item a {
+    margin-left: 0rem
+}
+
 li.sidenav-list-item a {
     margin-left: 1rem;
 }

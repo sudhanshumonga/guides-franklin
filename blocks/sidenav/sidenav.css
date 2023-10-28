@@ -44,6 +44,10 @@
     }
 }
 
+.sidenav-list-item { 
+    position: relative;
+}
+
 .sidenav-list-item.selected > a{
     background: var(--hover-bg-color);
 }
@@ -58,10 +62,19 @@ ul.tree {
     padding: 0;
 }
 
+li.sidenav-list-item a {
+    margin-left: 1rem;
+}
+
 li.sidenav-list-item a::before {
-    content: '\2022';
+    content: '';
     width: 8px;
-    height: 12px;
+    background: red;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
 }
 
 li.sidenav-list-item.has-children::before {

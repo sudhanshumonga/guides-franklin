@@ -21,18 +21,46 @@ function expandSelection(parent) {
   element.scrollIntoView();
 }
 
+function addResizeBar() {
+  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
+  const div = document.createElement("div");
+  div.classList.add('sidenav-resize-bar');
+  let isResizing = false
+  div.addEventListener('mousedown', (evt) => {
+    isResizing = true
+    document.addEventListener('mousemove', function (event) {
+      if (isResizing) {
+        let newWidth = event.pageX - sidenavContainer.offsetLeft;
+        sidenavContainer.style.width = `${newWidth}px`;
+      }
+    })
+  })
+  document.addEventListener('mouseup', function () {
+    if (isResizing) {
+      isResizing = false;
+    }
+  })
+  sidenavContainer.insertAdjacentElement("afterend", div)
+}
+
 function addExpandCollapseButton() {
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
   span.classList.add('open')
+  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
   span.addEventListener('click', () => {
     const isOpen = span.classList.contains('open')
-    const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
-    (!isOpen) ? sidenavContainer.classList.remove('force-hide') : sidenavContainer.classList.add('force-hide')
+    const sidenavResizer = document.getElementsByClassName("sidenav-resize-bar")[0];
+    if(!isOpen) {
+      sidenavContainer.classList.remove('collapse-width')
+      sidenavResizer.classList.remove('force-hide')
+    } else {
+      sidenavContainer.classList.add('collapse-width')
+      sidenavResizer.classList.add('force-hide')
+    }
     span.classList.toggle("open");
   })
-  const main = document.getElementsByTagName('main')[0]
-  main.prepend(span)
+  sidenavContainer.prepend(span)
 }
 
 function generateId(prefix, suffix) {
@@ -99,6 +127,7 @@ const treeview = document.getElementsByClassName("sidenav")[0];
 addExpandCollapseButton();
 createTree(treeview, treeData, '', '');
 migrateTree(isDesktop);
+addResizeBar(treeview);
 isDesktop.addEventListener("change", () => migrateTree(isDesktop));
 expandSelection(treeview);
 

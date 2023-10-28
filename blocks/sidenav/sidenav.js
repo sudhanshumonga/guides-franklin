@@ -21,7 +21,8 @@ function expandSelection(parent) {
   element.scrollIntoView();
 }
 
-function addResizeBar(sidenavBlock) {
+function addResizeBar() {
+  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
   const div = document.createElement("div");
   div.classList.add('sidenav-resize-bar');
   let isResizing = false
@@ -29,8 +30,8 @@ function addResizeBar(sidenavBlock) {
     isResizing = true
     document.addEventListener('mousemove', function (event) {
       if (isResizing) {
-        let newWidth = event.pageX - sidenavBlock.offsetLeft;
-        sidenavBlock.style.width = `${newWidth} px`;
+        let newWidth = event.pageX - sidenavContainer.offsetLeft;
+        sidenavContainer.style.width = `${newWidth} px`;
       }
     })
   })
@@ -39,7 +40,6 @@ function addResizeBar(sidenavBlock) {
       isResizing = false;
     }
   })
-  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
   sidenavContainer.insertAdjacentElement("afterend", div)
 }
 

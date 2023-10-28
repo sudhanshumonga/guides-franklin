@@ -31,7 +31,7 @@ function addResizeBar() {
     document.addEventListener('mousemove', function (event) {
       if (isResizing) {
         let newWidth = event.pageX - sidenavContainer.offsetLeft;
-        sidenavContainer.style.width = `${newWidth} px`;
+        sidenavContainer.style.width = `${newWidth}px`;
       }
     })
   })

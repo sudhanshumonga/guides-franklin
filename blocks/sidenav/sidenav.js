@@ -47,9 +47,9 @@ function addExpandCollapseButton() {
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
   span.classList.add('open')
+  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
   span.addEventListener('click', () => {
     const isOpen = span.classList.contains('open')
-    const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
     const sidenavResizer = document.getElementsByClassName("sidenav-resize-bar")[0];
     if(!isOpen) {
       sidenavContainer.classList.remove('force-hide')
@@ -60,8 +60,7 @@ function addExpandCollapseButton() {
     }
     span.classList.toggle("open");
   })
-  const main = document.getElementsByTagName('main')[0]
-  main.prepend(span)
+  sidenavContainer.prepend(span)
 }
 
 function generateId(prefix, suffix) {

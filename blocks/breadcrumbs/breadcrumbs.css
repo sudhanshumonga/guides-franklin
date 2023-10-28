@@ -6,16 +6,26 @@
 }
 
 .breadcrumbs > div > div:not(:last-child)::after {
-    content: "/";
+    content: url("./bcrumb-chev-right.svg");
     margin: 0 5px;
 }
 
 .breadcrumbs > div > div:not(:last-child) a {
     text-decoration: none;
     color: var(--brdcrmb-secondary-color);
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .breadcrumbs > div > div:last-child a {
     text-decoration: none;
     color: var(--brdcrmb-primary-color);
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }

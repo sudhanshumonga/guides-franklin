@@ -40,8 +40,8 @@
   /* nav height */
   --nav-height: 5rem;
 
-  --brdcrmb-primary-color: #4B4B4B;
-  --brdcrmb-secondary-color: #707070;
+  --brdcrmb-primary-color: #000;
+  --brdcrmb-secondary-color: #000;
   --hover-bg-color : rgba(50,50,50,.05);
 
   --table-header-bg-color: aliceblue;

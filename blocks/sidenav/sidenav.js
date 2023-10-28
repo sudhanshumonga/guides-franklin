@@ -25,16 +25,16 @@ function addResizeBar(sidenavBlock) {
   const div = document.createElement("div");
   div.classList.add('sidenav-resize-bar');
   let isResizing = false
-  div.onmousedown((evt) => {
+  div.addEventListener('mousedown', (evt) => {
     isResizing = true
-    document.onmousemove(function (event) {
+    document.addEventListener('mousemove', function (event) {
       if (isResizing) {
         let newWidth = event.pageX - sidenavBlock.offsetLeft;
         sidenavBlock.style.width = `${newWidth} px`;
       }
     })
   })
-  document.onmousemove(function () {
+  document.addEventListener('mouseup', function () {
     if (isResizing) {
       isResizing = false;
     }

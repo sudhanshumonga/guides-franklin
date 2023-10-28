@@ -270,8 +270,8 @@ header .spinner-wheel-suspense {
 }
 
 .collapse-width {
-  width: 0;
-  min-width: 0;
+  width: 0 !important;
+  min-width: 0 !important;
 }
 
 @media (min-width: 900px) {

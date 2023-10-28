@@ -58,7 +58,7 @@ ul.tree {
     padding: 0;
 }
 
-li.sidenav-list-item::before {
+li.sidenav-list-item a::before {
     content: '\2022';
     width: 8px;
     height: 12px;

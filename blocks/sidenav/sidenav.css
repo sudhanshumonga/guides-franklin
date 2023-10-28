@@ -7,9 +7,20 @@
     display: none;
 }
 
+.sidenav-resize-bar {
+    display: none;
+}
+
 @media (min-width: 900px) {
+    .sidenav-resize-bar {
+        display: block;
+        flex-shrink: 0;
+        width: 2px;
+        color: red;
+    }
     .sidenav-expand-collapse {
         display: block;
+        flex-shrink: 0;
     }
     .sidenav-container {
       display: block;

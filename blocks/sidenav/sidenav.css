@@ -66,7 +66,7 @@ li.sidenav-list-item a {
     margin-left: 1rem;
 }
 
-li.sidenav-list-item a::before {
+li.sidenav-list-item.selected a::before {
     content: '';
     width: 8px;
     background: red;
@@ -77,9 +77,6 @@ li.sidenav-list-item a::before {
     left: 0;
 }
 
-li.sidenav-list-item.has-children::before {
-    content: "";
-}
 
 li.sidenav-list-item > ul.tree li {
     margin-left: 40px;

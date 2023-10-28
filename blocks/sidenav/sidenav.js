@@ -52,10 +52,10 @@ function addExpandCollapseButton() {
     const isOpen = span.classList.contains('open')
     const sidenavResizer = document.getElementsByClassName("sidenav-resize-bar")[0];
     if(!isOpen) {
-      sidenavContainer.classList.remove('force-hide')
+      sidenavContainer.classList.remove('collapse-width')
       sidenavResizer.classList.remove('force-hide')
     } else {
-      sidenavContainer.classList.add('force-hide')
+      sidenavContainer.classList.add('collapse-width')
       sidenavResizer.classList.add('force-hide')
     }
     span.classList.toggle("open");

@@ -269,6 +269,11 @@ header .spinner-wheel-suspense {
   display: none !important;
 }
 
+.collapse-width {
+  width: 0;
+  min-width: 0;
+}
+
 @media (min-width: 900px) {
   .section > div {
     max-width: 1200px;

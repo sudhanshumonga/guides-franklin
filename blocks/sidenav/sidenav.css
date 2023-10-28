@@ -1,6 +1,7 @@
 .sidenav-container {
     display: none;
     width: 20rem;
+    max-width: 30%;
     background: var(--sidenav-bg-color);
 }
 .sidenav-expand-collapse {
@@ -16,7 +17,8 @@
         display: block;
         flex-shrink: 0;
         width: 2px;
-        color: red;
+        cursor: col-resize;
+        background-color: red;
     }
     .sidenav-expand-collapse {
         display: block;

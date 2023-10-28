@@ -21,6 +21,28 @@ function expandSelection(parent) {
   element.scrollIntoView();
 }
 
+function addResizeBar(sidenavBlock) {
+  const div = document.createElement("div");
+  div.classList.add('sidenav-resize-bar');
+  let isResizing = false
+  div.onmousedown((evt) => {
+    isResizing = true
+    document.onmousemove(function (event) {
+      if (isResizing) {
+        let newWidth = event.pageX - sidenavBlock.offsetLeft;
+        sidenavBlock.style.width = `${newWidth} px`;
+      }
+    })
+  })
+  document.onmousemove(function () {
+    if (isResizing) {
+      isResizing = false;
+    }
+  })
+  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
+  sidenavContainer.insertAdjacentElement("afterend", div)
+}
+
 function addExpandCollapseButton() {
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
@@ -99,6 +121,7 @@ const treeview = document.getElementsByClassName("sidenav")[0];
 addExpandCollapseButton();
 createTree(treeview, treeData, '', '');
 migrateTree(isDesktop);
+addResizeBar(treeview);
 isDesktop.addEventListener("change", () => migrateTree(isDesktop));
 expandSelection(treeview);
 

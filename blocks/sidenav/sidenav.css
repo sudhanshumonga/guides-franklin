@@ -28,7 +28,8 @@
         flex-shrink: 0;
     }
     .sidenav-container {
-      display: block;
+        padding-top: 0.5rem;
+        display: block;
     }
     .sidenav-expand-collapse {
         width: 1.25rem;

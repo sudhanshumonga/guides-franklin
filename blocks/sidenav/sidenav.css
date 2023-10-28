@@ -63,7 +63,7 @@ ul.tree {
     padding: 0;
 }
 
-.has-children li.sidenav-list-item a {
+.chevron-text-wrapper > a {
     margin-left: 0rem
 }
 

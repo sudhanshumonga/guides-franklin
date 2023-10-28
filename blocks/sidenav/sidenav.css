@@ -50,7 +50,6 @@
 
 .sidenav-list-item.selected > a{
     color: var(--sidenav-selection-color);
-    background: var(--hover-bg-color);
 }
 
 .sidenav-list-item.selected > .chevron-text-wrapper > a{

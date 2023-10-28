@@ -58,6 +58,16 @@ ul.tree {
     padding: 0;
 }
 
+li.sidenav-list-item::before {
+    content: '\2022';
+    width: 8px;
+    height: 12px;
+}
+
+li.sidenav-list-item.has-children::before {
+    content: "";
+}
+
 li.sidenav-list-item > ul.tree li {
     margin-left: 40px;
     position: relative;

@@ -21,7 +21,7 @@
         flex-shrink: 0;
         width: 2px;
         cursor: col-resize;
-        background-color: red;
+        background-color: var(--sidenav-bg-color);
     }
     .sidenav-expand-collapse {
         display: block;

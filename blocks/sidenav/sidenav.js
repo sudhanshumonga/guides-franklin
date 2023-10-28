@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"topic","url":"contents/topic"}]
+const treeData = [{"displayName":"Personal Spaceship Operations Manual","url":"contents/cover/personal-spaceship-operations-manual"},{"displayName":"Legal information about this publication","url":"contents/legal/legal"},{"displayName":"Contact information","url":"contents/contacts/contacts"},{"displayName":"General description","url":"","children":[{"displayName":"General description","url":"contents/generaldescription/general-description"},{"displayName":"History of flight","url":"","children":[{"displayName":"History of flight","url":"contents/generaldescription/c-history-of-flight"},{"displayName":"Space agencies","url":"contents/generaldescription/r-space-agencies"}]},{"displayName":"Overview","url":"","children":[{"displayName":"Overview","url":"contents/generaldescription/c-overview"},{"displayName":"Vehicle overview","url":"contents/generaldescription/r-vehicle-overview"},{"displayName":"Launch\nand landing site","url":"contents/generaldescription/r-launch-and-landing-site"}]},{"displayName":"Vehicle structure","url":"","children":[{"displayName":"Vehicle structure","url":"contents/generaldescription/c-vehicle-structure"},{"displayName":"Crew area","url":"","children":[{"displayName":"Crew area","url":"contents/generaldescription/c-crew-area"},{"displayName":"Adjust the seat temperature","url":"contents/generaldescription/t-adjust-the-seat-temperature"},{"displayName":"Change the seat temperature display","url":"contents/generaldescription/t-change-the-seat-temperature-display"},{"displayName":"Recline the seats","url":"contents/generaldescription/t-recline-the-seats"},{"displayName":"Adjust\nthe lighting levels","url":"contents/generaldescription/t-adjust-the-lighting-levels"},{"displayName":"Use the drink dispenser","url":"contents/generaldescription/t-use-the-drink-dispenser"}]},{"displayName":"Wing","url":"contents/generaldescription/c-wing"},{"displayName":"Thermal protection","url":"contents/generaldescription/c-thermal-protection"}]}]},{"displayName":"Systems","url":"","children":[{"displayName":"Systems","url":"contents/systems/systems"},{"displayName":"Escape system","url":"","children":[{"displayName":"Escape system","url":"contents/systems/c-escape-system"},{"displayName":"Launch pad escape","url":"contents/systems/c-launch-pad-escape"},{"displayName":"Cabin escape","url":"contents/systems/c-cabin-escape"},{"displayName":"Landing escape","url":"contents/systems/c-landing-escape"}]},{"displayName":"Crew and\npassenger system","url":"","children":[{"displayName":"Crew and\npassenger system","url":"contents/systems/c-crew-and-passenger-system"},{"displayName":"Hygiene","url":"contents/systems/c-hygiene"},{"displayName":"Sleep","url":"contents/systems/c-sleep"}]},{"displayName":"Landing system","url":"","children":[{"displayName":"Landing system","url":"contents/systems/c-landing-system"},{"displayName":"Landing gear","url":"contents/systems/c-landing-gear"},{"displayName":"Braking","url":"contents/systems/c-braking"}]}]},{"displayName":"Operating limitations","url":"","children":[{"displayName":"Operating limitations","url":"contents/operatinglimitations/operating-limitations"},{"displayName":"Engine limitations","url":"contents/operatinglimitations/r-engine-limitations"},{"displayName":"Airspeed\nlimitations","url":"","children":[{"displayName":"Airspeed\nlimitations","url":"contents/operatinglimitations/r-airspeed-limitations"},{"displayName":"Takeoff","url":"contents/operatinglimitations/r-takeoff"},{"displayName":"Entry","url":"contents/operatinglimitations/r-entry"},{"displayName":"Landing","url":"contents/operatinglimitations/r-landing"}]}]},{"displayName":"Frequently asked questions","url":"contents/faq-source/compiledfaq"}]
 
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
@@ -21,46 +21,18 @@ function expandSelection(parent) {
   element.scrollIntoView();
 }
 
-function addResizeBar() {
-  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
-  const div = document.createElement("div");
-  div.classList.add('sidenav-resize-bar');
-  let isResizing = false
-  div.addEventListener('mousedown', (evt) => {
-    isResizing = true
-    document.addEventListener('mousemove', function (event) {
-      if (isResizing) {
-        let newWidth = event.pageX - sidenavContainer.offsetLeft;
-        sidenavContainer.style.width = `${newWidth}px`;
-      }
-    })
-  })
-  document.addEventListener('mouseup', function () {
-    if (isResizing) {
-      isResizing = false;
-    }
-  })
-  sidenavContainer.insertAdjacentElement("afterend", div)
-}
-
 function addExpandCollapseButton() {
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
   span.classList.add('open')
-  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
   span.addEventListener('click', () => {
     const isOpen = span.classList.contains('open')
-    const sidenavResizer = document.getElementsByClassName("sidenav-resize-bar")[0];
-    if(!isOpen) {
-      sidenavContainer.classList.remove('collapse-width')
-      sidenavResizer.classList.remove('force-hide')
-    } else {
-      sidenavContainer.classList.add('collapse-width')
-      sidenavResizer.classList.add('force-hide')
-    }
+    const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
+    (!isOpen) ? sidenavContainer.classList.remove('force-hide') : sidenavContainer.classList.add('force-hide')
     span.classList.toggle("open");
   })
-  sidenavContainer.prepend(span)
+  const main = document.getElementsByTagName('main')[0]
+  main.prepend(span)
 }
 
 function generateId(prefix, suffix) {
@@ -127,7 +99,6 @@ const treeview = document.getElementsByClassName("sidenav")[0];
 addExpandCollapseButton();
 createTree(treeview, treeData, '', '');
 migrateTree(isDesktop);
-addResizeBar(treeview);
 isDesktop.addEventListener("change", () => migrateTree(isDesktop));
 expandSelection(treeview);
 

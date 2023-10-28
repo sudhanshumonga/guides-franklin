@@ -97,15 +97,18 @@ ul.tree li.closed>ul {
 }
 
 ul.tree li a {
-    font-weight: 700;
     cursor: pointer;
     color: var(--sidenav-text-color);
-    font-size: 1.125rem;
     text-decoration: none;
     overflow: hidden;
     width: 100%;
     display: block;
     overflow-wrap: break-word;
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 300;
+
 }
 
 ul.tree li a:hover {

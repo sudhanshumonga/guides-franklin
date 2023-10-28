@@ -49,6 +49,7 @@
 }
 
 .sidenav-list-item.selected > a{
+    color: var(--sidenav-selection-color);
     background: var(--hover-bg-color);
 }
 
@@ -69,7 +70,7 @@ li.sidenav-list-item a {
 li.sidenav-list-item.selected a::before {
     content: '';
     width: 8px;
-    background: red;
+    background: var(--sidenav-selection-color);
     display: inline-block;
     height: 100%;
     text-align: center;

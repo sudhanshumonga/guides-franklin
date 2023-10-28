@@ -18,7 +18,6 @@
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 .breadcrumbs > div > div:last-child a {
@@ -28,5 +27,4 @@
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
 }

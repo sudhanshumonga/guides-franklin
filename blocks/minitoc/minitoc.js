@@ -80,7 +80,7 @@ window.addEventListener('franklin-app-ready', () => {
             }
           }
           if(targetNode) {
-            targetNode.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: 100 })
+            targetNode.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: 150 })
           }
         }
       }, 0)

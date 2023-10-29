@@ -70,13 +70,13 @@ ul.tree {
 
 li.sidenav-list-item.selected a::before {
     content: '';
-    width: 8px;
+    width: 4px;
     background: var(--sidenav-selection-color);
     display: inline-block;
     height: 100%;
     text-align: center;
     position: absolute;
-    left: -0.85rem;
+    left: -0.75rem;
 }
 
 li.sidenav-list-item.has-children > .chevron-text-wrapper > a::before {

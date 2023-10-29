@@ -53,7 +53,10 @@ main .section .minitoc-container {
     .minitoc-wrapper {
         position: fixed;
     }
-    .minitoc-level::before {
+    .minitoc-level {
+        position: relative;
+    }
+    .minitoc-level.selected::before {
         content: '';
         width: 4px;
         background: var(--sidenav-selection-color);

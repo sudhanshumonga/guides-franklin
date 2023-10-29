@@ -52,7 +52,7 @@ header nav[aria-expanded="true"] {
   }
 
   header nav .nav-sections .project-title {
-    color: var(--header-title-color)
+    color: var(--header-title-color);
   }
 }
 

@@ -67,9 +67,6 @@ ul.tree {
     margin-left: 0rem
 }
 
-li.sidenav-list-item a {
-    margin-left: 1rem;
-}
 
 li.sidenav-list-item.selected a::before {
     content: '';
@@ -79,7 +76,7 @@ li.sidenav-list-item.selected a::before {
     height: 100%;
     text-align: center;
     position: absolute;
-    left: 0;
+    left: -1rem;
 }
 
 

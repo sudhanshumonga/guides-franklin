@@ -10,12 +10,21 @@
 }
 
 .minitoc-list li a {
-    color: #323232;
+    color: var(--minitoc-text-color);
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.minitoc-list li.selected a{
-    font-weight: bold;
+.minitoc-list li.selected a {
     color: var(--minitoc-selected-color);
+    font-family: Poppins;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .minitoc-title {

@@ -79,8 +79,9 @@ window.addEventListener('franklin-app-ready', () => {
               break;
             }
           }
+          let offset = 300
           if(targetNode) {
-            targetNode.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: 150 })
+            targetNode.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: offset})
           }
         }
       }, 0)

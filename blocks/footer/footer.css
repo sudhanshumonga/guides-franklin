@@ -60,6 +60,15 @@ footer ol li a {
   display: flex;
 }
 
+footer .container > div:nth-child(1) > div:nth-child(1) ol {
+  width: 100%;
+  font-size: 0.75rem;
+}
+
+footer .container > div:nth-child(1) > div:nth-child(1) ol li {
+  width: fit-content;
+}
+
 footer .container > div:nth-child(2) {
   display: flex;
   flex-direction: row-reverse;

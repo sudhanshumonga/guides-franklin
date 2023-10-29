@@ -100,7 +100,6 @@ li.sidenav-list-item a::before {
 }
 
 li.has-children {
-    margin-bottom: 0;
     margin-left: -1rem;
 }
 

@@ -75,6 +75,8 @@ footer .container > div:nth-child(1) > div:nth-child(1) p {
 
 footer .container > div:nth-child(1) > div:nth-child(1) h3 {
   margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 1.5rem;
   font-size: 1.5rem !important; 
   border-bottom: var(--footer-font-color);
   border-bottom-style: solid;
@@ -122,5 +124,6 @@ footer p, footer a {
     border-right: var(--footer-font-color);
     border-right-style: solid;
     padding-right: 10%;
+    padding-top: 2.5rem;
   }
 }

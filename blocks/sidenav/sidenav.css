@@ -79,6 +79,10 @@ li.sidenav-list-item.selected a::before {
     left: -1rem;
 }
 
+li.has-children {
+    margin-left: -1rem;
+}
+
 
 li.sidenav-list-item > ul.tree li {
     margin-left: 40px;
@@ -137,7 +141,6 @@ ul.tree .chevron-icon-span {
     text-align: center;
     line-height: 20px;
     color: #000;
-    margin-right: 0.5rem;
     font-weight: 800;
     transform: rotate(90deg);
     transform-origin: center;

@@ -84,7 +84,7 @@ li.sidenav-list-item.has-children > .chevron-text-wrapper > a::before {
 }
 
 li.sidenav-list-item a::before {
-    content: '';
+    content: '\2022';
     width: 8px;
     color: var(--sidenav-bullet-color);
     display: inline-block;

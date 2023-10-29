@@ -37,6 +37,11 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
   color: var(--footer-font-color) !important;
 }
 
+footer ol {
+  list-style: none;
+  display: flex;
+}
+
 footer p, footer a {
   font-size: var(--footer-font-size) !important;
   color: var(--footer-font-color) !important;

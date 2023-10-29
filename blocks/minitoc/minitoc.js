@@ -7,6 +7,7 @@ for (var i = 0; i < headings.length; i++) {
   var heading = headings[i];
   var headingLevel = parseInt(heading.tagName[1]);
   var listItem = document.createElement("li");
+  listItem.classList.add(`minitoc-level`)
   listItem.classList.add(`minitoc-level-${headingLevel}`)
   var link = document.createElement("a");
   link.textContent = heading.textContent;
@@ -21,7 +22,7 @@ for (var i = 0; i < headings.length; i++) {
 if(tagList.length !== 0) {
     var h2minitocText = document.createElement('h2')
     h2minitocText.classList.add('minitoc-title')
-    var textNode = document.createTextNode("On this page")
+    var textNode = document.createTextNode("In this article")
     miniTOCList.classList.add('minitoc-list')
     h2minitocText.appendChild(textNode)
     minitocContainer.appendChild(h2minitocText)

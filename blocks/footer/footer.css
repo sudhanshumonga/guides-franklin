@@ -60,7 +60,7 @@ footer ol li a {
   display: flex;
 }
 
-footer .container div:nth-child(2) {
+footer .container > div:nth-child(2) {
   display: flex;
   flex-direction: row-reverse;
 }

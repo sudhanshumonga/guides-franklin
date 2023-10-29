@@ -1,7 +1,7 @@
 footer {
+  color: var(--footer-font-color) !important; 
   padding: 2rem;
   flex-grow: 1;
-  background-color: var(--footer-background-color);
   background-color: var(--footer-background-color);
   font-size: var(--body-font-size-s);
   border-top-style: solid;
@@ -28,18 +28,18 @@ footer .container > div {
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
   font-size: .9375rem !important;
   font-weight: 600 !important;
-  color: #4b4b4b !important;
+  color: var(--footer-font-color) !important;
 }
 
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
   font-size: .9375rem !important;
   font-weight: 600 !important;
-  color: #4b4b4b !important;
+  color: var(--footer-font-color) !important;
 }
 
 footer p, footer a {
   font-size: var(--footer-font-size) !important;
-  color: var(--footer-content-color) !important;
+  color: var(--footer-font-color) !important;
   font-family: var(--footer-font-family) !important;
   font-weight: var(--footer-font-weight) !important;
 }

@@ -39,12 +39,23 @@ main .section .minitoc-container {
         width: 15rem;
         padding: 1rem;
         right: 0;
+        background-color: var(--minitoc-bg-color);
     }
     .minitoc-wrapper {
         position: fixed;
     }
-    
+    .minitoc-level::before {
+        content: '';
+        width: 4px;
+        background: var(--sidenav-selection-color);
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+        position: absolute;
+        left: -0.75rem;
+    }
 }
+
 
 .minitoc-level-1 {
     margin-left: 0;

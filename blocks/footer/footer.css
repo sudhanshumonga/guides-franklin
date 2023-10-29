@@ -73,6 +73,14 @@ footer .container > div:nth-child(1) > div:nth-child(1) p {
   color: var(--footer-background-color) !important;
 }
 
+footer .container > div:nth-child(1) > div:nth-child(1) h3 {
+  margin-top: 0;
+  font-size: 1.5rem !important; 
+  border-bottom: var(--footer-font-color);
+  border-bottom-style: solid;
+
+}
+
 footer .container > div:nth-child(1) > div:nth-child(1) ol li {
   width: fit-content;
 }

@@ -79,13 +79,17 @@ li.sidenav-list-item.selected a::before {
     left: -1rem;
 }
 
+.sidenav > ul.tree {
+    margin-left: 0.5rem;
+}
+
 li.has-children {
     margin-left: -1rem;
 }
 
 
 li.sidenav-list-item > ul.tree li {
-    margin-left: 40px;
+    margin-left: 2rem;
     position: relative;
 }
 

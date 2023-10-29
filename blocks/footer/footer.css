@@ -92,4 +92,10 @@ footer p, footer a {
     display: flex;
     justify-content: space-between;
   }
+
+  footer .container > div:nth-child(1) > div:nth-child(1) {
+    border-right: var(--footer-font-color);
+    border-right-style: solid;
+    padding-right: 10%;
+  }
 }

@@ -79,6 +79,21 @@ li.sidenav-list-item.selected a::before {
     left: -0.85rem;
 }
 
+li.sidenav-list-item.has-children a::before {
+    display: none;
+}
+
+li.sidenav-list-item a::before {
+    content: '';
+    width: 8px;
+    background: var(--sidenav-text-color);
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: -0.85rem;
+}
+
 .sidenav > ul.tree {
     margin-left: 0.5rem;
 }

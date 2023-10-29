@@ -45,6 +45,7 @@
 }
 
 .sidenav-list-item { 
+    margin-bottom: 0.75rem;
     position: relative;
 }
 
@@ -99,6 +100,7 @@ li.sidenav-list-item a::before {
 }
 
 li.has-children {
+    margin-bottom: 0;
     margin-left: -1rem;
 }
 

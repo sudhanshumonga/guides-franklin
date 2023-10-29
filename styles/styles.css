@@ -160,7 +160,7 @@ a:hover {
   color: var(--link-hover-color);
 }
 main {
-  /* min-height: calc(100% - 5rem); */
+  min-height: calc(100% - 5rem);
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -256,7 +256,7 @@ main img {
 }
 
 main .section {
-  /* overflow: auto; */
+  overflow: auto;
   padding: 1rem;
 }
 

@@ -68,6 +68,9 @@ footer .container > div:nth-child(1) > div:nth-child(1) ol {
 footer .container > div:nth-child(1) > div:nth-child(1) p {
   background-image: url('./footer.png');
   background-size: cover;
+  width: 3rem;
+  height: 3rem;
+  color: var(--footer-background-color) !important;
 }
 
 footer .container > div:nth-child(1) > div:nth-child(1) ol li {

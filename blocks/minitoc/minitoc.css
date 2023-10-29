@@ -35,21 +35,18 @@
     font-size: 1rem;
 }
 
-main .section .minitoc-container {
-    padding: 0rem;
-}
-
 
 @media (min-width: 900px) {
     .minitoc {
       display: block;
       text-transform: uppercase;
     }
-    main .section .minitoc-container {
+    main .section.minitoc-container {
         width: 15rem;
         padding: 2rem;
         right: 0;
         background-color: var(--minitoc-bg-color);
+        box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.10);
     }
     .minitoc-wrapper {
         position: fixed;

@@ -56,12 +56,33 @@ window.addEventListener('franklin-app-ready', () => {
     }
   }
   tagList.forEach(tag => {
-    tag.addEventListener('click', () => {
+    tag.addEventListener('click', (event) => {
+      event.preventDefault();
       setTimeout(() => {
         for (let j = 0; j < tagList.length; j++) {
           tagList[j].classList.remove('selected');
         }
         tag.classList.add('selected');
+        const a_tag = tag.children[0]
+        if(a_tag) {
+          let href = a_tag.attributes['href'].value
+          let target_id
+          if(href) {
+            target_id = href[0] === '#' ? href.substr(1, href.length - 1) : href
+          }
+          let targetNode
+          for (var i = 0; i < headings.length; i++) {
+            let heading = headings[i]
+            let id = heading.attributes['id'].value
+            if(id === target_id) {
+              targetNode = heading
+              break;
+            }
+          }
+          if(targetNode) {
+            targetNode.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: 100 })
+          }
+        }
       }, 0)
     })
   })

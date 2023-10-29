@@ -75,6 +75,10 @@
   --minitoc-bg-color: #DDE5FF33;
   --minitoc-text-color: #484848;
 
+  /*Header*/
+  --header-bg-color: #0B1D59;
+  --header-title-color: #FFF;
+
 }
 
 html {

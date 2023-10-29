@@ -50,10 +50,6 @@ header nav[aria-expanded="true"] {
     min-height: 0;
     overflow: visible;
   }
-
-  header nav .nav-sections .project-title {
-    color: var(--header-title-color);
-  }
 }
 
 header nav p {
@@ -174,6 +170,7 @@ header nav .nav-sections {
 nav .nav-sections h3 {
   margin: 0;
   line-height: var(--nav-height);
+  color: var(--header-title-color);
 }
 
 header nav[aria-expanded="true"] .nav-sections {

@@ -54,14 +54,17 @@ footer ol li a {
 
 footer ol li:nth-child(1) a {
   background-image: url('./fb.svg');
+  background-size: cover;
 }
 
 footer ol li:nth-child(2) a {
   background-image: url('./twitter.svg');
+  background-size: cover;
 }
 
 footer ol li:nth-child(3) a {
   background-image: url('./insta.svg');
+  background-size: cover;
 }
 
 footer p, footer a {

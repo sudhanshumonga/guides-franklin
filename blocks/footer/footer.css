@@ -52,15 +52,15 @@ footer ol li a {
   height: 100%;
 }
 
-footer ol li a:nth-child(1) {
+footer ol li:nth-child(1) a {
   background-image: url('./fb.svg');
 }
 
-footer ol li a:nth-child(2) {
+footer ol li:nth-child(2) a {
   background-image: url('./twitter.svg');
 }
 
-footer ol li a:nth-child(3) {
+footer ol li:nth-child(3) a {
   background-image: url('./insta.svg');
 }
 

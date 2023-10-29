@@ -60,6 +60,11 @@ footer ol li a {
   display: flex;
 }
 
+footer .container div:nth-child(2) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 footer ol li:nth-child(1) a {
   background-image: url('./fb.svg');
   background-size: cover;

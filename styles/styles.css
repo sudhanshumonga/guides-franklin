@@ -19,14 +19,10 @@
   --highlight-background-color: #ccc;
   --text-color: rgb(74, 74, 74);
   --sidenav-bg-color: #F1F1F1;
-  --minitoc-text-color: #484848;
   --bg-color : #ffffff;
-  --minitoc-title-color: #7B7B7B;
-  --minitoc-selected-color: #222;
   --note-block-bg-color: #eee;
   --note-block-border-color: #ddd;
   --note-block-header-color: #999;
-  --minitoc-bg-color: #DDE5FF33;
 
   /* fonts */
   --body-font-family: adobe-clean, "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande";
@@ -71,6 +67,14 @@
 
   /* Hero vars*/
   --hero-heading-text-color: rgb(74, 74, 74);
+
+  /* Minitoc */
+  --minitoc-side-selection-color: #0B1D59;
+  --minitoc-title-color: #7B7B7B;
+  --minitoc-selected-color: #222;
+  --minitoc-bg-color: #DDE5FF33;
+  --minitoc-text-color: #484848;
+
 }
 
 html {

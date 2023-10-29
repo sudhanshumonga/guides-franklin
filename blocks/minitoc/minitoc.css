@@ -59,7 +59,7 @@ main .section .minitoc-container {
     .minitoc-level.selected::before {
         content: '';
         width: 4px;
-        background: var(--sidenav-selection-color);
+        background: var(--minitoc-side-selection-color);
         display: inline-block;
         height: 100%;
         text-align: center;

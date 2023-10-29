@@ -86,7 +86,7 @@ li.sidenav-list-item.has-children > .chevron-text-wrapper > a::before {
 li.sidenav-list-item a::before {
     content: '';
     width: 8px;
-    background: var(--sidenav-text-color);
+    color: var(--sidenav-bullet-color);
     display: inline-block;
     height: 100%;
     text-align: center;

@@ -35,7 +35,7 @@
   --body-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 5rem;
+  --nav-height: 4em;
 
   --brdcrmb-primary-color: #000;
   --brdcrmb-secondary-color: #000;
@@ -160,7 +160,7 @@ a:hover {
   color: var(--link-hover-color);
 }
 main {
-  min-height: calc(100% - 5rem);
+  min-height: calc(100% - var(--nav-height));
   display: flex;
   width: 100%;
   flex-direction: row;

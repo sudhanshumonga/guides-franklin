@@ -181,13 +181,12 @@ header nav .nav-brand img {
 
 /* sections */
 header nav .nav-sections {
-  display: block;
-  visibility: visible;
-  align-self: start;
-  width: calc(100% + 2rem);
-  margin-left: -1rem;
-  padding: 0 2rem;
-  background-color: var();
+  grid-area: sections;
+  flex: 1 1 auto;
+  height: 100%;
+  display: none;
+  visibility: hidden;
+  background-color: var(--overlay-color);
 }
 
 nav .nav-sections h3 {
@@ -221,17 +220,7 @@ header nav .nav-sections ul > li > ul > li {
   font-weight: 500;
 }
 
-
 @media (min-width: 900px) {
-  header nav .nav-sections {
-    grid-area: sections;
-    flex: 1 1 auto;
-    height: 100%;
-    display: none;
-    visibility: hidden;
-    background-color: var(--sidenav-bg-color);
-  }
-
   header nav .nav-sections {
     display: block;
     visibility: visible;

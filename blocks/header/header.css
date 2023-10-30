@@ -43,6 +43,7 @@ header nav[aria-expanded="true"] {
     display: block;
     visibility: visible;
     align-self: start;
+    width: calc(100% - 1rem);
     margin-left: -2rem;
     padding: 0 3rem;
     background: var(--sidenav-bg-color);

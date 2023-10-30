@@ -101,6 +101,7 @@ header nav .nav-hamburger {
   height: 22px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 header nav .nav-hamburger button {

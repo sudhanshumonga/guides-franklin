@@ -92,17 +92,17 @@ footer .container > div:nth-child(2) {
   flex-direction: row-reverse;
 }
 
-footer ol li:nth-child(1) a {
+footer .container > div:nth-child(2) > div:nth-child(1) ol li:nth-child(1) a {
   background-image: url('./fb.svg');
   background-size: cover;
 }
 
-footer ol li:nth-child(2) a {
+footer .container > div:nth-child(2) > div:nth-child(1) ol li:nth-child(2) a{
   background-image: url('./twitter.svg');
   background-size: cover;
 }
 
-footer ol li:nth-child(3) a {
+footer .container > div:nth-child(2) > div:nth-child(1) ol li:nth-child(3) a {
   background-image: url('./insta.svg');
   background-size: cover;
 }

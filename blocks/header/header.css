@@ -1,5 +1,9 @@
 /* header and nav layout */
 
+header .header-button-group > div {
+  display: none;
+}
+
 header.header-wrapper {
   min-height: var(--nav-height);
 }
@@ -41,6 +45,24 @@ header nav[aria-expanded="true"] {
 }
 
 @media (min-width: 900px) {
+
+  header .header-button-group > div {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  header .header-button-group > div > div {
+    display: inline-flex;
+    padding: 0.875rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--header-button-group-button-border-color);
+    background: var(--header-button-group-button-bg-color);
+    height: 0.75rem;
+  }
+
   header nav {
     display: flex;
     justify-content: space-between;

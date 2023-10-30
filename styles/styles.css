@@ -78,6 +78,8 @@
   /*Header*/
   --header-bg-color: #0B1D59;
   --header-title-color: #FFF;
+  --header-button-group-button-border-color: #0B1D59;
+  --header-button-group-button-bg-color: #fff;
 
 }
 

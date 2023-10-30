@@ -38,6 +38,18 @@ header nav[aria-expanded="true"] {
   min-height: 100vh;
 }
 
+@media (max-width: 900px) {
+  header nav[aria-expanded="true"] .nav-sections {
+    display: block;
+    visibility: visible;
+    align-self: start;
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    padding: 0 2rem;
+    background: var(--sidenav-bg-color);
+  }
+}
+
 @media (min-width: 600px) {
   header nav {
     padding: 0 2rem;

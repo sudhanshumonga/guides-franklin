@@ -28,7 +28,7 @@
         display: block;
         flex-shrink: 0;
     }
-    .sidenav-container {
+    main .section.sidenav-container {
         padding-top: 0.5rem;
         display: block;
         overflow-y: auto;

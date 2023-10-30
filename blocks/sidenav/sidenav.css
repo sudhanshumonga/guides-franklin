@@ -31,7 +31,7 @@
     .sidenav-container {
         padding-top: 0.5rem;
         display: block;
-        overflow: auto;
+        overflow-y: auto;
     }
     .sidenav-expand-collapse {
         width: 1.25rem;

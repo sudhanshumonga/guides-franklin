@@ -104,7 +104,7 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = ['brand', 'sections', 'tools'];
+    const classes = ['brand', 'sections', 'tools', 'toc-btn'];
     classes.forEach((c, i) => {
       const section = nav.children[i];
       if (section) section.classList.add(`nav-${c}`);
@@ -123,6 +123,11 @@ export default async function decorate(block) {
         });
       });
     }
+
+    // toc button for mobile toc view
+    const button = nav.querySelector('#toc-mob-button')
+    
+
 
     // hamburger for mobile
     const hamburger = document.createElement('div');

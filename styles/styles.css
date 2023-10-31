@@ -309,6 +309,7 @@ header .spinner-wheel-suspense {
 
 .franklin-app-rendered .section.breadcrumbs-container {
   flex-grow: 1;
+  padding-top: 1rem;
 }
 
 /* section metadata */

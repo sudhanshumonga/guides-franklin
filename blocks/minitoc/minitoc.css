@@ -42,6 +42,7 @@
       text-transform: uppercase;
     }
     main .section.minitoc-container {
+        display: block;
         width: 15rem;
         padding: 2rem;
         right: 0;

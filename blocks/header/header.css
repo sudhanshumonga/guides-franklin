@@ -24,7 +24,8 @@ header .nav-wrapper {
 }
 
 .nav-toc-btn > p {
-  width: 5rem;
+  width: fit-content;
+  min-width: 5rem;
   height: 2rem;
   background: rebeccapurple;
   margin: 1rem 2rem;

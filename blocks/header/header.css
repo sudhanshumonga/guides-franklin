@@ -17,18 +17,25 @@ header .nav-wrapper {
 }
 
 .nav-toc-btn {
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  height: 100%;
+}
+
+.nav-toc-btn > p {
+  width: 5rem;
   height: 2rem;
-  background: red;
-  grid-area: toc-btn;
+  background: rebeccapurple;
+  margin: 1rem 2rem;
 }
 
 header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'brand tools hamburger' var(--nav-height)
-    'toc-btn x x' 2rem
-    'sections sections sections' 1fr / auto 1fr auto;
+  'brand tools hamburger' var(--nav-height)
+  'toc-btn toc-btn toc-btn' 4rem
+  'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
   gap: 1rem 2em;
   height: var(--nav-height);

@@ -20,6 +20,7 @@ header .nav-wrapper {
   width: calc(100% + 4rem);
   margin-left: -2rem;
   height: 100%;
+  grid-area: toc-btn;
 }
 
 .nav-toc-btn > p {

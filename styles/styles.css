@@ -289,11 +289,6 @@ header .spinner-wheel-suspense {
 }
 
 @media (min-width: 900px) {
-
-.franklin-app-rendered .section.breadcrumbs-container {
-  flex-grow: 1;
-  padding-top: 1rem;
-}
   .section > div {
     max-width: 1200px;
     margin: auto;
@@ -312,11 +307,18 @@ header .spinner-wheel-suspense {
   }
 }
 
-
 .franklin-app-rendered .section.breadcrumbs-container {
   flex-grow: 1;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
+
+@media(max-width) {
+  .franklin-app-rendered .section.breadcrumbs-container {
+    flex-grow: 1;
+    padding-top: 3rem;
+  }
+}
+
 /* section metadata */
 main .section.highlight {
   background-color: var(--highlight-background-color);

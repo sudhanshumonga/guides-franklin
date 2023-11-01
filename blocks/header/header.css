@@ -40,14 +40,17 @@ header nav[aria-expanded="true"] {
   gap: 0em 2em;
   grid-template:
     'brand hamburger' var(--nav-height)
-    'sections sections' 1fr
+    'sections toc-btn' 1fr
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
 }
 
 header nav[aria-expanded="true"] .nav-toc-btn {
-  display: none;
+  width: 2rem;
+  margin-left: -4rem;
+  align-self: flex-start;
+  margin-top: 1rem;
 }
 
 @media (max-width: 900px) {

@@ -312,7 +312,7 @@ header .spinner-wheel-suspense {
   padding-top: 1rem;
 }
 
-@media(max-width) {
+@media(max-width: 900px) {
   .franklin-app-rendered .section.breadcrumbs-container {
     flex-grow: 1;
     padding-top: 3rem;

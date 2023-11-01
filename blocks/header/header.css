@@ -17,6 +17,7 @@ header .nav-wrapper {
 }
 
 .nav-toc-btn {
+  background-color: var(--background-color);
   width: calc(100% + 4rem);
   margin-left: -2rem;
   height: 100%;
@@ -56,6 +57,7 @@ header nav[aria-expanded="true"] {
 }
 
 header nav[aria-expanded="true"] .nav-toc-btn {
+  background-color: unset;
   width: 2rem;
   height: 2rem;
   margin-left: -4rem;

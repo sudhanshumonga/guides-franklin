@@ -210,6 +210,10 @@ header nav[aria-expanded="true"] .nav-hamburger-icon::after {
     display: none;
     visibility: hidden;
   }
+
+  header nav .nav-toc-btn {
+    display: none;
+  }
 }
 
 /* brand */

@@ -125,9 +125,9 @@ export default async function decorate(block) {
     }
 
     // toc button for mobile toc view
-    const button = nav.querySelector('#toc-mob-button')
+    const button = nav.querySelector('.nav-toc-btn')
     button.addEventListener('click', () => toggleMenu(nav, navSections));
-
+    
 
 
     // hamburger for mobile

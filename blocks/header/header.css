@@ -161,9 +161,7 @@ header nav .nav-hamburger-icon{
 
 
 header nav[aria-expanded="false"] .nav-hamburger-icon {
-  height: 2px;
-  border-radius: 2px;
-  background: currentcolor;
+  height: 100%;
 }
 
 header nav[aria-expanded="true"] .nav-hamburger-icon {

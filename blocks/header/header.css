@@ -72,6 +72,13 @@ header nav[hamburger-expanded="true"] .nav-toc-btn {
 
 header nav[hamburger-expanded="true"] .nav-tools {
   height: 100%;
+  background-color: var(--sidenav-bg-color);
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+}
+
+header nav[hamburger-expanded="true"] .nav-tools .header-button-group{
+  padding: 1rem;
 }
 
 header nav[hamburger-expanded="true"] .header-button-group > div {

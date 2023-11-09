@@ -149,7 +149,7 @@ export default async function decorate(block) {
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, isDesktop.matches);
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
-    isDesktop.addEventListener('change', () => toggleTools(nav, navSections, !isDesktop.matches));
+    isDesktop.addEventListener('change', () => toggleTools(nav, navSections, false));
 
     decorateIcons(nav);
     const navWrapper = document.createElement('div');

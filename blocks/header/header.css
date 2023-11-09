@@ -56,6 +56,16 @@ header nav[aria-expanded="true"] {
   min-height: 100vh;
 }
 
+header nav[hamburger-expanded="true"] {
+  gap: 0em 2em;
+  grid-template:
+    'brand hamburger' var(--nav-height)
+    'sections toc-btn' 1fr
+    'tools tools' var(--nav-height) / auto 1fr;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
 header nav[aria-expanded="true"] .nav-toc-btn {
   background-color: unset;
   width: 2rem;

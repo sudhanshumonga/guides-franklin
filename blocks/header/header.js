@@ -47,19 +47,6 @@ function toggleAllNavSections(sections, expanded = false) {
   });
 }
 
-/**
- * Toggles the entire nav
- * @param {Element} nav The container element
- * @param {Element} navSections The nav sections within the container element
- * @param {*} forceExpanded Optional param to force nav expand behavior when not null
- */
-
-function toggleTools(nav, navSections, forceExpanded = null) {
-  const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('hamburger-expanded') === 'true';
-  nav.setAttribute('hamburger-expanded', expanded ? 'false' : 'true');
-
-}
-
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
@@ -143,13 +130,11 @@ export default async function decorate(block) {
     hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
         <span class="nav-hamburger-icon"></span>
       </button>`;
-    hamburger.addEventListener('click', () => toggleTools(nav, navSections));
     nav.prepend(hamburger);
     nav.setAttribute('aria-expanded', 'false');
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, isDesktop.matches);
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
-    isDesktop.addEventListener('change', () => toggleTools(nav, navSections, false));
 
     decorateIcons(nav);
     const navWrapper = document.createElement('div');

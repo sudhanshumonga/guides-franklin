@@ -117,6 +117,7 @@ header nav[aria-expanded="true"] .nav-toc-btn {
 
 header nav[aria-expanded="true"] .nav-toc-btn > p {
   padding-right: 0;
+  padding-left: 0;
   width: 100%;
   min-width: unset;
   height: 100%;

@@ -24,7 +24,14 @@ header .nav-wrapper {
   grid-area: toc-btn;
 }
 
+.nav-toc-btn > p picture {
+  padding-right: 0.5rem;
+}
+
 .nav-toc-btn > p {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
   width: fit-content;
   min-width: 5rem;
   height: 2rem;

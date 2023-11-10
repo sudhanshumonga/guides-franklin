@@ -298,6 +298,7 @@ header nav .nav-sections {
   display: none;
   visibility: hidden;
   background-color: var(--overlay-color);
+  overflow: auto;
 }
 
 nav .nav-sections h3 {

@@ -24,6 +24,10 @@ header .nav-wrapper {
   grid-area: toc-btn;
 }
 
+.nav-toc-btn a::before {
+  content: url('../sidenav/toc-icon.svg');
+}
+
 .nav-toc-btn > p picture {
   padding-right: 0.5rem;
 }

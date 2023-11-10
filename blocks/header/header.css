@@ -3,6 +3,11 @@ header.header-wrapper {
   min-height: var(--nav-height);
 }
 
+header .header-button-group > div {
+  display: flex;
+  flex-direction: row;
+}
+
 header .nav-wrapper {
   width: 100%;
   z-index: 2;
@@ -133,10 +138,6 @@ header .header-button-group {
   flex-direction: row;
 }
 
-header .header-button-group > div {
-  display: flex;
-  flex-direction: row;
-}
   header nav[aria-expanded="true"] .nav-sections {
     display: block;
     visibility: visible;

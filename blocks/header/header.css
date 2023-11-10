@@ -1,9 +1,4 @@
 /* header and nav layout */
-header nav .nav-hamburger {
-  display: none;
-  visibility: hidden;
-}
-
 header.header-wrapper {
   min-height: var(--nav-height);
 }
@@ -184,10 +179,7 @@ header nav a:any-link {
 /* hamburger */
 header nav .nav-hamburger {
   grid-area: hamburger;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  display: none;
 }
 
 header nav .nav-hamburger button {
@@ -220,8 +212,6 @@ header nav[aria-expanded="true"] .nav-hamburger-icon {
 }
 
 @media (min-width: 900px) {
-  
-
   header nav .nav-toc-btn {
     display: none;
   }

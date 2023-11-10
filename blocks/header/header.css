@@ -5,7 +5,7 @@ header.header-wrapper {
 
 header .header-button-group > div {
   display: flex;
-  flex-direction: row;
+  gap: 1.5rem;
 }
 
 header .nav-wrapper {
@@ -138,6 +138,10 @@ header .header-button-group {
   flex-direction: row;
 }
 
+header .header-button-group > div {
+  display: flex;
+  flex-direction: row;
+}
   header nav[aria-expanded="true"] .nav-sections {
     display: block;
     visibility: visible;
@@ -157,10 +161,6 @@ header .header-button-group {
 
 @media (min-width: 900px) {
 
-  header .header-button-group > div {
-    display: flex;
-    gap: 1.5rem;
-  }
 
   header .header-button-group > div > div {
     display: inline-flex;

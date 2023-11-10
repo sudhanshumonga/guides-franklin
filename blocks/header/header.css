@@ -133,6 +133,8 @@ header nav[aria-expanded="true"] .nav-toc-btn > p a {
 
 header nav[aria-expanded="true"] .nav-toc-btn > p a::before {
   content: url("../sidenav/close.svg");
+  margin-left: 0.5rem;
+  padding-right: 0.0rem;
 }
 
 @media (max-width: 900px) {

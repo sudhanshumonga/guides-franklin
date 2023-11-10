@@ -120,10 +120,12 @@ header .header-button-group > div > div a {
 
 header .header-button-group > div > div:nth-child(1) a {
   background: url('./contact.svg');
+  background-size: contain;
 }
 
 header .header-button-group > div > div:nth-child(2) a {
   background: url('./signin.svg');
+  background-size: contain;
 }
 
 header .header-button-group {

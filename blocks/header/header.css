@@ -24,8 +24,16 @@ header .nav-wrapper {
   grid-area: toc-btn;
 }
 
+.nav-toc-btn a {
+  display: flex;
+  line-height: 1.25rem;
+  align-items: center;
+}
+
 .nav-toc-btn a::before {
-  content: url('../sidenav/toc-icon.svg');
+  content: url(../sidenav/toc-icon.svg);
+  padding-right: 0.5rem;
+  line-height: 1rem;
 }
 
 .nav-toc-btn > p picture {

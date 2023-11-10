@@ -131,6 +131,10 @@ header nav[aria-expanded="true"] .nav-toc-btn > p a {
   margin-left: 0.5rem;
 }
 
+header nav[aria-expanded="true"] .nav-toc-btn > p a::before {
+  content: url("../sidenav/close.svg");
+}
+
 @media (max-width: 900px) {
 
   header .header-button-group > div {

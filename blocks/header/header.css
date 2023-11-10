@@ -118,11 +118,11 @@ header .header-button-group > div > div a {
   height: 100%;
 }
 
-header .header-button-group > div > div a:nth-child(1) {
+header .header-button-group > div > div:nth-child(1) a {
   background: url('./contact.svg');
 }
 
-header .header-button-group > div > div a:nth-child(2) {
+header .header-button-group > div > div:nth-child(2) a {
   background: url('./signin.svg');
 }
 

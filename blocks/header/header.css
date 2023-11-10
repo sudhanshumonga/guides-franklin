@@ -27,6 +27,7 @@ header .nav-wrapper {
 .nav-toc-btn a {
   display: flex;
   line-height: 1.25rem;
+  text-decoration: none;
   align-items: center;
 }
 

@@ -71,9 +71,9 @@ header nav {
 header nav[aria-expanded="true"] {
   gap: 0em 2em;
   grid-template:
-    'brand hamburger' var(--nav-height)
-    'sections toc-btn' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
+  'brand hamburger' var(--nav-height)
+  'sections toc-btn' calc(100% - 4rem)
+  'tools tools' 0;
   overflow-y: auto;
   min-height: 100vh;
 }
@@ -138,11 +138,17 @@ header nav[aria-expanded="true"] .nav-toc-btn > p a::before {
   padding-right: 0.0rem;
 }
 
+header nav[aria-expanded="true"] .nav-tools {
+  display: none;
+}
+
 @media (max-width: 900px) {
 
-  header .header-button-group > div {
-    gap: 0.5rem;
-  }
+header .header-button-group > div {
+  gap: 0.5rem;
+}
+
+
 
 header .header-button-group > div > div {
   width: 2rem;

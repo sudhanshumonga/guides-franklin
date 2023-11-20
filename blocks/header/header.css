@@ -59,7 +59,7 @@ header nav {
   display: grid;
   grid-template:
   'brand tools tools' var(--nav-height)
-  'toc-btn x x' 4rem
+  'toc-btn toc-btn toc-btn' 4rem
   'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
   gap: 0rem 2em;

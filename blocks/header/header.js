@@ -123,8 +123,8 @@ export default async function decorate(block) {
     const a_tag = button.querySelector('a')
     a_tag.addEventListener('click', evt => {
       evt.preventDefault()
+      toggleMenu(nav, navSections)
     })
-    button.addEventListener('click', () => toggleMenu(nav, navSections));
     
 
 

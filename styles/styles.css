@@ -45,6 +45,8 @@
   --sidenav-bullet-color: #C0C0C0;
   --table-header-bg-color: rgba(11, 29, 89, 0.80);
   --table-header-text-color: #FFF;
+  --table-body-border-color: #000;
+  --table-body-text-color: #000;
 
   /* Main content vars */
   --alias-heading-text-line-height: 1.3;

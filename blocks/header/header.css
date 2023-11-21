@@ -138,12 +138,13 @@ header nav[aria-expanded="true"] .nav-toc-btn > p a::before {
   padding-right: 0.0rem;
 }
 
-header nav[aria-expanded="true"] .nav-tools {
-  display: none;
-}
 
 @media (max-width: 900px) {
-
+  
+  header nav[aria-expanded="true"] .nav-tools {
+    display: none;
+  }
+  
 header .header-button-group > div {
   gap: 0.5rem;
 }

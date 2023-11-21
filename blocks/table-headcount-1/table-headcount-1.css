@@ -27,7 +27,7 @@
 
 .table-headcount-1 > div:first-child > div {
   font-weight: bold;
-  background: var(--table-header-bg-color);
+  background: var(--table-header-bg-color) !important;
   color: var(--table-header-text-color);
   font-family: Poppins;
   font-size: 0.875rem;

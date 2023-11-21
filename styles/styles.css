@@ -47,6 +47,7 @@
   --table-header-text-color: #FFF;
   --table-body-border-color: #000;
   --table-body-text-color: #000;
+  --table-row-bg-color-even: #F0F0F0;
 
   /* Main content vars */
   --alias-heading-text-line-height: 1.3;

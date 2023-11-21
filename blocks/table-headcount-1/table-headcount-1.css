@@ -8,6 +8,10 @@
   display: table-row;
 }
 
+.table-headcount-1 > div > div:nth-child(even) {
+  background: var(--table-row-bg-color-even);
+}
+
 .table-headcount-1 > div > div {
   display: table-cell;
   padding: 8px;

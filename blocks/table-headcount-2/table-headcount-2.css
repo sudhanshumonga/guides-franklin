@@ -20,7 +20,7 @@
   line-height: normal;
 }
 
-.table-headcount-2 > div > div:nth-child(even) {
+.table-headcount-2 > div:nth-child(even) > div {
   background: var(--table-row-bg-color-even);
 }
 

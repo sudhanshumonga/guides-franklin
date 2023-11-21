@@ -43,8 +43,8 @@
   --sidenav-selection-color: #642CDB;
   --sidenav-text-color: #484848;
   --sidenav-bullet-color: #C0C0C0;
-  --table-header-bg-color: aliceblue;
-
+  --table-header-bg-color: rgba(11, 29, 89, 0.80);
+  --table-header-text-color: #FFF;
 
   /* Main content vars */
   --alias-heading-text-line-height: 1.3;

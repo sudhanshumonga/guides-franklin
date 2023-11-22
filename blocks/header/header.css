@@ -309,8 +309,6 @@ header nav .nav-sections {
 }
 
 nav .nav-sections h3 {
-  margin: 0;
-  line-height: var(--nav-height);
   overflow-wrap: break-word;
   color: var(--sidenav-title-color);
   font-family: Poppins;

@@ -48,6 +48,7 @@ function addExpandCollapseButton() {
   divWrapper.classList.add('title-close-wrapper')
   const titleSpan = document.createElement("span");
   titleSpan.classList.add('title-span')
+  titleSpan.textContent = mapTitle
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
   span.classList.add('open')

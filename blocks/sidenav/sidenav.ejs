@@ -44,6 +44,10 @@ function addResizeBar() {
 }
 
 function addExpandCollapseButton() {
+  const divWrapper = document.createElement("div");
+  divWrapper.classList.add('title-close-wrapper')
+  const titleSpan = document.createElement("span");
+  titleSpan.classList.add('title-span')
   const span = document.createElement("span");
   span.classList.add('sidenav-expand-collapse')
   span.classList.add('open')
@@ -60,7 +64,9 @@ function addExpandCollapseButton() {
     }
     span.classList.toggle("open");
   })
-  sidenavContainer.prepend(span)
+  divWrapper.append(titleSpan)
+  divWrapper.append(span)
+  sidenavContainer.prepend(divWrapper)
 }
 
 function generateId(prefix, suffix) {

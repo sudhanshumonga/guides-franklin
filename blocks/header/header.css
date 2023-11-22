@@ -345,6 +345,9 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 @media (min-width: 900px) {
+  nav .nav-sections h3 {
+    display: none;
+  }
   header nav .nav-sections {
     display: block;
     visibility: visible;

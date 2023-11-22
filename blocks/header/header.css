@@ -311,7 +311,13 @@ header nav .nav-sections {
 nav .nav-sections h3 {
   margin: 0;
   line-height: var(--nav-height);
-  color: var(--header-title-color);
+  overflow-wrap: break-word;
+  color: var(--sidenav-title-color);
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3rem;
 }
 
 header nav[aria-expanded="true"] .nav-sections {

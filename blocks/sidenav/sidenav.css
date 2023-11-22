@@ -1,3 +1,17 @@
+
+.title-close-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-span {
+    text-decoration: none;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    overflow-wrap: break-word;
+}
+
 .sidenav-container {
     display: none;
     width: 20rem;
@@ -36,7 +50,6 @@
     }
     .sidenav-expand-collapse {
         width: 1.25rem;
-        margin-left: calc(100% - 1rem);
         height: 1.25rem;
         background: url('./toc-icon.svg');
         left: 0;

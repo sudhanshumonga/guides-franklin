@@ -1,5 +1,5 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"topic","url":"contents/topic"}]
+const treeData = [{"url":"contents/smonga-test/topic"}]
 
 const isDesktop = window.matchMedia("(min-width: 900px)");
 

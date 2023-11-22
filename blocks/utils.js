@@ -5,6 +5,11 @@
 export function migrateTree(isDesktop) {
     if(!isDesktop.matches) { //move the tree to header nav-sections: mobile view
         const treeUlParent = document.querySelector(".sidenav.block");
+        const mapTitle = document.querySelector(".title-span");
+        let title = ""
+        if(mapTitle) {
+            title = mapTitle.textContent
+        }
         if(treeUlParent) {
             const treeUl = treeUlParent.querySelector('.tree')
             if(treeUl) {
@@ -12,6 +17,8 @@ export function migrateTree(isDesktop) {
                 if(headerNav) {
                     treeUl.remove()
                     headerNav.appendChild(treeUl)
+                    const mapTitleNode = headerNav.querySelector('h3')
+                    mapTitleNode.textContent = title
                 }
             }
         }

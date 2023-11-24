@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
 const treeData = [{"displayName":"topic","url":"contents/smonga-test/topic"}]
-const mapTitle = "$MAP_TITLE$"
+const mapTitle = "mapper"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {

@@ -318,6 +318,7 @@ nav .nav-sections h3 {
   line-height: 1.3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: -1rem;
 }
 
 header nav[aria-expanded="true"] .nav-sections {

@@ -1,5 +1,5 @@
 
-.title-close-wrapper {
+main div.title-close-wrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;

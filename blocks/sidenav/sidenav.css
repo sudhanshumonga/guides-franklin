@@ -34,6 +34,10 @@ main div.title-close-wrapper {
     display: none;
 }
 
+.sidenav-container .sidenav-wrapper {
+    margin-left: 1rem;
+}
+
 @media (min-width: 900px) {
     .collapse-width .sidenav-wrapper {
         display: none;

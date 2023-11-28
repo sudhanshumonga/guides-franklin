@@ -2,6 +2,7 @@
 .title-close-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 .title-span {

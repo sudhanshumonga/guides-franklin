@@ -73,7 +73,7 @@ footer .container > div:nth-child(1) > div:nth-child(1) p {
   color: var(--footer-background-color) !important;
 }
 
-footer .container > div:nth-child(1) > div:nth-child(1) h3 {
+footer .container > div:nth-child(1) > div:nth-child(1) h6 {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 1.0rem;

@@ -14,5 +14,5 @@
 
 .hazardstatement > div:first-child > div > p::before {
     content: url("./hazard-note.svg");
-    display: block;
+    margin-right: 0.5rem;
 }

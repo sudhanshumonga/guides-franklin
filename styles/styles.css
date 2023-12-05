@@ -21,9 +21,13 @@
   --sidenav-bg-color: #F1F1F1;
   --sidenav-title-color: #000;
   --bg-color : #ffffff;
+
+  /* note */
   --note-block-bg-color: #eee;
   --note-block-border-color: #ddd;
   --note-block-header-color: #999;
+  --note-hazard-bg-color: #FFEBE7;
+  --note-hazard-border-color: #EA3829;
 
   /* fonts */
   --body-font-family: adobe-clean, "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande";

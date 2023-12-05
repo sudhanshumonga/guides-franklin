@@ -1,4 +1,5 @@
 .note {
+    border-radius: 0.25rem;
     background: var(--note-block-bg-color);
     padding: 18px 24px;
     border-left: 4px solid var(--note-block-border-color);
@@ -6,11 +7,12 @@
     font-size: 14px;
 }
 
-.note::before {
-    content: "Note:";
-    display: block;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--note-block-header-color);
+.note.hazardstatement {
+    border-radius: 0.25rem;
+    border: 1px solid var(--note-hazard-border-color);
+    background: var(--note-hazard-bg-color);
+}
+
+.note.hazardstatement::before {
+    background: url("./hazard-note.svg");
 }

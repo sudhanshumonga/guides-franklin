@@ -13,5 +13,5 @@
 }
 
 .hazardstatement::before {
-    background: url("./hazard-note.svg");
+    content: url("./hazard-note.svg");
 }

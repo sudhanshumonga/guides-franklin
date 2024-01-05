@@ -1,1 +1,1 @@
-export default [{"displayName":"topic","url":"contents/smonga-test/topic"}]
+export default [{"displayName":"topic","url":"contents/smonga-test/topic"},{"displayName":"test123","url":"contents/smonga-test/test123"}]

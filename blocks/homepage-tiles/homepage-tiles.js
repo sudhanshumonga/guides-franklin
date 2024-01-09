@@ -22,13 +22,13 @@ function construct(nodeList, prefixID) {
     nodeList.every((node, idx) => {
         const id = generateId(prefixID, idx)
         if (node.children) {
-            construct(node.children, id)
-            return true
+            return construct(node.children, id)
         } else {
             getTileForData(node.url, id)
             return false
         }
     })
+    return true
 }
 
 construct(sidenavTreeData, '')

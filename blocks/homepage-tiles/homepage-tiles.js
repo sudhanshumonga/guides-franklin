@@ -10,7 +10,7 @@ function getTileForData(url) {
     window.location.href = navURL.toString()
 }
 
-function construct(nodeList) {
+function construct(nodeList) {//
     nodeList.forEach(node => {
         if(node.children) {
             construct(node.children)

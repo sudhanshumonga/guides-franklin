@@ -19,12 +19,14 @@ function generateId(prefix, suffix) {
 }
 
 function construct(nodeList, prefixID) {
-    nodeList.forEach((node, idx) => {
+    nodeList.every((node, idx) => {
         const id = generateId(prefixID, idx)
         if (node.children) {
             construct(node.children, id)
+            return true
         } else {
-            return getTileForData(node.url, id)
+            getTileForData(node.url, id)
+            return false
         }
     })
 }

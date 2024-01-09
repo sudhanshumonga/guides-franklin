@@ -7,7 +7,7 @@ function getTileForData(url, id) {
     window.location.hostname +
     (window.location.port ? ":" + window.location.port : "");
     let navURL = new URL(url, siteURL);
-    navURL.searchParams.set("level", id)
+    navURL.searchParams.set("expand", id)
     window.location.href = navURL.toString()
 }
 
@@ -18,7 +18,8 @@ function generateId(prefix, suffix) {
     return `${suffix}`
 }
 
-function construct(nodeList, prefixID) {//
+function construct(nodeList, prefixID) {
+   setTimeout(() => {
     nodeList.forEach((node, idx) => {
         const id = generateId(prefixID, idx)
         if(node.children) {
@@ -27,6 +28,7 @@ function construct(nodeList, prefixID) {//
             getTileForData(node.url, id)
         }
     })
+   }, 10000)
 }
 
 construct(sidenavTreeData, '')

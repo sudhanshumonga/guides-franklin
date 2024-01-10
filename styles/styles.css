@@ -361,6 +361,8 @@ ol ol ol {
   list-style-type: lower-roman;
 }
 
+
+@media (min-width: 900px) {
 body {
   overflow: hidden;
 }
@@ -372,3 +374,5 @@ body.hide-content-scroll {
 .hide-content-scroll main .breadcrumbs-container{
   overflow: hidden;
 }
+}
+

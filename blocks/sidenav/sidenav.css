@@ -58,6 +58,7 @@ main div.title-close-wrapper {
         display: block;
         overflow-y: auto;
         overflow-x: hidden;
+        min-width: 200px;
     }
     .sidenav-expand-collapse {
         width: 1.25rem;

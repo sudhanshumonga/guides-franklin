@@ -211,14 +211,14 @@ header .header-button-group > div {
 
   header .header-button-group > div > div {
     display: inline-flex;
-    padding: 0.875rem 1.5rem;
+    padding: 0.88rem 1.5rem;
     justify-content: center;
     align-items: center;
     gap: 0.625rem;
     border-radius: 0.25rem;
     border: 1px solid var(--header-button-group-button-border-color);
     background: var(--header-button-group-button-bg-color);
-    height: 0.75rem;
+    height: 0.62rem;
   }
 
   header nav {

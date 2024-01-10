@@ -30,9 +30,9 @@
   --note-hazard-border-color: #EA3829;
 
   /* fonts */
-  --body-font-family: adobe-clean, "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande";
+  --body-font-family: Poppins, adobe-clean, "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande";
   --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --fixed-font-family: Poppins, 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -100,7 +100,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-size: var(--body-font-size-s);
+  font-size: var(--body-font-size-xs);
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;

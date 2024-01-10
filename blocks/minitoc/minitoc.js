@@ -112,6 +112,13 @@ window.addEventListener('franklin-app-ready', () => {
     }
   });
 
+  window.addEventListener('scroll', () => {
+    if (body.scrollTop === 0) {
+      body.classList.remove('hide-content-scroll')
+      console.log("You have reached the top of the element!");
+    }
+  });
+
   main.addEventListener('scroll', () => {
     if (main.scrollTop === 0) {
       main.classList.remove('hide-content-scroll')

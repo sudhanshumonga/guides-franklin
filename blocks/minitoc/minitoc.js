@@ -106,7 +106,7 @@ window.addEventListener('franklin-app-ready', () => {
 
   contentSection.addEventListener('scroll', updateSelectedTag);
   window.addEventListener('scroll', () => {
-    if (body.scrollTop === 0) {
+    if (window.scrollTop === 0) {
       body.classList.remove('hide-content-scroll')
       console.log("You have reached the top of the element!");
     }

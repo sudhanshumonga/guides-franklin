@@ -101,9 +101,6 @@ window.addEventListener('franklin-app-ready', () => {
     })
   })
 
-
-
-
   contentSection.addEventListener('scroll', updateSelectedTag);
   window.addEventListener('scroll', () => {
     if (window.scrollY === 0) {

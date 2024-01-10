@@ -360,3 +360,11 @@ ul ol, ol ol {
 ol ol ol {
   list-style-type: lower-roman;
 }
+
+body.hide-content-scroll {
+  overflow: auto;
+}
+
+.hide-content-scroll main .breadcrumbs-container{
+  overflow: hidden;
+}

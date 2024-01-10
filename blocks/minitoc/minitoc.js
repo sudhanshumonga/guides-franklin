@@ -38,6 +38,9 @@ window.addEventListener('franklin-app-ready', () => {
   const body = document.querySelector('body')
   const main = document.querySelector('main')
 
+  function hasVerticalScrollbar(element) {
+    return element.scrollHeight > element.clientHeight;
+  }
 
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -61,7 +64,7 @@ window.addEventListener('franklin-app-ready', () => {
       }
     }
 
-    if (contentSection.scrollTop + contentSection.clientHeight >= contentSection.scrollHeight) {
+    if ((contentSection.scrollTop + contentSection.clientHeight >= contentSection.scrollHeight) || !hasVerticalScrollbar(contentSection)) {
       // You have reached the bottom of the element
       body.classList.add('hide-content-scroll')
       console.log("You have reached the bottom of the element!");

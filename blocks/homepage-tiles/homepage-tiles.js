@@ -19,7 +19,8 @@ function generateId(prefix, suffix) {
 }
 
 function construct(nodeList, prefixID) {
-    nodeList.every((node, idx) => {
+    for(let idx=0;idx<nodeList.length;idx++) {
+        const node = nodeList[idx]
         const id = generateId(prefixID, idx)
         if (node.children) {
             return construct(node.children, id)
@@ -27,8 +28,8 @@ function construct(nodeList, prefixID) {
             getTileForData(node.url, id)
             return false
         }
-    })
-    return true
+    }
+    return null
 }
 
 construct(sidenavTreeData, '')

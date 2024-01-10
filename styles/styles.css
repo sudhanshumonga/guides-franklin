@@ -361,6 +361,10 @@ ol ol ol {
   list-style-type: lower-roman;
 }
 
+body {
+  overflow: hidden;
+}
+
 body.hide-content-scroll {
   overflow: auto;
 }

@@ -62,14 +62,9 @@ window.addEventListener('franklin-app-ready', () => {
 
     if (contentSection.scrollTop + contentSection.clientHeight >= contentSection.scrollHeight) {
       // You have reached the bottom of the element
+      body.classList.add('hide-content-scroll')
       console.log("You have reached the bottom of the element!");
     }
-
-    if (contentSection.scrollTop === 0) {
-      // You have reached the top of the element
-      console.log("You have reached the top of the element!");
-  }
-
   }
 
   tagList.forEach(tag => {
@@ -109,6 +104,12 @@ window.addEventListener('franklin-app-ready', () => {
 
 
   contentSection.addEventListener('scroll', updateSelectedTag);
+  body.addEventListener('scroll', () => {
+    if (body.scrollTop === 0) {
+      body.classList.remove('hide-content-scroll')
+      console.log("You have reached the top of the element!");
+    }
+  });
   window.addEventListener('resize', updateSelectedTag);
   updateSelectedTag()
 });

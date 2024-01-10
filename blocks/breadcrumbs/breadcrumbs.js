@@ -12,7 +12,7 @@ function isRelativePath(url) {
 }
 
 a_tags.forEach(a_tag => {
-  const url = a_tag.getAttribute('href')
+  let url = a_tag.getAttribute('href')
   if(url && !isRelativePath(url) && !isExteralURL(url)) {
     url = '/' + url
   }

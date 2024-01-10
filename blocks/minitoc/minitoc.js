@@ -36,6 +36,7 @@ window.addEventListener('franklin-app-ready', () => {
   const contentSection = document.querySelector('.section.breadcrumbs-container')
 
   const body = document.querySelector('body')
+  const main = document.querySelector('main')
 
 
   function isInViewport(element) {
@@ -107,6 +108,13 @@ window.addEventListener('franklin-app-ready', () => {
   body.addEventListener('scroll', () => {
     if (body.scrollTop === 0) {
       body.classList.remove('hide-content-scroll')
+      console.log("You have reached the top of the element!");
+    }
+  });
+
+  main.addEventListener('scroll', () => {
+    if (main.scrollTop === 0) {
+      main.classList.remove('hide-content-scroll')
       console.log("You have reached the top of the element!");
     }
   });

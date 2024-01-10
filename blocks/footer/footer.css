@@ -68,9 +68,18 @@ footer .container > div:nth-child(1) > div:nth-child(1) ol {
 footer .container > div:nth-child(1) > div:nth-child(1) p:nth-child(1) {
   background-image: url('./footer.svg');
   background-size: cover;
-  width: 3rem;
+  width: 8rem;
   height: 3rem;
+  margin-bottom: 0.5rem;
   color: var(--footer-background-color) !important;
+}
+
+footer .container > div:nth-child(1) > div:nth-child(1) p:nth-child(2) {
+  font-family: Poppins !important;
+  font-size: 2rem !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 2rem;
 }
 
 footer .container > div:nth-child(1) > div:nth-child(1) h6 {

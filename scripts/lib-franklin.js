@@ -574,10 +574,13 @@ export async function waitForLCP(lcpBlocks) {
 export function addLoadingToHeader(header) {
   const spinner = document.createElement('span')
   spinner.classList.add('spinner-wheel-suspense')
-  spinner.style.width = '100%'
-  spinner.style.height = '5rem'
+  spinner.style.width = '1.5rem'
+  spinner.style.height = '1.5rem'
   spinner.style.backgroundColor = 'white'
   spinner.style.display = 'flex'
+  spinner.style.position = 'absolute'
+  spinner.style.top = '50%'
+  spinner.style.left = '50%'
   header.appendChild(spinner)
   return spinner
 } 

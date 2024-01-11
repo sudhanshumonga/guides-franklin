@@ -290,7 +290,7 @@ main .section:empty {
 header .spinner-wheel-suspense {
   background-image: url('./loader.gif');
   background-repeat: no-repeat;
-  background-size: 2rem 2rem;
+  background-size: 1.5rem 1.5rem;
 }
 
 .force-hide {

@@ -39,10 +39,8 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
 
 footer ol {
   list-style: none;
-  display: inline-flex;
   margin: 0;
   padding: 0;
-  gap: 1rem;
 }
 
 footer ul {
@@ -123,13 +121,13 @@ footer p, footer a {
   font-weight: var(--footer-font-weight) !important;
 }
 
-footer .container > div:nth-child(1) > div:nth-child(4) ul li:last-child {
+footer .container > div:nth-child(1) > div:nth-child(4) ul > li:last-child {
   list-style: none;
   margin-left: -1rem;
   font-size: 0px !important;
 }
 
-footer .container > div:nth-child(1) > div:nth-child(4) ul li:last-child ol {
+footer .container > div:nth-child(1) > div:nth-child(4) ul > li:last-child ol {
   list-style: none;
   display: inline-flex;
   margin: 0;

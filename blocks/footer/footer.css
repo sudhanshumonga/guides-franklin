@@ -126,7 +126,6 @@ footer p, footer a {
 @media(min-width: 900px) {
   footer .container > div {
     display: flex;
-    justify-content: space-between;
   }
 
   footer .container > div:nth-child(1) > div:nth-child(1) {
@@ -134,5 +133,14 @@ footer p, footer a {
     border-right-style: solid;
     padding-right: 10%;
     padding-top: 2.5rem;
+  }
+
+  footer .container > div:nth-child(1) > div:nth-child(2) {
+    margin-left: 12%;
+  }
+  footer .container > div:nth-child(1) > div:nth-child(2),  
+  footer .container > div:nth-child(1) > div:nth-child(3),
+  footer .container > div:nth-child(1) > div:nth-child(4){
+    width: 25%;
   }
 }

@@ -112,7 +112,7 @@ window.addEventListener('franklin-app-ready', () => {
   })
   contentSection.addEventListener('mouseleave', () => {
     if(hasVerticalScrollbar(contentSection)) {
-      body.classList.remove('hide-content-scroll')
+      body.classList.add('hide-content-scroll')
     }
   })
   window.addEventListener('scroll', () => {

@@ -1,0 +1,3 @@
+#Please customise this file as per your SEO requirements
+User-agent: *
+Disallow: 

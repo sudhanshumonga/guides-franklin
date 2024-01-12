@@ -150,7 +150,7 @@ ul.tree li.closed>ul {
     display: none;
 }
 
-ul.tree li a {
+ul.tree li a, ul.tree li span {
     cursor: pointer;
     color: var(--sidenav-text-color);
     text-decoration: none;

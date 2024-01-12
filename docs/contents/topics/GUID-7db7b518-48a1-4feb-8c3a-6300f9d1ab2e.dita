@@ -5,7 +5,7 @@
   <shortdesc/>
   <body>
     <note type="important">this is note important</note>
-    <note outputclass="caution">this is note caution</note>
+    <note outputclass="mycaution">this is note caution</note>
     <note type="danger">this is note danger</note>
     <note>this is note default</note>
     <note type="attention">this is note attention</note>

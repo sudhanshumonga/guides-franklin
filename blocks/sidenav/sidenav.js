@@ -87,10 +87,7 @@ function createTree(parent, data, prefix, level) {
     const _id = generateId(newPrefix, idx);
     li.setAttribute("id", `sidenav-li-${_id}`);
     ul.appendChild(li);
-    let anchor = document.createElement("a");
-    if(item.children) {
-      anchor = document.createElement("span");
-    }
+    const anchor = document.createElement("a");
     const span = document.createElement("span");
     span.classList.add("chevron-icon-span");
     anchor.textContent = item.displayName;

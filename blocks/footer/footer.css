@@ -143,6 +143,9 @@ footer .container > div:nth-child(1) > div:nth-child(4) ul li:last-child ol li a
 
 @media(max-width: 900px) {
   footer .container > div > div:first-child {
+    padding-bottom: 2rem;
+    border-bottom: var(--footer-font-color);
+    border-bottom-style: solid;
     margin-bottom: 2rem;
   }
 

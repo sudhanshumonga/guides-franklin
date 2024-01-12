@@ -171,6 +171,7 @@ a:hover {
   text-decoration: underline;
   color: var(--link-hover-color);
 }
+
 main {
   min-height: calc(100% - var(--nav-height));
   display: flex;
@@ -330,6 +331,10 @@ header .spinner-wheel-suspense {
   .franklin-app-rendered .section.breadcrumbs-container {
     flex-grow: 1;
     padding-top: 3rem;
+  }
+
+  main {
+    min-height: unset;
   }
 }
 

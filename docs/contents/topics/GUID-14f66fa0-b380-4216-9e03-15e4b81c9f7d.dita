@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "../dtd/libs/fmdita/dita_resources/DITA-1.3/dtd/technicalContent/dtd/topic.dtd">
+<topic id="GUID-4bdcfd25-7d05-4f67-ac39-fe524063a577">
+  <title>Abbreviated-form and term</title>
+  <shortdesc>The following references are from /content/dam/articleBasedContent/maps/glossaryMap.ditamap </shortdesc>
+  <body>
+    <p><abbreviated-form keyref="a"/></p>
+    <p><term keyref="b"/> </p>
+  </body>
+</topic>

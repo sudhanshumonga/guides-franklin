@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "../dtd/libs/fmdita/dita_resources/DITA-1.3/dtd/technicalContent/dtd/topic.dtd">
+<topic id="GUID-14626105-cf2d-4311-bc61-daad01735bf5">
+  <title>Imagemaps</title>
+  <shortdesc>All imagemaps are having references to different types of options available.</shortdesc>
+  <body>
+    <p><imagemap id="imagemap_7">
+      <image href="images/GUID-08a564a8-1f76-493a-b34d-019c8f731f42.png" id="image_1">
+      <alt>image map has content reference link to '/content/dam/articleBasedContent/Topics/fn_usercontent.dita' png image element </alt>
+      </image>
+      <area>
+      <shape>rect</shape>
+      <coords>180, 89, 507, 386</coords>
+      <xref href="GUID-b444557c-b50d-40ee-bd7a-beb53d71339a.dita#concept.dita_971cfc92-b60e-477e-926d-9d5a576aea67/image_2"/>
+      </area>
+      </imagemap><imagemap id="imagemap_2">
+      <image href="images/GUID-9fadca50-7e6a-40ec-b8bb-ee3a6fcbe72e.png" id="image_3">
+      <alt>This imagemap has content key ref link to '/content/dam/articleBasedContent/maps/keysMap.ditamap' key 2 element u_1</alt>
+      </image>
+      <area>
+      <shape>circle</shape>
+      <coords>229, 154, 147</coords>
+      <xref keyref="2/u_1"> </xref>
+      </area>
+      </imagemap></p>
+    <p> <imagemap id="imagemap_3">
+      <image href="images/GUID-0d52eb1c-45e2-41a9-aac9-fdba357910db.png" id="image_5">
+      <alt>This image map has key ref link to '/content/dam/articleBasedContent/maps/keysMap.ditamap' key 1</alt>
+      </image>
+      <area>
+      <shape>rect</shape>
+      <coords>79, 50, 384, 234</coords>
+      <xref keyref="1"> </xref>
+      </area>
+      </imagemap></p>
+    <p><imagemap id="imagemap_4">
+      <image href="images/GUID-da353dfc-d809-41ea-8d67-54db0a3a4695.png" id="image_7">
+      <alt>This image map has file ref link to '/content/dam/articleBasedContent/Topics/abbreviatedform.dita'</alt>
+      </image>
+      <area>
+      <shape>circle</shape>
+      <coords>181, 138, 149</coords>
+      <xref href="GUID-14f66fa0-b380-4216-9e03-15e4b81c9f7d.dita"> </xref>
+      </area>
+      </imagemap> </p>
+    <p><imagemap id="imagemap_5">
+      <image href="images/GUID-dd864e0c-5866-4408-89d2-76a9f591b62c.png" id="image_9">
+      <alt>This has external link to http://www.gmail.com</alt>
+      </image>
+      <area>
+      <shape>poly</shape>
+      <coords>581,185,117,126,36,356,637,427</coords>
+      <xref href="http://www.gmail.com"> </xref>
+      </area>
+      </imagemap> </p>
+    <p><imagemap id="imagemap_6">
+      <image href="images/GUID-562e9d83-4d58-49f2-83a8-c74f87ec3f63.png" id="image_11">
+      <alt>This imagemap has email link to tulika310@gmail.com</alt>
+      </image>
+      <area>
+      <shape>rect</shape>
+      <coords>65, 86, 672, 436</coords>
+      <xref href="mailto:tulika310@gmail.com?subject=test&amp;body=test%20body"/>
+      </area>
+      </imagemap> </p>
+  </body>
+</topic>

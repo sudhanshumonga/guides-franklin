@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "../dtd/libs/fmdita/dita_resources/DITA-1.3/dtd/technicalContent/dtd/task.dtd">
+<task id="GUID-6dcdfbe9-3375-44b1-85b0-254e83580875">
+  <title>Task: cmd, step, info, option, choice, choicetable (chdesc, choption, chrow)</title>
+  <titlealts>
+    <navtitle>This is navtitle: Publishing in PDF</navtitle>
+  </titlealts>
+  <shortdesc>Washing dishes helps keep your kitchen clean and orderly.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Washing dishes properly reduces bacteria and frees up the dishware available for you for eating. If you approach dish washing in a logical, efficient manner, the task can be enjoyable and fun. </p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Then this</cmd>
+        <choicetable relcolwidth="1* 1*">
+          <chhead>
+            <choptionhd>Do something</choptionhd>
+            <chdeschd>Or Else this</chdeschd>
+          </chhead>
+          <chrow>
+            <choption>Do this</choption>
+            <chdesc>and this will happen</chdesc>
+          </chrow>
+          <chrow>
+            <choption>Do that</choption>
+            <chdesc>and that will happen</chdesc>
+          </chrow>
+        </choicetable>
+      </step>
+      <step>
+        <cmd>Then this</cmd>
+        <substeps>
+          <substep importance="optional">
+            <cmd>which is done by doing this</cmd>
+          </substep>
+          <substep importance="required">
+            <cmd>and then this.</cmd>
+          </substep>
+        </substeps>
+        <choicetable relcolwidth="1* 1*">
+          <chrow>
+            <choption>Do this</choption>
+            <chdesc>and this will happen</chdesc>
+          </chrow>
+          <chrow>
+            <choption>Do that</choption>
+            <chdesc>and that will happen</chdesc>
+          </chrow>
+        </choicetable>
+      </step>
+      <step>
+        <cmd>Put on headphones with appropriate entertainment options.</cmd>
+        <info>Some people find that doing dishes in silence is therapeutic, but most do not. Adding an entertainment option can make dishes significantly more of an escape.</info>
+      </step>
+      <step>
+        <cmd>Fill the sink with warm water.</cmd>
+      </step>
+      <step>
+        <cmd>Get the scrubby warm and soapy.</cmd>
+        <info>
+          <note type="note">Make sure you don't use an abrasive scrubby for delicate glassware.</note>
+        </info>
+      </step>
+      <step>
+        <cmd>Put on rubber gloves.</cmd>
+        <stepxmp> For example, you might use yellow Latex gloves. </stepxmp>
+      </step>
+      <step>
+        <cmd>Scrub clean the dishes in soapy water.</cmd>
+        <stepresult>The dishes will be clean but soapy.</stepresult>
+      </step>
+      <step>
+        <cmd>Rinse the dishes by doing one of the following:</cmd>
+        <choices>
+          <choice>Spray them with a sprayer.</choice>
+          <choice>Dunk them in a separate division of the sink that contains clean water.</choice>
+        </choices>
+      </step>
+      <step importance="optional">
+        <cmd>Dry the dishes with a rag.</cmd>
+      </step>
+      <step>
+        <cmd>Put away the dishes in the appropriate cupboards.</cmd>
+        <info> this is info </info>
+      </step>
+      <step>
+        <cmd>Stake similar dishes inside each other for maximum space efficiency.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Nest the cups inside each other.</cmd>
+          </substep>
+          <substep>
+            <cmd>Stack the plates on top of each other.</cmd>
+          </substep>
+          <substep>
+            <cmd>Spoon the spoons, and nest the forks as well.<option>this is option in step cmd</option></cmd>
+          </substep>
+        </substeps>
+      </step>
+    </steps>
+    <result>Congratulations, you've totally finishes doing the dishes. Now make sure that your spouse knows how hard you've worked.</result>
+    <postreq>Now you're ready to wash the counters and mop the floors.</postreq>
+  </taskbody>
+</task>

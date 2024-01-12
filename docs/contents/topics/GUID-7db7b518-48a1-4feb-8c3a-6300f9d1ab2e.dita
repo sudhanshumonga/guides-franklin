@@ -4,11 +4,10 @@
   <title>Notes (count: 5, multiple types)</title>
   <shortdesc/>
   <body>
-    
     <note type="important">this is note important</note>
-    <note type="caution">this is note caution</note>
+    <note>this is note caution</note>
     <note type="danger">this is note danger</note>
     <note>this is note default</note>
-      <note type="attention">this is note attention</note>
+    <note type="attention">this is note attention</note>
   </body>
 </topic>

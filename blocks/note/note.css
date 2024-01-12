@@ -16,3 +16,7 @@
     content: url("./hazard-note.svg");
     margin-right: 0.5rem;
 }
+
+.note.my-custom-class {
+    background: green;
+}

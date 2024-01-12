@@ -149,7 +149,7 @@ footer .container > div:nth-child(1) > div:nth-child(4) ul li:last-child ol li a
     margin-bottom: 2rem;
   }
 
-  footer .container > div > div:first-child > p:nth-child(2) {
+  footer .container > div:nth-child(1) > div:nth-child(1) p:nth-child(2) {
     padding-bottom: 1rem;
   }
 }

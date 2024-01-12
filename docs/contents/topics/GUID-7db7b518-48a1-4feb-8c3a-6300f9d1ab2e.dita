@@ -4,7 +4,7 @@
   <title>Notes (count: 5, multiple types)</title>
   <shortdesc/>
   <body>
-    <note type="important">this is note important</note>
+    <note outputclass="my-custom-class" type="important">this is note important</note>
     <note outputclass="mycaution">this is note caution</note>
     <note type="danger">this is note danger</note>
     <note>this is note default</note>

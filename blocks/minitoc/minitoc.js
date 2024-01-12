@@ -105,6 +105,16 @@ window.addEventListener('franklin-app-ready', () => {
   })
 
   contentSection.addEventListener('scroll', updateSelectedTag);
+  contentSection.addEventListener('mouseenter', () => {
+    if(hasVerticalScrollbar(contentSection)) {
+      body.classList.remove('hide-content-scroll')
+    }
+  })
+  contentSection.addEventListener('mouseleave', () => {
+    if(hasVerticalScrollbar(contentSection)) {
+      body.classList.remove('hide-content-scroll')
+    }
+  })
   window.addEventListener('scroll', () => {
     if (window.scrollY === 0 && hasVerticalScrollbar(contentSection)) {
       body.classList.remove('hide-content-scroll')

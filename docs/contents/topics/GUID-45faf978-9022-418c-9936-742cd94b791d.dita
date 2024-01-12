@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "../dtd/libs/fmdita/dita_resources/DITA-1.3/dtd/technicalContent/dtd/topic.dtd">
+<topic id="GUID-d5e8929e-f158-4dc2-aadb-595ff4066e9d">
+  <title>MathML (count: 2 elements)</title>
+  <shortdesc/>
+  <body>
+    <p><mathml><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:msubsup><m:mo largeop="true">3</m:mo><m:mn>5</m:mn><m:mn>2</m:mn></m:msubsup></m:math>
+      </mathml></p>
+    <p><mathml><m:math xmlns:m="http://www.w3.org/1998/Math/MathML"><m:mfenced><m:mtable><m:mtr><m:mtd><m:mn>1</m:mn></m:mtd><m:mtd><m:mn>2</m:mn></m:mtd><m:mtd><m:mn>5</m:mn></m:mtd><m:mtd><m:mn>3</m:mn></m:mtd><m:mtd><m:mn>6</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>6</m:mn></m:mtd><m:mtd><m:mn>4</m:mn></m:mtd><m:mtd><m:mn>5</m:mn></m:mtd><m:mtd><m:mn>7</m:mn></m:mtd><m:mtd><m:mn>6</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>2</m:mn></m:mtd><m:mtd><m:mn>7</m:mn></m:mtd><m:mtd><m:mn>77</m:mn></m:mtd><m:mtd><m:mn>14</m:mn></m:mtd><m:mtd><m:mn>5</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>3</m:mn></m:mtd><m:mtd><m:mn>7</m:mn></m:mtd><m:mtd><m:mn>86</m:mn></m:mtd><m:mtd><m:mn>24</m:mn></m:mtd><m:mtd><m:mn>6</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>5</m:mn></m:mtd><m:mtd><m:mn>6</m:mn></m:mtd><m:mtd><m:mn>9</m:mn></m:mtd><m:mtd><m:mn>53</m:mn></m:mtd><m:mtd><m:mn>64</m:mn></m:mtd></m:mtr><m:mtr><m:mtd><m:mn>6</m:mn></m:mtd><m:mtd><m:mn>6</m:mn></m:mtd><m:mtd><m:mn>10</m:mn></m:mtd><m:mtd><m:mn>5</m:mn></m:mtd><m:mtd><m:mn>46</m:mn></m:mtd></m:mtr></m:mtable></m:mfenced></m:math>
+      </mathml> </p>
+  </body>
+</topic>

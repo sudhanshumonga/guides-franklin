@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "../dtd/libs/fmdita/dita_resources/DITA-1.3/dtd/technicalContent/dtd/topic.dtd">
+<topic id="GUID-5706ab1c-17de-405c-8d3c-14c5c5b0acb0">
+  <title>Table(right aligned)</title>
+  <shortdesc/>
+  <body>
+    <p>
+      <table id="table_2">
+        <title>this is right aligned table</title>
+        <tgroup align="right" cols="4">
+          <colspec colname="col_1" colwidth="1*"/>
+          <colspec colname="col_2" colwidth="1*"/>
+          <colspec colname="col_3" colwidth="1*"/>
+          <colspec colname="col_4" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>1</entry>
+              <entry>2</entry>
+              <entry>3</entry>
+              <entry>4</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>apple</entry>
+              <entry>ball</entry>
+              <entry>candy</entry>
+              <entry>dog</entry>
+            </row>
+            <row>
+              <entry>elf</entry>
+              <entry>fruit</entry>
+              <entry>gun</entry>
+              <entry>hat</entry>
+            </row>
+            <row>
+              <entry>a</entry>
+              <entry>a</entry>
+              <entry>a</entry>
+              <entry>a</entry>
+            </row>
+            <row>
+              <entry>b</entry>
+              <entry>b</entry>
+              <entry>g</entry>
+              <entry>i</entry>
+            </row>
+            <row>
+              <entry>c</entry>
+              <entry>c</entry>
+              <entry>h</entry>
+              <entry>j</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </p>
+  </body>
+</topic>

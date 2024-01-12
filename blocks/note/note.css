@@ -6,7 +6,7 @@
     font-size: 14px;
 }
 
-.note.hazardstatement {
+.note.hazardstatement, .note.danger {
     border-radius: 0.25rem;
     border: 1px solid var(--note-hazard-border-color);
     background: var(--note-hazard-bg-color);

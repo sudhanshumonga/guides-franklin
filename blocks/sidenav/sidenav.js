@@ -89,7 +89,7 @@ function createTree(parent, data, prefix, level) {
     ul.appendChild(li);
     let anchor = document.createElement("a");
     if(item.children) {
-      anchor = document.createElement("a");
+      anchor = document.createElement("span");
     }
     const span = document.createElement("span");
     span.classList.add("chevron-icon-span");

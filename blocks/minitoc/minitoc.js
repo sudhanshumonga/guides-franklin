@@ -64,8 +64,12 @@ window.addEventListener('franklin-app-ready', () => {
       }
     }
 
-    if ((contentSection.scrollTop + contentSection.clientHeight >= contentSection.scrollHeight) || !hasVerticalScrollbar(contentSection)) {
+    if ((contentSection.scrollTop + contentSection.clientHeight >= contentSection.scrollHeight)) {
       // body.classList.add('hide-content-scroll')
+    }
+    if(!hasVerticalScrollbar(contentSection)) {
+      body.classList.add('hide-content-scroll')
+      
     }
   }
 

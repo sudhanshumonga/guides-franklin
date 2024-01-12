@@ -65,9 +65,7 @@ window.addEventListener('franklin-app-ready', () => {
     }
 
     if ((contentSection.scrollTop + contentSection.clientHeight >= contentSection.scrollHeight) || !hasVerticalScrollbar(contentSection)) {
-      // You have reached the bottom of the element
-      body.classList.add('hide-content-scroll')
-      console.log("You have reached the bottom of the element!");
+      // body.classList.add('hide-content-scroll')
     }
   }
 
@@ -117,8 +115,7 @@ window.addEventListener('franklin-app-ready', () => {
   })
   window.addEventListener('scroll', () => {
     if (window.scrollY === 0 && hasVerticalScrollbar(contentSection)) {
-      body.classList.remove('hide-content-scroll')
-      console.log("You have reached the top of the element!");
+      // body.classList.remove('hide-content-scroll')
     }
   });
   window.addEventListener('resize', updateSelectedTag);

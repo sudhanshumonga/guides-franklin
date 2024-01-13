@@ -2,6 +2,8 @@ var content = document.querySelector('body')
 var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
 var minitocContainer = content.getElementsByClassName("minitoc")[0];
 var miniTOCList = document.createElement("ul");
+const contentSection = document.querySelector('.section.breadcrumbs-container')
+
 const tagList = []
 for (var i = 0; i < headings.length; i++) {
   var heading = headings[i];
@@ -33,15 +35,6 @@ if (tagList.length !== 0) {
 }
 
 window.addEventListener('franklin-app-ready', () => {
-  const contentSection = document.querySelector('.section.breadcrumbs-container')
-
-  const body = document.querySelector('body')
-  const main = document.querySelector('main')
-
-  function hasVerticalScrollbar(element) {
-    return element.scrollHeight > element.clientHeight;
-  }
-
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -62,14 +55,6 @@ window.addEventListener('franklin-app-ready', () => {
         tagList[i].classList.add('selected');
         break;
       }
-    }
-
-    if ((contentSection.scrollTop + contentSection.clientHeight >= contentSection.scrollHeight)) {
-      // body.classList.add('hide-content-scroll')
-    }
-    if(!hasVerticalScrollbar(contentSection)) {
-      body.classList.add('hide-content-scroll')
-      
     }
   }
 
@@ -107,21 +92,6 @@ window.addEventListener('franklin-app-ready', () => {
   })
 
   contentSection.addEventListener('scroll', updateSelectedTag);
-  contentSection.addEventListener('mouseenter', () => {
-    if(hasVerticalScrollbar(contentSection)) {
-      body.classList.remove('hide-content-scroll')
-    }
-  })
-  contentSection.addEventListener('mouseleave', () => {
-    if(hasVerticalScrollbar(contentSection)) {
-      body.classList.add('hide-content-scroll')
-    }
-  })
-  window.addEventListener('scroll', () => {
-    if (window.scrollY === 0 && hasVerticalScrollbar(contentSection)) {
-      // body.classList.remove('hide-content-scroll')
-    }
-  });
   window.addEventListener('resize', updateSelectedTag);
   updateSelectedTag()
 });

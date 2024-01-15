@@ -1,6 +1,6 @@
 import { migrateTree } from "../utils.js";
-const treeData = [{"displayName":"TopicToBeReferred","url":"contents/publishing/topictobereferred"},{"displayName":"TopicReferring","url":"contents/publishing/topicreferring"}]
-const mapTitle = "MapToPublish"
+const treeData = [{"displayName":"dita topic","url":"contents/dita-topic"},{"displayName":"abc","url":"contents/abc"}]
+const mapTitle = "ditamap"
 const isDesktop = window.matchMedia("(min-width: 900px)");
 
 function expandHeirarchy(element, root) {

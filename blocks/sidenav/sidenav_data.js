@@ -1,1 +1,1 @@
-export default [{"displayName":"TopicToBeReferred","url":"contents/publishing/topictobereferred"},{"displayName":"TopicReferring","url":"contents/publishing/topicreferring"}]
+export default [{"displayName":"dita topic","url":"contents/dita-topic"},{"displayName":"abc","url":"contents/abc"}]

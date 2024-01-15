@@ -3,7 +3,7 @@ const contentSection = document.querySelector('.section.breadcrumbs-container')
 const body = document.querySelector('body')
 
 function changeScroller(isDesktop) {
-    if(!isDesktop.matches) { //mobile view
+    if(!isDesktop.matches || !hasVerticalScrollbar(contentSection)) { //mobile view
         body.classList.add('hide-content-scroll')
     } else {
         

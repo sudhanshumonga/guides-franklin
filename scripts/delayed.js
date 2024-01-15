@@ -2,6 +2,14 @@
 const contentSection = document.querySelector('.section.breadcrumbs-container')
 const body = document.querySelector('body')
 
+function changeScroller(isDesktop) {
+    if(!isDesktop.matches) { //mobile view
+        body.classList.add('hide-content-scroll')
+    } else {
+        
+    }
+}
+
 function hasVerticalScrollbar(element) {
   return element.scrollHeight > element.clientHeight;
 }
@@ -26,6 +34,7 @@ function handleScroll() {
   }
 
 import { sampleRUM } from './lib-franklin.js';
+const isDesktop = window.matchMedia('(min-width: 900px)');
 
 // Core Web Vitals RUM collection
 sampleRUM('cwv');
@@ -36,6 +45,8 @@ contentSection.addEventListener('scroll', handleScroll);
 contentSection.addEventListener('mouseenter', () => {
   if(hasVerticalScrollbar(contentSection)) {
     body.classList.remove('hide-content-scroll')
+  } else {
+    body.classList.add('hide-content-scroll')
   }
 })
 contentSection.addEventListener('mouseleave', () => {
@@ -48,4 +59,5 @@ window.addEventListener('scroll', () => {
     // body.classList.remove('hide-content-scroll')
   }
 });
+isDesktop.addEventListener("change", () => changeScroller(isDesktop));
 // add more delayed functionality here

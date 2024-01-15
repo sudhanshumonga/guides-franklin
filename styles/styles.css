@@ -118,6 +118,7 @@ body.appear {
 header {
   height: var(--nav-height);
   min-height: var(--nav-height);
+  background-color: var(--header-bg-color);
 }
 
 h1, h2, h3,

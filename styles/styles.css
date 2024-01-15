@@ -319,7 +319,7 @@ header .spinner-wheel-suspense {
     width: 15rem;
   } 
   .section.breadcrumbs-container {
-    width: calc(100% - 42rem);
+    width: calc(100% - 43rem);
     /* flex-grow: 1; */
   }
 }

@@ -324,16 +324,16 @@ header .spinner-wheel-suspense {
   }
 }
 
-.franklin-app-rendered .section.breadcrumbs-container {
+.section.breadcrumbs-container {
   flex-grow: 1;
   overflow-x: auto;
   padding-top: 1rem;
 }
 
 @media(max-width: 900px) {
-  .franklin-app-rendered .section.breadcrumbs-container {
+  .section.breadcrumbs-container {
     flex-grow: 1;
-    padding-top: 3rem;
+    padding-top: 3rem !important;
   }
 
   main {

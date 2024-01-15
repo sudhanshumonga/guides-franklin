@@ -60,4 +60,5 @@ window.addEventListener('scroll', () => {
   }
 });
 isDesktop.addEventListener("change", () => changeScroller(isDesktop));
+changeScroller(isDesktop)
 // add more delayed functionality here

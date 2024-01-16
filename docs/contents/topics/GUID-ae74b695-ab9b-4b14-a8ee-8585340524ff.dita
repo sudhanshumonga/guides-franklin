@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "../dtd/libs/fmdita/dita_resources/DITA-1.3/dtd/technicalContent/dtd/task.dtd">
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "../../dtd/libs/fmdita/dita_resources/DITA-1.3/dtd/technicalContent/dtd/task.dtd">
 <task id="GUID-6dcdfbe9-3375-44b1-85b0-254e83580875">
   <title>Task: cmd, step, info, option, choice, choicetable (chdesc, choption, chrow)</title>
   <titlealts>

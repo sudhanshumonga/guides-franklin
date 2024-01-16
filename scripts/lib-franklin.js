@@ -560,7 +560,7 @@ export async function waitForLCP(lcpBlocks) {
 
   document.body.style.display = null;
   const lcpCandidates = document.querySelectorAll('main img');
-  await Promise.all(lcpCandidates.map(lcpCandidate => {
+  await Promise.all(Array.from(lcpCandidates).map(lcpCandidate => {
     return new Promise((resolve) => {
       if (lcpCandidate && !lcpCandidate.complete) {
         lcpCandidate.setAttribute('loading', 'eager');

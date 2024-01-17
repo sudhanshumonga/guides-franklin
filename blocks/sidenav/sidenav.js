@@ -18,7 +18,9 @@ function expandSelection(parent) {
   if (!element) return;
   element.classList.add("selected");
   expandHeirarchy(element, parent);
-  element.scrollIntoView();
+  setTimeout(() => {
+    element.scrollIntoView()
+  }, 2000);
 }
 
 function addResizeBar() {

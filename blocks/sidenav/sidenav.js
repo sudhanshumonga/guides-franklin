@@ -21,7 +21,7 @@ function expandSelection(parent) {
   setTimeout(() => {
     const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
     sidenavContainer.scrollTo({
-      top: Math.max(element.offsetTop - 104, 0),
+      top: Math.max(element.offsetTop - 110, 0),
       behavior: 'smooth'
   });
 

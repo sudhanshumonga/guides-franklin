@@ -19,9 +19,11 @@ function expandSelection(parent) {
   element.classList.add("selected");
   expandHeirarchy(element, parent);
   setTimeout(() => {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
+    sidenavContainer.scrollTop = element.offsetTop
   }, 2000);
 }
+
 
 function addResizeBar() {
   const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];

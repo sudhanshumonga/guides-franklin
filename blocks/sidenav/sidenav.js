@@ -18,8 +18,14 @@ function expandSelection(parent) {
   if (!element) return;
   element.classList.add("selected");
   expandHeirarchy(element, parent);
-  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
-  sidenavContainer.scrollTop = Math.max(element.offsetTop - 64, 0)
+  setTimeout(() => {
+    const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
+    sidenavContainer.scrollTo({
+      top: Math.max(element.offsetTop - 64, 0),
+      behavior: 'smooth'
+  });
+
+  }, 2000);
 }
 
 

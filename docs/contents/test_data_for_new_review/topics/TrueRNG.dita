@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "../../../dtd/libs/fmdita/dita_resources/DITA-1.3/dtd/technicalContent/dtd/reference.dtd">
+<reference class="- topic/topic       reference/reference " ditaarch:DITAArchVersion="1.2" domains="(topic reference)                            (topic hi-d)                             (topic ut-d)                             (topic indexing-d)                            (topic hazard-d)                            (topic abbrev-d)                            (topic pr-d)                             (topic sw-d)                            (topic ui-d)    " id="reference_ezm_nxt_sl" translate="no" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title class="- topic/title ">Random Number Generator</title>
+  <refbody class="- topic/body        reference/refbody ">
+    <section class="- topic/section ">
+      <p class="- topic/p ">The Frame Controller (FRC) implements a random number generator that uses entropy gathered from noise in the RF receive chain. The data is suitable for use in cryptographic applications.</p>
+      <p>==========================================================</p>
+      <p>Below is the con key ref from submap --------------</p>
+      <p/>
+      <p conkeyref="sub_map_key/1"/>
+      <p/>
+      <p/>
+      <p class="- topic/p ">Output from the random number generator can be used either directly or as a seed or entropy source for software-based random number generator algorithms such as Fortuna.</p>
+      <p><object data="../multimedia/video_file.mp4">
+        </object></p>
+    </section>
+  </refbody>
+</reference>

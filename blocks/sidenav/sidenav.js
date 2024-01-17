@@ -19,7 +19,7 @@ function expandSelection(parent) {
   element.classList.add("selected");
   expandHeirarchy(element, parent);
   setTimeout(() => {
-    element.scrollTop = 150
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 2000);
 }
 

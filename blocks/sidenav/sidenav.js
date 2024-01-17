@@ -20,7 +20,7 @@ function expandSelection(parent) {
   expandHeirarchy(element, parent);
   setTimeout(() => {
     const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
-    sidenavContainer.scrollTop = element.offsetTop
+    sidenavContainer.scrollTop = Math.max(element.offsetTop - 64, 0)
   }, 2000);
 }
 

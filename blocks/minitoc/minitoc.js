@@ -71,7 +71,9 @@ window.addEventListener('franklin-app-ready', () => {
           behavior: 'smooth'
         });
       }
-      parentScrollNode.style.overflowY = ''
+      setTimeout(() => {
+        parentScrollNode.style.overflowY = ''
+      }, 100)
     }
   }
   

@@ -13,7 +13,7 @@ function changeScroller(isDesktop) {
 function scrollSidenavSelectionToView() {
   const element = document.querySelector('.sidenav-list-item.selected')
   const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
-  if (element.offsetTop < containerDiv.scrollTop || element.offsetTop + element.offsetHeight > containerDiv.scrollTop + containerDiv.clientHeight) {
+  if (element.offsetTop < sidenavContainer.scrollTop || element.offsetTop + element.offsetHeight > sidenavContainer.scrollTop + sidenavContainer.clientHeight) {
     sidenavContainer.scrollTo({
       top: Math.max(element.offsetTop - 110, 0),
       behavior: 'smooth'

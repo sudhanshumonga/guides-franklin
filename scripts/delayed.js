@@ -10,17 +10,6 @@ function changeScroller(isDesktop) {
     }
 }
 
-function scrollSidenavSelectionToView() {
-  const element = document.querySelector('.sidenav-list-item.selected')
-  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
-  if(!element) return
-  if (element.offsetTop < sidenavContainer.scrollTop || element.offsetTop + element.offsetHeight > sidenavContainer.scrollTop + sidenavContainer.clientHeight) {
-    sidenavContainer.scrollTo({
-      top: Math.max(element.offsetTop - 110, 0),
-      behavior: 'smooth'
-    });
-  }
-}
 
 function hasVerticalScrollbar(element) {
   return element.scrollHeight > element.clientHeight;
@@ -73,5 +62,4 @@ window.addEventListener('scroll', () => {
 });
 isDesktop.addEventListener("change", () => changeScroller(isDesktop));
 changeScroller(isDesktop)
-scrollSidenavSelectionToView()
 // add more delayed functionality here

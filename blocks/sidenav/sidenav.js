@@ -77,6 +77,19 @@ function generateId(prefix, suffix) {
   return `${suffix}`
 }
 
+function scrollSidenavSelectionToView() {
+  const element = document.querySelector('.sidenav-list-item.selected')
+  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
+  if(!element) return
+  if (element.offsetTop < sidenavContainer.scrollTop || element.offsetTop + element.offsetHeight > sidenavContainer.scrollTop + sidenavContainer.clientHeight) {
+    sidenavContainer.scrollTo({
+      top: Math.max(element.offsetTop - 110, 0),
+      behavior: 'smooth'
+    });
+  }
+}
+
+
 function createTree(parent, data, prefix, level) {
   const ul = document.createElement("ul");
   ul.classList.add("tree");
@@ -122,6 +135,10 @@ function createTree(parent, data, prefix, level) {
     }
   });
 }
+
+window.addEventListener('franklin-app-ready', () => {
+  scrollSidenavSelectionToView()
+})
 
 function onClick(id, navURL) {
   const url = new URL(navURL);

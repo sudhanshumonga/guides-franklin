@@ -21,6 +21,20 @@ function expandSelection(parent) {
   element.scrollIntoView();
 }
 
+function scrollSidenavSelectionToView() {
+  const element = document.querySelector('.sidenav-list-item.selected')
+  const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
+  if(!element) return
+  if (element.offsetTop < sidenavContainer.scrollTop || element.offsetTop + element.offsetHeight > sidenavContainer.scrollTop + sidenavContainer.clientHeight) {
+    sidenavContainer.scrollTo({
+      top: Math.max(element.offsetTop - 110, 0),
+      behavior: 'smooth'
+    });
+  }
+}
+
+
+
 function addResizeBar() {
   const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
   const div = document.createElement("div");
@@ -76,6 +90,12 @@ function generateId(prefix, suffix) {
   }
   return `${suffix}`
 }
+
+
+window.addEventListener('franklin-app-ready', () => {
+  scrollSidenavSelectionToView()
+})
+
 
 function createTree(parent, data, prefix, level) {
   const ul = document.createElement("ul");

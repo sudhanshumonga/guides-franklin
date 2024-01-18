@@ -13,10 +13,12 @@ function changeScroller(isDesktop) {
 function scrollSidenavSelectionToView() {
   const element = document.querySelector('.sidenav-list-item.selected')
   const sidenavContainer = document.getElementsByClassName("sidenav-container")[0];
-  sidenavContainer.scrollTo({
-    top: Math.max(element.offsetTop - 110, 0),
-    behavior: 'smooth'
-});
+  if (element.offsetTop < containerDiv.scrollTop || element.offsetTop + element.offsetHeight > containerDiv.scrollTop + containerDiv.clientHeight) {
+    sidenavContainer.scrollTo({
+      top: Math.max(element.offsetTop - 110, 0),
+      behavior: 'smooth'
+    });
+  }
 }
 
 function hasVerticalScrollbar(element) {

@@ -62,7 +62,7 @@ window.addEventListener('franklin-app-ready', () => {
     }
   }
 
-  function scrollSidenavSelectionToView(element, parentScrollNode, offset) {
+  function scrollContentWRTMinitoc(element, parentScrollNode, offset) {
     if(hasVerticalScrollbar(parentScrollNode)) {
       parentScrollNode.style.overflowY = 'auto'
       if (element.offsetTop < parentScrollNode.scrollTop || element.offsetTop + element.offsetHeight > parentScrollNode.scrollTop + parentScrollNode.clientHeight) {
@@ -103,7 +103,7 @@ window.addEventListener('franklin-app-ready', () => {
           }
           if (targetNode) {
             const parentScrollNode = document.querySelector('.section.breadcrumbs-container')
-            scrollSidenavSelectionToView(targetNode, parentScrollNode, 300)
+            scrollContentWRTMinitoc(targetNode, parentScrollNode, 300)
             // targetNode.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: offset })
           }
         }

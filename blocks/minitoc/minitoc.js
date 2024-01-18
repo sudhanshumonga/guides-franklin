@@ -45,6 +45,10 @@ window.addEventListener('franklin-app-ready', () => {
     );
   }
 
+  function hasVerticalScrollbar(element) {
+    return element.scrollHeight > element.clientHeight;
+  }
+  
   function updateSelectedTag(arg1, arg2) {
     for (let i = 0; i < headings.length; i++) {
       if (isInViewport(headings[i])) {
@@ -59,11 +63,15 @@ window.addEventListener('franklin-app-ready', () => {
   }
 
   function scrollSidenavSelectionToView(element, parentScrollNode, offset) {
-    if (element.offsetTop < parentScrollNode.scrollTop || element.offsetTop + element.offsetHeight > parentScrollNode.scrollTop + parentScrollNode.clientHeight) {
-      parentScrollNode.scrollTo({
-        top: Math.max(element.offsetTop - offset, 0),
-        behavior: 'smooth'
-      });
+    if(hasVerticalScrollbar(parentScrollNode)) {
+      parentScrollNode.style.overflowY = 'auto'
+      if (element.offsetTop < parentScrollNode.scrollTop || element.offsetTop + element.offsetHeight > parentScrollNode.scrollTop + parentScrollNode.clientHeight) {
+        parentScrollNode.scrollTo({
+          top: Math.max(element.offsetTop - offset, 0),
+          behavior: 'smooth'
+        });
+      }
+      parentScrollNode.style.overflowY = ''
     }
   }
   

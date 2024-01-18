@@ -67,8 +67,7 @@ window.addEventListener('franklin-app-ready', () => {
       parentScrollNode.style.overflowY = 'auto'
       if (element.offsetTop < parentScrollNode.scrollTop || element.offsetTop + element.offsetHeight > parentScrollNode.scrollTop + parentScrollNode.clientHeight) {
         parentScrollNode.scrollTo({
-          top: Math.max(element.offsetTop - offset, 0),
-          behavior: 'smooth'
+          top: Math.max(element.offsetTop - offset, 0)
         });
       }
       setTimeout(() => {

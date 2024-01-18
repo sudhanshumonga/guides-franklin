@@ -58,6 +58,16 @@ window.addEventListener('franklin-app-ready', () => {
     }
   }
 
+  function scrollSidenavSelectionToView(element, parentScrollNode, offset) {
+    if (element.offsetTop < parentScrollNode.scrollTop || element.offsetTop + element.offsetHeight > parentScrollNode.scrollTop + parentScrollNode.clientHeight) {
+      parentScrollNode.scrollTo({
+        top: Math.max(element.offsetTop - offset, 0),
+        behavior: 'smooth'
+      });
+    }
+  }
+  
+
   tagList.forEach(tag => {
     tag.addEventListener('click', (event) => {
       event.preventDefault();
@@ -82,9 +92,10 @@ window.addEventListener('franklin-app-ready', () => {
               break;
             }
           }
-          let offset = 300
           if (targetNode) {
-            targetNode.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: offset })
+            const parentScrollNode = document.querySelector('.section.breadcrumbs-container')
+            scrollSidenavSelectionToView(targetNode, parentScrollNode, 300)
+            // targetNode.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: offset })
           }
         }
       }, 0)

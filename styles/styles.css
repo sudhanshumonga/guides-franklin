@@ -28,6 +28,8 @@
   --note-block-header-color: #999;
   --note-hazard-bg-color: #FFEBE7;
   --note-hazard-border-color: #EA3829;
+  --note-caution-border-color: #f5c823;
+  --note-caution-bg-color: #fff9e5;
 
   /* fonts */
   --body-font-family: Poppins, adobe-clean, "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande";

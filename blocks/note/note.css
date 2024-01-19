@@ -6,6 +6,12 @@
     font-size: 14px;
 }
 
+.note.caution {
+    border-radius: 0.25rem;
+    border: 1px solid var(--note-caution-border-color);
+    background: var(--note-caution-bg-color);
+}
+
 .note.hazardstatement, .note.danger {
     border-radius: 0.25rem;
     border: 1px solid var(--note-hazard-border-color);
